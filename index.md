@@ -1,5 +1,5 @@
 
-# Víctor Porcar Cano [<img align="right" src="images/linkedin.png" width="24">](http://google.com.au/)[<img align="right" src="images/github.png" width="28">](http://google.com.au/)[<img align="right" src="images/mail.png" width="30">](http://google.com.au/)
+# Víctor Porcar Cano [<img align="right" src="assets/images/linkedin.png" width="28">](http://google.com.au/)[<img align="right" src="assets/images/github.png" width="28">](http://google.com.au/)[<img align="right" src="assets/images/mail.png" width="30">](http://google.com.au/)
 
 IT resources I find useful
 
@@ -22,9 +22,11 @@ Bookmarks collected over the years
 
 Cheatshet to be used on everyday work
 
-* [shell](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+* [bash / powershell](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [sql / oracle](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [docker / kubernetes](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+* [git / hg / gradle / mvn](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+* [eclipse / git](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
   <br />
   <br />
 
