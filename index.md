@@ -12,7 +12,7 @@ IT resources I find useful
 Bookmarks collected over the years
 
 * [Bookmarks as md](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings): ddddbuilt ddusing Bookmark2md
-* [Bookmarks as Pretty html](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings): built using Bookmark2md
+* [Bookmarks as Pretty html](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings): aaa built using Bookmark2md
 * [Bookmarks as raw Netsacoe,,](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings): ready to be imported in any browser
   <br />
   <br />
