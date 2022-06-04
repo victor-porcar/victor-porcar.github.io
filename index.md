@@ -22,7 +22,7 @@ Bookmarks collected over the years
 
 Cheatshet to be used on everyday work
 
-* [bash / powershell](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+* [bash / powershell](cheatsheets/shell.md)
 * [sql / oracle](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [docker / kubernetes](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [git / hg / gradle / mvn](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
