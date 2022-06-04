@@ -1,3 +1,6 @@
+---
+title-heading: false
+---
 ## Víctor Porcar Cano [<img align="right" src="images/linkedin.png" width="24">](http://google.com.au/)[<img align="right" src="images/github.png" width="28">](http://google.com.au/)[<img align="right" src="images/mail.png" width="30">](http://google.com.au/)
 
 IT resources I find useful
