@@ -1,5 +1,5 @@
 
-# Víctor Porcar Cano [<img align="right" src="images/github.png" width="28">](https://github.com/victormpcmun)[<img align="right" src="images/mail.png" width="28">](mailto:victormpcmun@gmail.com)[<img align="right" src="images/linkedin.png" width="28">](https://es.linkedin.com/in/victor-porcar-a110a533)
+# Víctor Porcar [<img align="right" src="images/github.png" width="28">](https://github.com/victormpcmun)[<img align="right" src="images/mail.png" width="28">](mailto:victormpcmun@gmail.com)[<img align="right" src="images/linkedin.png" width="28">](https://es.linkedin.com/in/victor-porcar-a110a533)
 
 IT resources I find useful in one place
 <br />
@@ -7,7 +7,7 @@ IT resources I find useful in one place
 
 ### Bookmarks
 
-Bookmarks related to IT collected over the years in a readable format (see [*here*](bookmarks/generate/README.md))
+My bookmarks related to IT collected over the years in a readable format (see [*here*](bookmarks/generate/README.md))
 
 * [Bookmarks](bookmarks/generated_bookmarks/generatedFSD.md)
 * [Raw Bookmarks](bookmarks/generated_bookmarks/bookmarksFSD.html): ready to be imported to any browser (format NETSCAPE-Bookmark-file-1" DOCTYPE)
