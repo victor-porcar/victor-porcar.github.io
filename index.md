@@ -2,10 +2,8 @@
 # Víctor Porcar Cano [<img align="right" src="images/github.png" width="28">](https://github.com/victormpcmun)[<img align="right" src="images/mail.png" width="28">](mailto:victormpcmun@gmail.com)[<img align="right" src="images/linkedin.png" width="28">](https://es.linkedin.com/in/victor-porcar-a110a533)
 
 IT resources I find useful in one place
-
 <br />
 <br />
-
 
 ### Bookmarks
 
@@ -53,15 +51,12 @@ Articles:
   <br />
   <br />
 
-***
+___
 
 ### Mountaneeiring
 
-Besides Software Engineering, Mountaineering has always been one of my passions:
+Besides Software Engineering, mountaineering has always been one of my passions:
 
-* [<img align="right" src="images/youtube.png" width="28">](https://www.youtube.com/c/V%C3%ADctorPorcar): my mountain YT channel (spanish)
-* [<img align="right" src="images/blogger.png" width="28">](https://victormpcmun.blogspot.com/): blog about mountaineering (spanish)
-* [La imagen de Penyagolosa 115 años atrás](https://www.elperiodicomediterraneo.com/castello-provincia/2021/08/29/115-anos-excursion-fotos-penyagolosa-sarthou-martinez-checa-aniversario-castellon-56448760.html): I'm proud of having this article published in the local newspaper :slightly_smiling_face:
-
-
+* [<img align="left" src="images/youtube.png" width="28"> Youtube](https://www.youtube.com/c/V%C3%ADctorPorcar) 
+* [<img align="left" src="images/blogger.png" width="28"> Blog](https://victormpcmun.blogspot.com/)
 
