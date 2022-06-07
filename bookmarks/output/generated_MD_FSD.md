@@ -2,8 +2,6 @@
 
 # FSD
         
-  * [info](file:///home/victor.porcar/Escritorio/info)
-
 * ## Util
             
   * [Epoch Converter - Unix Timestamp Converter](https://www.epochconverter.com/)
@@ -32,7 +30,6 @@
                     
   * [SPRING: Configure and Use Multiple DataSources in Spring Boot | Baeldung](https://www.baeldung.com/spring-boot-configure-multiple-datasources)
   * [SPRING: Spring Boot Actuator metrics monitoring with Prometheus and Grafana | CalliCoder](https://www.callicoder.com/spring-boot-actuator-metrics-monitoring-dashboard-prometheus-grafana/)
-  * [WEBFLUX REACTOR: Logging with Context in Spring WebFlux (Part II) - Nicolas Portmann - .NET / Java / Security](https://ndportmann.com/logging-with-context-in-spring-webflux/)
   * [Concurrency with LMAX Disruptor - An Introduction | Baeldung](https://www.baeldung.com/lmax-disruptor-concurrency)
   * [Introduction to Hystrix | Baeldung](https://www.baeldung.com/introduction-to-hystrix)
   * [Netflix Archaius with Various Database Configurations | Baeldung](https://www.baeldung.com/netflix-archaius-database-configurations)
@@ -85,7 +82,6 @@
   * [Agile software development - Wikipedia](https://en.wikipedia.org/wiki/Agile_software_development#The_Agile_Manifesto)
   * [Scrum VS Waterfall | How Do Scrum VS Waterfall Compare? Lean Agile](https://leanagiletraining.com/agile/waterfall-versus-scrum-how-do-they-compare/)
   * [The Reactive Manifesto](https://www.reactivemanifesto.org/)
-  * [Manifesto for Software Craftsmanship](http://manifesto.softwarecraftsmanship.org/)
   * [s5des.lo](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
   * [Lean software development - Wikipedia](https://en.wikipedia.org/wiki/Lean_software_development)
   * [A Design Analysis of Cloud-based Microservices Architecture at Netflix | by Cao Duc Nguyen | The Startup | Medium](https://medium.com/swlh/a-design-analysis-of-cloud-based-microservices-architecture-at-netflix-98836b2da45f)
@@ -165,8 +161,6 @@
 * ## Solr
                     
   * [Apache Solr Reference Guide 7.0](https://lucene.apache.org/solr/guide/7_0/index.html)
-  * [Query Syntax - Solr Tutorial.com](http://www.solrtutorial.com/solr-query-syntax.html)
-  * [Solr in 5 minutes - Solr Tutorial.com](http://www.solrtutorial.com/solr-in-5-minutes.html)
   * [Solr Regex Query Tutorial | Open Source Escapades](https://web.archive.org/web/20161030170947/http://www.openjems.com/solr-regex-tutorial/)
                     
   * [GraphQL Search Indexing  =&gt; muy interesante para tener un sistema conversacional y sobre todo conesguisdf sdfsdf gfdgd fiestas de la magdalena 2020](https://netflixtechblog.com/graphql-search-indexing-334c92e0d8d5)

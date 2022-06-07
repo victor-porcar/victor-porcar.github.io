@@ -9,7 +9,7 @@ IT resources I find useful in one place
 
 My bookmarks related to IT collected over the years in a readable format (see [*here*](bookmarks/README.md))
 
-* [Bookmarks (md)](bookmarks/output/generatedFSD.md) - [Bookmarks (pretty html)](bookmarks/output/generatedFSD.html) 
+* [Bookmarks (md as html)](bookmarks/output/generated_MD_FSD.md) - [Bookmarks (pretty html)](bookmarks/output/generated_HTML_FSD.html) 
 * [Raw Bookmarks](bookmarks/output/bookmarksFSD.html): to be imported to any browser (format NETSCAPE-Bookmark-file-1" DOCTYPE)
   <br />
   <br />
