@@ -7,10 +7,10 @@ IT resources I find useful in one place
 
 ### Bookmarks
 
-My bookmarks related to IT collected over the years in a readable format (see [*here*](bookmarks/generate/README.md))
+My bookmarks related to IT collected over the years in a readable format (see [*here*](bookmarks/README.md))
 
-* [Bookmarks](bookmarks/generated_bookmarks/generatedFSD.md)
-* [Raw Bookmarks](bookmarks/generated_bookmarks/bookmarksFSD.html): ready to be imported to any browser (format NETSCAPE-Bookmark-file-1" DOCTYPE)
+* [Bookmarks](bookmarks/bookmarks/output/generatedFSD.md)
+* [Raw Bookmarks](bookmarks/bookmarks/output/bookmarksFSD.html): to be imported to any browser (format NETSCAPE-Bookmark-file-1" DOCTYPE)
   <br />
   <br />
 
