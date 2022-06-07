@@ -14,15 +14,11 @@ My bookmarks related to IT collected over the years in a readable format (see [*
   <br />
 
 
-### CheatSheet
+### Notes 
 
-For everyday work:
+For everyday work, kind of my cheatsheet
 
-* [Shell](cheatsheets/shell.md)
-* [SQL](cheatsheets/sql.md)
-* [Kubernetes](cheatsheets/kubernetes.md)
-* [Git / Mercurial / gradle / mvn](cheatsheets/vcs.md)
-* [IDE Eclipse / Intellij](cheatsheets/ide.md)
+* [Notes](cheatsheets/shell.md)
   <br />
   <br />
 
