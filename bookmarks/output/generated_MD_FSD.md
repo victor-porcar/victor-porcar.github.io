@@ -13,7 +13,7 @@
 
       * ## JVM
 
-        * [The JVM Architecture Explained - DZone Java](https://dzone.com/articles/jvm-architecture-explained)
+        * [The JVM Architecture Explained - DZone Java *italica* **negrita** ***italica y negrita***](https://dzone.com/articles/jvm-architecture-explained)
         * [A Java Programmer&#39;s Guide to Byte Code](https://www.beyondjava.net/blog/java-programmers-guide-java-byte-code)
         * [A Quick Guide to Writing Bytecode With ASM](https://www.beyondjava.net/blog/quick-guide-writing-byte-code-asm)
         * [A Guide to Java Bytecode Manipulation with ASM - Baeldung](https://www.baeldung.com/java-asm)
