@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BOOKMARK2MD_HOME="$HOME/victormpcmun/bookmark2md"
+BOOKMARK2MD_HOME="$HOME/victormpcmun/Bookmark2md"
 
 BOOKMARK_FOLDER_NAME="FSD"
 
