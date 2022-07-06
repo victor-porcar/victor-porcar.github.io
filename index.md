@@ -18,7 +18,7 @@ My bookmarks related to IT collected over the years in a readable format (see [*
 
 For everyday work, kind of my cheatsheet
 
-* [Notes](cheatsheets/shell.md)
+* [Notes](cheatsheets/notes.md)
   <br />
   <br />
 
