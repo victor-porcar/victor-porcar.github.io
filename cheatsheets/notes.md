@@ -4,5 +4,5 @@
 ## mercurial
 
 ```
-./gradlew clean build --refresh-dependencies   // full refresh
+./gradlew clean build --refresh-dependencies   # full refresh
 ```
