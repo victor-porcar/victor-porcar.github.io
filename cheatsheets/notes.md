@@ -3,8 +3,6 @@
 
 ## mercurial
 
-
-aspecto 1
 ```
-command line 
+./gradlew clean build --refresh-dependencies   // full refresh
 ```
