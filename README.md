@@ -1,3 +1,3 @@
 # victormpcmun.github.io
 
-my personal site for it resources 
+my personal site for IT resources 
