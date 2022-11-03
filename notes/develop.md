@@ -1,5 +1,4 @@
-## [<img align="left" src="../images/back_button.png" width="28">](../index.md) Notes
-
+[<img align="right" src="images/github.png" width="24"> Edit](https://github.com/victormpcmun/victormpcmun.github.io/edit/master/notes/develop.md)
 
 ## mercurial
 
