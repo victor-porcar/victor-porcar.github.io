@@ -1,5 +1,7 @@
 @echo off
 
+:: please set this variable properly for your environment
+
 set "BOOKMARK2MD_HOME=D:\VICTOR-MASTER\FSD\MY_PROJECTS\GitHub\Bookmark2md"
 set "BOOKMARK_EXPORTED_FROM_BROWSER_DIRECTORY=D:\VICTOR-MASTER\Bookmarks"
 
