@@ -11,16 +11,17 @@ Bookmarks I collected over the years in a readable format (using tool  [Bookmark
 
 * [Pretty HTML](bookmarks/generated/generated_HTML_FSD.html)
 * [MarkDown (GitHub HTML style)](bookmarks/generated/generated_MD_FSD.md)
+* [Pretty HTML](bookmarks/generated/generated_HTML_FSD.html)
+* [MarkDown (GitHub HTML style)](bookmarks/generated/generated_MD_FSD.md)
 * [Raw importable HTML Bookmark](bookmarks/generated/bookmarksFSD.html)
-
   <br />
- 
+  <br />
 ### Notes 
 
 * [Develop](notes/develop.md)
 * [Devops](notes/devops.md)
   <br />
-
+  <br />
 ### Talks & Articles
 
 Some of my Talks:
@@ -35,4 +36,5 @@ Articles:
 
 * [DelayedBatchExecutor- article1](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [DelayedBatchExecutor (article 2)](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+  <br />
   <br />
