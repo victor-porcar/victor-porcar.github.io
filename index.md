@@ -9,11 +9,11 @@ IT resources I find useful in one place
 
 My bookmarks related to IT collected over the years in a readable format (see [*here*](bookmarks/README.md))
 
-* [Bookmarks (md as html)](bookmarks/output/generated_MD_FSD.md) - [Bookmarks (pretty html)](bookmarks/output/generated_HTML_FSD.html) - [Bookmarks (raw html to be imported to any browser)](bookmarks/output/bookmarksFSD.html) 
+* [Bookmarks (md as html)](bookmarks/generated/generated_MD_FSD.md) - [Bookmarks (pretty html)](bookmarks/generated/generated_HTML_FSD.html) - [Bookmarks (raw html to be imported to any browser)](bookmarks/generated/bookmarksFSD.html) 
   <br />
   <br />
 
-
+  
 ### Notes 
 
 For everyday work, kind of my cheatsheet
