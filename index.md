@@ -1,5 +1,5 @@
 
-## Víctor Porcar [<img align="right" src="images/github.png" width="28">](https://github.com/victormpcmun)[<img align="right" src="images/mail.png" width="28">](mailto:victormpcmun@gmail.com)[<img align="right" src="images/linkedin.png" width="28">](https://es.linkedin.com/in/victor-porcar-a110a533)
+## Víctor Porcar [<img align="right" src="images/github.png" width="24">](https://github.com/victormpcmun)[<img align="right" src="images/mail.png" width="24">](mailto:victormpcmun@gmail.com)[<img align="right" src="images/linkedin.png" width="24">](https://es.linkedin.com/in/victor-porcar-a110a533)
 
 My public IT resources in one place
 <br />
@@ -9,7 +9,10 @@ My public IT resources in one place
 
 Bookmarks I collected over the years in a readable format (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
-* [Bookmarks (md as html)](bookmarks/generated/generated_MD_FSD.md) - [Bookmarks (pretty html)](bookmarks/generated/generated_HTML_FSD.html) - [Bookmarks (raw html to be imported to any browser)](bookmarks/generated/bookmarksFSD.html) 
+* [Pretty HTML](bookmarks/generated/generated_HTML_FSD.html)
+* [MarkDown (GitHub HTML)](bookmarks/generated/generated_MD_FSD.md)
+* [Raw importable HTML Bookmark](bookmarks/generated/bookmarksFSD.html)
+
   <br />
   <br />
 
