@@ -7,11 +7,11 @@ My public IT resources in one place
 
 ### Bookmarks
 
-Bookmarks I collected over the years in a readable format (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
+Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
 * [Pretty HTML](bookmarks/generated/generated_PRETTY_HTML_IT.html)
 * [MarkDown GitHub style](bookmarks/generated/generated_MD_IT.md)
-* [Importable to browser](bookmarks/generated/bookmarksIT.html)
+* [Importable to a browser](bookmarks/generated/bookmarksIT.html)
 
 
 ### Tech notes 
