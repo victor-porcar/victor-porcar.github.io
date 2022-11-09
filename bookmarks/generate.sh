@@ -13,9 +13,9 @@ BOOKMARK_FOLDER_NAME="IT"
 THIS_FOLDER=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 GENERATED_FOLDER="$THIS_FOLDER/generated"
-MARKDOWN_FILE_NAME="generated_MD_FSD.md"
-HTML_PRETTY_FILE_NAME="generated_HTML_FSD.html"
-RAW_IMPORTABLE_HTML_FILE="bookmarksFSD.html"
+MARKDOWN_FILE_NAME="generated_MD_$BOOKMARK_FOLDER_NAME.md"
+HTML_PRETTY_FILE_NAME="generated_PRETTY_HTML_$BOOKMARK_FOLDER_NAME.html"
+RAW_IMPORTABLE_HTML_FILE="bookmarks$BOOKMARK_FOLDER_NAME.html"
 
 #  ======================================================
 
