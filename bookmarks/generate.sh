@@ -10,7 +10,6 @@ BOOKMARK_FOLDER_NAME="IT"
 
 #  CALCULATE PARAMETERS FOR bookmark2md
 
-# shellcheck disable=SC2164
 THIS_FOLDER=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 GENERATED_FOLDER="$THIS_FOLDER/generated"
