@@ -69,7 +69,6 @@
 
   * ## Engineering
 
-    * [Clean Coder Blog](https://blog.cleancoder.com/uncle-bob/2018/08/28/CraftsmanshipMovement.html)
     * ## Concepts
 
       * [Worse is better - Wikipedia](https://en.wikipedia.org/wiki/Worse_is_better)
@@ -128,6 +127,7 @@
     * ## Non Functional Requirements
 
 
+    * [Clean Coder Blog](https://blog.cleancoder.com/uncle-bob/2018/08/28/CraftsmanshipMovement.html)
 
   * ## DevOps
 
@@ -159,10 +159,10 @@
 
   * ## Data
 
-    * ## Oracle
-
-
     * ## MySQL
+
+
+    * ## Oracle
 
 
     * ## Solr
