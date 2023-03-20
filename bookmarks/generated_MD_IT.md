@@ -32,11 +32,6 @@
       * [What are markers in Java Logging frameworks and what is a reason to use them? - Stack Overflow](https://stackoverflow.com/questions/16813032/what-are-markers-in-java-logging-frameworks-and-what-is-a-reason-to-use-them)
       * [reactor-core/faq.adoc at main · reactor/reactor-core](https://github.com/reactor/reactor-core/blob/main/docs/asciidoc/faq.adoc)
 
-    * ## BOOK Effective Java Third Edition
-
-      * [test/Joshua Bloch - Effective Java (3rd) - 2018.pdf at master · muhdkhokhar/test · GitHub](https://github.com/muhdkhokhar/test/blob/master/Joshua%20Bloch%20-%20Effective%20Java%20(3rd)%20-%202018.pdf)
-      * [SUMMARY:Effective Java 3rd Edition Summary](https://github.com/david-sauvage/effective-java-summary/blob/master/README.md)
-
     * [Waste space in Java Collections: empty ArrayList() wastes 36 or 72 bytes. Use lazy creations](https://dzone.com/articles/preventing-your-java-collections-from-wasting-memo)
     * [Covariance, Contravariance: Java Generics, Arrays and Method return types - Covariant, Contravariant and Invariant subtyping rules](https://www.logicbig.com/tutorials/core-java-tutorial/java-language/java-subtyping-rules.html)
     * [Covariance and Contravariance In Java - DZone Java](https://dzone.com/articles/covariance-and-contravariance)
@@ -63,6 +58,11 @@
     * [syntax - What&#39;s the difference between &lt;?&gt; and &lt;? extends Object&gt; in Java Generics? - Stack Overflow](https://stackoverflow.com/questions/8055389/whats-the-difference-between-and-extends-object-in-java-generics)
     * [Guide to the Synchronized Keyword in Java - Baeldung](https://www.baeldung.com/java-synchronized)
     * [10 Things You Didn’t Know About Java – Java, SQL and jOOQ.](https://blog.jooq.org/10-things-you-didnt-know-about-java/)
+    * ## BOOK Effective Java Third Edition
+
+      * [test/Joshua Bloch - Effective Java (3rd) - 2018.pdf at master · muhdkhokhar/test · GitHub](https://github.com/muhdkhokhar/test/blob/master/Joshua%20Bloch%20-%20Effective%20Java%20(3rd)%20-%202018.pdf)
+      * [SUMMARY:Effective Java 3rd Edition Summary](https://github.com/david-sauvage/effective-java-summary/blob/master/README.md)
+
     * ## Classic
 
 
