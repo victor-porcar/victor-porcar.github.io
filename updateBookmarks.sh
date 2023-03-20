@@ -1,8 +1,12 @@
 #!/bin/bash
 
+THIS_FOLDER=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+
 # please set this variable properly for your environment
 
-BOOKMARK2MD_HOME="$HOME/victormpcmun/Bookmark2md"
+#BOOKMARK2MD_HOME="$HOME/victormpcmun/Bookmark2md"
+BOOKMARK2MD_HOME="../Bookmark2md"
+
 BOOKMARK_EXPORTED_FROM_BROWSER_DIRECTORY="$HOME/Bookmarks"
 BOOKMARK_FOLDER_NAME="IT"
 
@@ -10,7 +14,7 @@ BOOKMARK_FOLDER_NAME="IT"
 
 #  CALCULATE PARAMETERS FOR bookmark2md
 
-THIS_FOLDER=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+
 
 GENERATED_FOLDER="$THIS_FOLDER/bookmarks"
 MARKDOWN_FILE_NAME="generated_MD_$BOOKMARK_FOLDER_NAME.md"
