@@ -9,9 +9,9 @@ My public IT resources in one place
 
 Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
-* [Pretty HTML](bookmarks/generated/generated_PRETTY_HTML_IT.html)
-* [MarkDown GitHub style](bookmarks/generated/generated_MD_IT.md)
-* [Importable to a browser](bookmarks/generated/bookmarksIT.html)
+* [Pretty HTML](bookmarks/generated_PRETTY_HTML_IT.html)
+* [MarkDown GitHub style](bookmarks/generated_MD_IT.md)
+* [Importable to a browser](bookmarks/bookmarksIT.html)
 
 
 ### Tech notes 
