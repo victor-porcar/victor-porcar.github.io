@@ -307,7 +307,7 @@ It is not possible to use a block() operator on a Mono/Flux returned by the libr
 ## Developing Applications with WebFlux Reactor
 
 ```
-You can "mix" reactivity approach and "classical" approach in the same application, for example in Powersearch:
+You can "mix" reactivity approach and "classical" approach in the same application, for example in xxxx:
 All code to manage searches is implemented in a reactive way
 Queries to database to tefresh of local caches that happens every 10 minutes are performed in a no reactive way
 ```
