@@ -24,7 +24,7 @@ Bookmarks I collected over the years in readable formats (using tool  [Bookmark2
 
 Some of my Talks:
 
-* [Introduction To Reactor](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+* [Introduction To Reactor Part 1](./talks/reactive_programming_with_webflux_reactor_part1/reactive_programming_with_webflux_reactor_part1.md)
 * [SonarLint / SonarQube](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [Loggin policy](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [Code Refactor](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
