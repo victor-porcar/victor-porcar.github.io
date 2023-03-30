@@ -23,29 +23,11 @@ To be used when:
 
 when the response is not well structured as Json array example: Solr HTTP Response, Mirada APIs
 when the response size is “short”: Even having a structured response, perhaps it is not worthy to use Flux
-[http://dev.mirada.tv/hg/capability-iris-sdp-search/file/4aa31e59b83c/service-iris-sdp-search/src/main/java/tv/mirada/iris/sdp/search/service](http://dev.mirada.tv/hg/capability-iris-sdp-search/file/4aa31e59b83c/service-iris-sdp-search/src/main/java/tv/mirada/iris/sdp/search/service)
-/HttpService.java
-Fully working example including:
 
-```
-POST / GET Methods, passing parameters and headers
-Logging response as string (if required)
-Dealing with status code generate exceptions if required
-Dealing correctly with unexpected situations timeouts
-```
 ### RestController
 
 Similar to the conventional spring web controller, but methods should return Mono or Flux
-Real example
-[http://dev.mirada.tv/hg/capability-iris-sdp-search/file/4aa31e59b83c/service-iris-sdp-search/src/main/java/tv/mirada/iris/sdp/search/rest](http://dev.mirada.tv/hg/capability-iris-sdp-search/file/4aa31e59b83c/service-iris-sdp-search/src/main/java/tv/mirada/iris/sdp/search/rest)
-/SearchController.java
-Fully working example including:
 
-```
-Swagger public documentation
-Using a builder to handle request params important to have clean code!!!
-single responsability controller handles only I/O parameters all business logic is delegated to the proper service
-```
 ### Redis
 
 based on templates, similar to the non reactive API
@@ -70,11 +52,7 @@ Project Oracle R2DBC: https://github.com/oracle/oracle-r2dbc The Oracle R2DBC Dr
 19c and 21c.
 Dave Moten wrote a driver: https://github.com/davidmoten/rxjava2-jdbc
 Originally written in RxJava, not Reactor, however it is fully integrated in Reactor
-Used in some projects of Mirada
-Example:
-Database is a bean of org.davidmoten.rx.jdbc.Database that is typically configured as pointed in:
-[http://dev.mirada.tv/hg/capability-iris-sdp-wishlist/file/10846da72bad/service-iris-sdp-wishlist/src/main/java/tv/mirada/iris/sdp/wishlist/port/rx2jdbc](http://dev.mirada.tv/hg/capability-iris-sdp-wishlist/file/10846da72bad/service-iris-sdp-wishlist/src/main/java/tv/mirada/iris/sdp/wishlist/port/rx2jdbc)
-/RXJdbcConfiguration.java
+
 Known issues
 DO NOT USE block() on a MONO returned by the driver, if so, it will “kept” the executing thread indefinitely and the service will soon
 collapse
