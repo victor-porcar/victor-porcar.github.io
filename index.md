@@ -26,7 +26,7 @@ Some of my Talks:
 
 * [Introduction To Reactor Part 1](./talks/reactive_programming_with_webflux_reactor_part1/reactive_programming_with_webflux_reactor_part1.md)
 * [Introduction To Reactor Part 2](./talks/reactive_programming_with_webflux_reactor_part2/reactive_programming_with_webflux_reactor_part2.md)
-* [SonarLint / SonarQube](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+* [SonarLint / SonarQube](./talks/sonarLint/sonarLint.md)
 * [Loggin policy](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [Code Refactor](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [Clean code](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
