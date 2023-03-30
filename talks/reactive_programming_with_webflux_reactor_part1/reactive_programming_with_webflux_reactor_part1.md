@@ -88,7 +88,7 @@ NOTE: There is not an official implementation for JDBC / Oracle database. See la
 ```
 WebFlux Reactor = Spring Boot + Reactor library + Async I/O communication modules
 ```
-Ratpack, which is used in Mirada, includes Netty as async web server as well·
+Ratpack includes Netty as async web server as well·
 
 ### Why and When Reactive Programming is good idea?
 
