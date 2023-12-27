@@ -16,16 +16,16 @@ Bookmarks I collected over the years in readable formats (using tool  [Bookmark2
 
 ### Tech notes 
 
-* [Develop](notes/develop.md)
-* [Devops](notes/devops.md)
+* [Develop](./site/notes/develop.md)
+* [Devops](./site/notes/devops.md)
 
 
 ### Talks & Articles
 
 Some of my Talks:
 
-* [Introduction To Reactor Part 1](./talks/reactive_programming_with_webflux_reactor_part1/reactive_programming_with_webflux_reactor_part1.md)
-* [Introduction To Reactor Part 2](./talks/reactive_programming_with_webflux_reactor_part2/reactive_programming_with_webflux_reactor_part2.md)
+* [Introduction To Reactor Part 1](.site/talks/reactive_programming_with_webflux_reactor_part1/reactive_programming_with_webflux_reactor_part1.md)
+* [Introduction To Reactor Part 2](.site/talks/reactive_programming_with_webflux_reactor_part2/reactive_programming_with_webflux_reactor_part2.md)
 * [SonarLint / SonarQube](./talks/sonarLint/sonarLint.md)
 * [Loggin policy](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
 * [Code Refactor](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)

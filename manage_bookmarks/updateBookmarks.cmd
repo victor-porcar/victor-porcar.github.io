@@ -4,8 +4,8 @@ set "THIS_FOLDER=%~dp0"
 
 :: ======================================================
 
-set "BOOKMARK2MD_HOME=.\..\Bookmark2md"
-set "BOOKMARK_EXPORTED_FROM_BROWSER_DIRECTORY=.\..\..\..\Bookmarks\RawBookmarks"
+set "BOOKMARK2MD_HOME=.\..\..\Bookmark2md"
+set "BOOKMARK_EXPORTED_FROM_BROWSER_DIRECTORY=.\..\..\..\..\Bookmarks\RawBookmarks"
 set "BOOKMARK_FOLDER_NAME=IT"
 
 :: ======================================================
@@ -13,7 +13,7 @@ set "BOOKMARK_FOLDER_NAME=IT"
 :: CALCULATE PARAMETERS FOR bookmark2md
 
 
-set "GENERATED_FOLDER=%THIS_FOLDER%bookmarks"
+set "GENERATED_FOLDER=%THIS_FOLDER%\..\site\bookmarks"
 set "MARKDOWN_FILE_NAME=generated_MD_%BOOKMARK_FOLDER_NAME%.md"
 set "HTML_PRETTY_FILE_NAME=generated_PRETTY_HTML_%BOOKMARK_FOLDER_NAME%.html"
 set "RAW_IMPORTABLE_HTML_FILE=bookmarks%BOOKMARK_FOLDER_NAME%.html"
