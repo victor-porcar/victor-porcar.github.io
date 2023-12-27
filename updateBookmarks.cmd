@@ -4,8 +4,8 @@ set "THIS_FOLDER=%~dp0"
 
 :: ======================================================
 
-set "BOOKMARK2MD_HOME=D:\VICTOR-MASTER\FSD\MY_PROJECTS\GitHub\Bookmark2md"
-set "BOOKMARK_EXPORTED_FROM_BROWSER_DIRECTORY=D:\VICTOR-MASTER\Bookmarks\RawBookmarks"
+set "BOOKMARK2MD_HOME=.\..\Bookmark2md"
+set "BOOKMARK_EXPORTED_FROM_BROWSER_DIRECTORY=.\..\..\..\Bookmarks\RawBookmarks"
 set "BOOKMARK_FOLDER_NAME=IT"
 
 :: ======================================================
