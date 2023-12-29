@@ -24,9 +24,11 @@ If a project is cloned with token, then later it is not necessary to enter name/
 then set the name and the account id (email) to push the commits for this project
 
 `git config user.name "victor-porcar"`
+
 `git config user. email "you@example.com"`
 
 These values can be set globally, so they apply for all git projects
 
 `git config --global user.name "victor-porcar"`
+
 `git config --global user. email "you@example.com"`
