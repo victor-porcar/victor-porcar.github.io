@@ -3,13 +3,16 @@
 
 ## Create a GitHub Token
 
-Let's create a "classic" github token for the account. 
+Let's create a "classic" github token for an existing account. 
 
 1) goto https://github.com/settings/apps
 2) choose tokens classic
 3) generate new token
 4) select only "repo" with all its children, which is enough to push later
 5) set a name for your token
+
+
+NOTE: this token will apply for all repositories in the account
 
 
 ## Clone a project with token
