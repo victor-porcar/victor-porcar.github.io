@@ -38,7 +38,7 @@ Now, let’s suppose we have to build a java service that loads all cars from da
 
 The typical approach would be something like this:
 
-```groovy
+```java
 private final static String RETRIEVE_CAR= "select * from car";
 
 public void readCarsFromDatabase() {
@@ -98,7 +98,7 @@ It could be achieve by using a **interner** component
 
 Let’s have a look how it would work using the previous example
 
-```groovy
+```java
 Interner interner = Interner.instance();
 
 private final static String RETRIEVE_CAR = "select * from CAR";
@@ -128,7 +128,7 @@ public void readCarsFromDatabase() {
 
 let’s focus on line 21
 
-```groovy
+```java
 String internedBrand = interner.internString(brand);
 ```
 
@@ -143,7 +143,7 @@ Interner is a component that uses basically a Map to maintain one and only one i
 
 So, it keeps in memory the very first instance “interned”.
 
-```groovy
+```java
 public class Interner {
     private Map<String,String> stringMap = Collections.synchronizedMap(new HashMap<String,String>());
      ...
