@@ -1,10 +1,5 @@
 # Delayed-Batch-Executor
-*   [Introduction](#DelayedBatchExecutor-Introduction)
-*   [Database queries](#DelayedBatchExecutor-Databasequeries)
-*   [DelayedBatchExecutor (DBE)](#DelayedBatchExecutor-DelayedBatchExecutor(DBE))
-    *   [Example](#DelayedBatchExecutor-Example)
-    *   [DBE Execution policies](#DelayedBatchExecutor-DBEExecutionpolicies)
-        *   [\- Blocking](#DelayedBatchExecutor--Blocking)
+ 
 
 Introduction
 ------------
