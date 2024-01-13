@@ -11,17 +11,17 @@
 *   Write more performant code
 *   Write cleaner code
 
-  
+![image](./4605476912.png)
   
 
 SonarLint is a _member_ of the well-known [SonarQube](https://www.sonarqube.org/) ecosystem. But it can work as a standalone product.
 
   
 
-![SonarQube Instance Components](sonarqube-dev-cycle.png)
+![SonarQube Instance Components](sonarqb.jpeg)
 
-Rules
------
+## Rules
+ 
 
 [SonarLint](https://www.sonarlint.org/) defines a set of Rules for many languages. For Java [it covers more than 640 rules](https://rules.sonarsource.com/java)
 
@@ -45,16 +45,11 @@ Please find more information about rules [here](https://docs.sonarqube.org/lates
 
   
 
-Installation and Configuration
-==============================
+## Installation and Configuration
+ 
 
-  
-
-Installation in Eclipse
------------------------
-
-  
-
+### Installation in Eclipse
+ 
 1.  As first step, update your lombok.jar (located in your eclipse directory) to the [latest version](https://projectlombok.org/download) 
 2.  Using eclipse MarketPlace, install "SonarLint" plugin
 3.  Restart your eclipse
@@ -62,26 +57,23 @@ Installation in Eclipse
 
   
 
-Configuration
--------------
-
-  
-
+### Configuration
+ 
 1.  Go to Preferences → SonarLint → Rules Configuration
 
 You can enable or disable rules for a particular language. Some of them can be configured by setting parameters. Once enable or disabled click on Apply
 
-#### ![](attachments/4605476866/4605476948.png)
+![image](./4605476948.png)
 
-  
 
 It is possible to configure how Eclipse will point a rule violation in the IDE, to do that configure Text Editor Annotations  in Eclipse
 
-![](attachments/4605476866/4605476933.png)
-------------------------------------------
+![image](./4605476933.png)
+ 
+ 
 
-Exporting  / Importing SonarLint Rules
---------------------------------------
+### Exporting  / Importing SonarLint Rules
+ 
 
   
 
@@ -97,21 +89,16 @@ Rules configutations are actually stored in a settings files on your eclipse dir
 
 So you can read/write file  **org.sonarlint.eclipse.ui.prefs** in order to export/import rules.
 
-Using SonarLint
-===============
-
-  
-
+## Using SonarLint
+ 
 It is possible to analyze a whole  project, to do that  click on Menu "SonarLint" → Analize
 
   
 After some time of analysis, all violations will appear in the "SonarLint Repor" tab
 
   
-
-![](attachments/4605476866/4605476924.png)
-
-  
+![image](./4605476924.png)
+ 
 
 However, as pointed before,  the most interesting option is the ability to analyze code **as we write,** it underlines  the problematic code and 
 
@@ -124,12 +111,10 @@ when the pointer is over the code, it shows a little popup with the
 
   
 
-Some Interesting and useful Rules
-=================================
+## Rules
+ 
 
-  
-
-Some interesting examples to avoid bugs:
+### Some interesting rules to avoid bugs:
 
   
 
@@ -139,7 +124,7 @@ Some interesting examples to avoid bugs:
 
   
 
-Some interesting examples to optimize performance :
+### Some interesting rules to optimize performance :
 
   
 
@@ -149,7 +134,7 @@ Some interesting examples to optimize performance :
 
   
 
-Some examples of rules for good **CLEAN CODE**
+### Some interesting rules for good **CLEAN CODE**
 
   
 
@@ -159,26 +144,21 @@ Some examples of rules for good **CLEAN CODE**
 
   
 
-Some examples of rules for good style (similar to _Checkstyle Plugin (eclipse-cs)_ )
+### Some interesting rules for good style (similar to _Checkstyle Plugin (eclipse-cs)_ )
 
   
 
 <table class="wrapped relative-table confluenceTable" style="width: 71.2679%;"><colgroup><col style="width: 53.0079%;"></colgroup><colgroup><col style="width: 7.00646%;"></colgroup><colgroup><col style="width: 10.3948%;"></colgroup><colgroup><col style="width: 29.4616%;"></colgroup><tbody><tr><th class="confluenceTh">Rule</th><th colspan="1" class="confluenceTh">Category</th><th colspan="1" class="confluenceTh">Security Level</th><th colspan="1" class="confluenceTh">Comment</th></tr><tr><td colspan="1" class="confluenceTd"><p><a class="external-link" href="https://rules.sonarsource.com/java/RSPEC-105" rel="nofollow">Tabulation characters should not be used</a></p></td><td colspan="1" class="confluenceTd">Code Smell</td><td colspan="1" class="confluenceTd">Minor</td><td colspan="1" class="confluenceTd"><br></td></tr><tr><td colspan="1" class="confluenceTd"><p><a class="external-link" href="https://rules.sonarsource.com/java/RSPEC-122" rel="nofollow">Statements should be on separate lines</a></p></td><td colspan="1" class="confluenceTd">Code Smell</td><td colspan="1" class="confluenceTd">Major</td><td colspan="1" class="confluenceTd"><br></td></tr><tr><td colspan="1" class="confluenceTd"><p><a class="external-link" href="https://rules.sonarsource.com/java/RSPEC-103" rel="nofollow">Lines should not be too long</a></p></td><td colspan="1" class="confluenceTd">Code Smell</td><td colspan="1" class="confluenceTd">Major</td><td colspan="1" class="confluenceTd">150</td></tr><tr><td colspan="1" class="confluenceTd"><p><a class="external-link" href="https://rules.sonarsource.com/java/RSPEC-1107" rel="nofollow">Close curly brace and the next "else", "catch" and "finally" keywords should be located on the same line</a></p></td><td colspan="1" class="confluenceTd">Code Smell</td><td colspan="1" class="confluenceTd">Minor</td><td colspan="1" class="confluenceTd"><br></td></tr><tr><td colspan="1" class="confluenceTd"><p><a class="external-link" href="https://rules.sonarsource.com/java/RSPEC-122" rel="nofollow">Statements should be on separate lines</a></p></td><td colspan="1" class="confluenceTd">Code Small</td><td colspan="1" class="confluenceTd">Major</td><td colspan="1" class="confluenceTd"><br></td></tr></tbody></table>
 
-Disable SonarLint Rules
-=======================
-
-  
-
+## Disable SonarLint Rules
+ 
 Let's take an example:
-
-  
 
 Let's suposse I don't agree with a particular rule in one place, for example:
 
   
-
-![](attachments/4605476866/4605476921.png?width=524)
+![image](./4605476921.png)
+ 
 
 which violates  [Local variables should not be declared and then immediately returned or thrown](https://rules.sonarsource.com/java/type/Code%20Smell/RSPEC-1488)
 
@@ -187,22 +167,12 @@ But I really want to have this local variable because I want to inspect the vari
 In order to disable it just in one place, just add a comment at then end of the line (//NOSONAR)
 
   
+![image](./4605476918.png?width=614)
+ 
 
-![](attachments/4605476866/4605476918.png?width=614)
-
-Proposed Rules Configuration
-============================
-
-  
-
+## Proposed Rules Configuration
+ 
 The rules explained before are defined in the following file:
-
-  
-
-org.sonarlint.eclipse.ui.prefs
-
-  
-
-  
-
-[![](attachments/thumbnails/4605476866/4605476915)](attachments/4605476866/4605476915.prefs)
+ 
+[org.sonarlint.eclipse.ui.prefs](./4605476915.prefs)
+ 
