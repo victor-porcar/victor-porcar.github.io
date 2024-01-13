@@ -1,24 +1,7 @@
-*   [Introduction](#CopyofSonarLint-Introduction)
-    *   [Rules](#CopyofSonarLint-Rules)
-*   [Installation and Configuration](#CopyofSonarLint-InstallationandConfiguration)
-    *   [Installation in Eclipse](#CopyofSonarLint-InstallationinEclipse)
-    *   [Configuration](#CopyofSonarLint-Configuration)
-        
-        *   [](#CopyofSonarLint-)
-        [](#CopyofSonarLint-)
-        
-        [](#CopyofSonarLint-)
-    [](#CopyofSonarLint-)*   [](#CopyofSonarLint-)[](#CopyofSonarLint-.1)
-    [](#CopyofSonarLint-.1)*   [](#CopyofSonarLint-.1)[Exporting / Importing SonarLint Rules](#CopyofSonarLint-Exporting/ImportingSonarLintRules)
-*   [Using SonarLint](#CopyofSonarLint-UsingSonarLint)
-*   [Some Interesting and useful Rules](#CopyofSonarLint-SomeInterestingandusefulRules)
-*   [Disable SonarLint Rules](#CopyofSonarLint-DisableSonarLintRules)
-*   [Proposed Rules Configuration](#CopyofSonarLint-ProposedRulesConfiguration)
+# SonarLint and Clean Code
 
-Introduction
-============
-
-  
+ 
+ 
 
 [SonarLint](https://www.sonarlint.org/) is an open source IDE plugin (Eclipse, Intellij, VisualStudio)  that helps you detect and fix quality issues **as you write (real time)** in order to:
 
@@ -29,9 +12,6 @@ Introduction
 *   Write cleaner code
 
   
-
-![](attachments/4605476866/4605476912.png?width=450)
-
   
 
 SonarLint is a _member_ of the well-known [SonarQube](https://www.sonarqube.org/) ecosystem. But it can work as a standalone product.
