@@ -76,11 +76,11 @@ Code may fall into two categories:
                 
 
  
-  As explained, there will be only one log line that summarizes the request execution, which could be <strong>INFO</strong>, <strong>ERROR</strong> or <strong>WARN</strong>.</p><p>Typically this log will be written by the top class of the execution hierarchy, which is normally a <strong>Controller</strong> or <strong>Handler</strong>
+  As explained, there will be only one log line that summarizes the request execution, which could be <strong>INFO</strong>, <strong>ERROR</strong> or <strong>WARN</strong>, this log line will be written by the top class of the execution hierarchy, which is normally a <strong>Controller</strong> or <strong>Handler</strong>
 
 #### Production log level
 
-Typically production environment will have INFO level, which will include FATAL, ERROR and WARN as well (see the hierarchy below).
+Typically production environment will have INFO level, which will include these levels as well: FATAL, ERROR and WARN as well (see the hierarchy below).
 
 ![log hierarchy](./log_hierarchy.png)
 
