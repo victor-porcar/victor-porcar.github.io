@@ -27,7 +27,8 @@ Some of my Talks:
 * [Interning](site/talks/interning/interning.md)
 * [SonarLint and Clean Code](site/talks/sonarLintAndCleanCode/sonarLintAndCleanCode.md)
 * [Logging policy](site/talks/loggingPolicy/loggingPolicy.md)
-* [Logging policy](site/talks/loggingPolicy/loggingPolicy.md)
+* [Reactive programming and WebFlux](site/talks/reactiveProgrammingAndWebFlux/reactiveProgrammingAndWebFlux.md)
+* [Delayed-Batch-Executor](site/talks/delayedBatchExecutor/delayedBatchExecutor.md)
 
 Articles:
 
