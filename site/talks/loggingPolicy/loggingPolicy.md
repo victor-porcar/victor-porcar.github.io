@@ -17,7 +17,7 @@ The amount of log generated in services receiving thousand of request in a short
 
 Based on this,  the following is a guideline to address and mitigage these issues
 
-## Log level
+## Log level and strategies
  
 
 Typically, there are four log levels to be used:
