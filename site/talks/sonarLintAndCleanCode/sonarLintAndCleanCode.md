@@ -18,7 +18,7 @@ SonarLint is a _member_ of the well-known [SonarQube](https://www.sonarqube.org/
 
   
 
-![SonarQube Instance Components](https://docs.sonarqube.org/latest/images/dev-cycle.png)
+![SonarQube Instance Components](sonarqube-dev-cycle.png)
 
 Rules
 -----
