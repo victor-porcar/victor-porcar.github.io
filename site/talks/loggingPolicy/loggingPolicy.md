@@ -34,11 +34,11 @@ Typically, there are four log levels to be used:
 *   **TRACE / DEBUG**: to be used to describe relevant data or execution flow that may help the developer to find out a problem or explain a behaviour. The differences between TRACE and DEBUG are subtle.
     
 
-### Log amount
+#### Log amount
 
 Code may fall into two categories:
 
-#### Infrequently executed code
+##### Infrequently executed code
 
 *   this code is typically executed at startup time or in periodic tasks
     
@@ -50,7 +50,7 @@ Code may fall into two categories:
     *   only detailed data or subtle details in **DEBUG / TRACE.**
         
 
-#### Frequently executed code
+##### Frequently executed code
 
 *   this code is typically executed in services processing many requests/events per second.
     
@@ -76,7 +76,7 @@ Code may fall into two categories:
  
   As explained, there will be only one log line that summarizes the request execution, which could be <strong>INFO</strong>, <strong>ERROR</strong> or <strong>WARN</strong>.</p><p>Typically this log will be written by the top class of the execution hierarchy, which is normally a <strong>Controller</strong> or <strong>Handler</strong>
 
-### Production log level
+#### Production log level
 
 Typically production environment will have INFO level, which will include WARN and ERROR as well (see the hierarchy below).
 
@@ -91,8 +91,6 @@ Typically production environment will have INFO level, which will include WARN a
 In non reactive environments it is easy to follow all the logs of a particular request because they will log the executing **threadId**, which is the same in all lifecycle of the request.
 
 In reactive environments specially (Ratpack or WebFluxReactor), the **threadId** can not be used to follow the lines of logs because the executing thread may change and that is a problem, the solution is to used a **Identifier of the request**
-
-### **WebFlux Reactor**
 
 Althoug WebFlux creates a particular logId for every request, it is much better to use [Sleuth](https://spring.io/projects/spring-cloud-sleuth/) , which manages automatically the logging in to the reactive chain and much much more interesting features.
 
@@ -177,73 +175,20 @@ There are not universal rules
 
 As a rule of thumb → Log or Propagate ONLY thing that provides information !!!!
 
-### Controlled situation (warning) ignoring exception
+Questions to ask ouservelves:
 
-At some point we need to retrieve recordings from TvRecord, but there is an error in the returned json
+Does logging this message provide useful information ?
+Does logging this exception provide useful information ?
 
-The business rules tell us that if for somereason recordings can not be retrieved, then assume No recordings
 
-```groovy
-List<Recording> getRecordingsFromJson(String jsonRecording) {
-
-  try {
-	return Arrays.asList(objectMapper.readValue(jsonRecording, Recording.class));
-  } catch (JsonProcessingException e) {
-     // Logging the whole original stack trace exception does not provide information
-     
-	 	Log.warn("can not deserialize json {}. Cause={} From this point assuming no recordings", 
-				jsonRecording, 
-				e.getMessage());
-				
-	 return Collection.emptyList();
-  }
-
-}
-```
-
-### Controlled situation (error) ignoring original exception
-
-The business rules tells us that if for some reason recordings can not be retrieved, then it can not follow with the execution → error
-
-```groovy
-List<Recording> getRecordingsFromJson(String jsonRecording) {
-
-  try {
-	return Arrays.asList(objectMapper.readValue(jsonRecording, Recording.class));
-  } catch (JsonProcessingException e) {
-    // original exception is not added as cause because it Does not provides information?
-    throws new RecordingException("can not deserialize json " + jsonRecording + " because:" + e.getMessage());
-  }
-
-}
-```
-
-### UnControlled situation (error)
-
-In this case it make sense to add as a cause the original exception as it can help us to see the actual problem
-
-As a rule of thumb → if catch general `Exception` rather than a specific one, then it is good idea to add it as a cause
-
-```groovy
-indexSolr() {
-   try {
-			List<Content> contentList = hollowMetadataLoader.getContent();
-			...
-			List<Document> documentList = createDocumentsFromContent(contentList);
-   
-   } catch (Exception e) {
-		throw new IndexSolrException("Can not index Solr",e)
-}
-  
-```
 
 APPENDIX: Exception chaining in Java
 ------------------------------------
 
 Java keeps the whole exception chain when logging
 
-```groovy
-package tv.mirada.iris.sdp.search.test;
+```java
+package test;
 
 /* this is a just a quick sample to prove how Java chains exceptions 
 without any external library
@@ -280,15 +225,15 @@ public class Test {
 
 Result:
 
-```groovy
+```java
 init method 1
 init method 2
-tv.mirada.iris.sdp.search.test.Sample1Exception: Exception method 1
-	at tv.mirada.iris.sdp.search.test.Test.method1(Test.java:19)
-	at tv.mirada.iris.sdp.search.test.Test.main(Test.java:7)
-Caused by: tv.mirada.iris.sdp.search.test.Sample2Exception: Exception method 2
-	at tv.mirada.iris.sdp.search.test.Test.method2(Test.java:25)
-	at tv.mirada.iris.sdp.search.test.Test.method1(Test.java:16)
+test.Sample1Exception: Exception method 1
+	at test.Test.method1(Test.java:19)
+	at test.Test.main(Test.java:7)
+Caused by: test.Sample2Exception: Exception method 2
+	at test.Test.method2(Test.java:25)
+	at test.Test.method1(Test.java:16)
 	... 1 more
 ```
 
@@ -296,4 +241,4 @@ But cleverly enough, Java avoids to repeat stack trace lines
 
 (1.. more) is actually:
 
-`at tv.mirada.iris.sdp.search.test.Test.main(Test.java:7)`
+`at test.Test.main(Test.java:7)`
