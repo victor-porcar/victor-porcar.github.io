@@ -1,35 +1,9 @@
-\[data-colorid=hpxejf1wwm\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=hpxejf1wwm\]{color:#d6d9db}\[data-colorid=qd6zkf7d89\]{color:#454c55} html\[data-color-mode=dark\] \[data-colorid=qd6zkf7d89\]{color:#aab1ba}\[data-colorid=mhjru1t7nc\]{color:#202124} html\[data-color-mode=dark\] \[data-colorid=mhjru1t7nc\]{color:#dbdcdf}\[data-colorid=zry8mmczvd\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=zry8mmczvd\]{color:#d6d9db}\[data-colorid=y69ztax79m\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=y69ztax79m\]{color:#d6d9db}\[data-colorid=o27hy5y1ak\]{color:#292b2c} html\[data-color-mode=dark\] \[data-colorid=o27hy5y1ak\]{color:#d3d5d6}\[data-colorid=f5ebzpspl6\]{color:#202124} html\[data-color-mode=dark\] \[data-colorid=f5ebzpspl6\]{color:#dbdcdf}\[data-colorid=p1m10pg4ou\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=p1m10pg4ou\]{color:#d6d9db}\[data-colorid=nl6qvokf4j\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=nl6qvokf4j\]{color:#d6d9db}\[data-colorid=zjz4q73o5q\]{color:#292929} html\[data-color-mode=dark\] \[data-colorid=zjz4q73o5q\]{color:#d6d6d6}\[data-colorid=q5qjnttlc5\]{color:#474747} html\[data-color-mode=dark\] \[data-colorid=q5qjnttlc5\]{color:#b8b8b8}\[data-colorid=rmo2lh9q3h\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=rmo2lh9q3h\]{color:#d6d9db}\[data-colorid=gjb3sal9c8\]{color:#292929} html\[data-color-mode=dark\] \[data-colorid=gjb3sal9c8\]{color:#d6d6d6}\[data-colorid=dv2v52gx30\]{color:#292929} html\[data-color-mode=dark\] \[data-colorid=dv2v52gx30\]{color:#d6d6d6}\[data-colorid=d9xhf0o9qw\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=d9xhf0o9qw\]{color:#d6d9db}\[data-colorid=fjd9eh2xn0\]{color:#292b2c} html\[data-color-mode=dark\] \[data-colorid=fjd9eh2xn0\]{color:#d3d5d6}\[data-colorid=xnyjwyuua8\]{color:#292b2c} html\[data-color-mode=dark\] \[data-colorid=xnyjwyuua8\]{color:#d3d5d6}\[data-colorid=rr37pt5o68\]{color:#474747} html\[data-color-mode=dark\] \[data-colorid=rr37pt5o68\]{color:#b8b8b8}\[data-colorid=cvwsxvc37z\]{color:#474747} html\[data-color-mode=dark\] \[data-colorid=cvwsxvc37z\]{color:#b8b8b8}\[data-colorid=sqmcjx2ahc\]{color:#242729} html\[data-color-mode=dark\] \[data-colorid=sqmcjx2ahc\]{color:#d6d9db}\[data-colorid=jmikwb29pz\]{color:#454c55} html\[data-color-mode=dark\] \[data-colorid=jmikwb29pz\]{color:#aab1ba}\[data-colorid=czqfe5yanx\]{color:#292b2c} html\[data-color-mode=dark\] \[data-colorid=czqfe5yanx\]{color:#d3d5d6}\[data-colorid=isge4relkw\]{color:#454c55} html\[data-color-mode=dark\] \[data-colorid=isge4relkw\]{color:#aab1ba}  
+# Reactive programming in WebFlux (part 1)
 
-/\*<!\[CDATA\[\*/ div.rbtoc1705128493117 {padding: 0px;} div.rbtoc1705128493117 ul {list-style: disc;margin-left: 0px;} div.rbtoc1705128493117 li {margin-left: 0px;padding-left: 0px;} /\*\]\]>\*/
+## Introduction to Reactive Paradigm
+ 
 
-*   [Introduction to Reactive Paradigm](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-IntroductiontoReactiveParadigm)
-    *   [Reactive Programming in Java](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-ReactiveProgramminginJava)
-    *   [Spring Boot WebFlux Reactor](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-SpringBootWebFluxReactor)
-    *   [Why and When Reactive Programming is good idea?](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-WhyandWhenReactiveProgrammingisgoodidea?)
-        *   [Thread-per-Request processing](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Thread-per-Requestprocessing)
-        *   [Reactive Programming](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-ReactiveProgramming)
-*   [Digging deeper in WebFlux Reactor](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-DiggingdeeperinWebFluxReactor)
-    *   [Mono](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Mono)
-        *   [Operators](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Operators)
-            *   [Map](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Map)
-            *   [FlatMap](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-FlatMap)
-            *   [Zip](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Zip)
-    *   [Flux](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Flux)
-    *   [Exceptions / timeout](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Exceptions/timeout)
-    *   [Blocking scenario](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Blockingscenario)
-    *   [Schedulers](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Schedulers)
-    *   [Reactive Web Server](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-ReactiveWebServer)
-    *   [Web Client](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-WebClient)
-    *   [Redis](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Redis)
-    *   [Database](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-Database)
-*   [Developing Applications with WebFlux Reactor](#CopyofReactiveProgrammingwithWebFluxReactor(partI)-DevelopingApplicationswithWebFluxReactor)
-
-Introduction to Reactive Paradigm
-=================================
-
-  
-
-//<!\[CDATA\[ (function(){ var data = { "addon\_key":"com.mxgraph.confluence.plugins.plantuml", "uniqueKey":"com.mxgraph.confluence.plugins.plantuml\_\_plantumlcloud2207699160968631890", "key":"plantumlcloud", "moduleType":"dynamicContentMacros", "moduleLocation":"content", "cp":"/wiki", "general":"", "w":"600px", "h":"400px", "url":"https://puml4cc.stratus-addons.com/viewer.html?pageId=4605476983&filename=Example.png&width=400&linkMap=&revision=5&repository=&zoom=&toolbar=&markup=hVFRDsIgDD0Nn0sQdgFd%2FFPiFZiSjYSxhUKy41tA0SjOpGnal77XVyAtBS%2BdD5MhdB%2BDUcz9vMaCsUvojYZROawTwk96GP3BBPUYrsWCivqqF2l9ljkrADmoLCIB0xNJS5W9IRSXpvaL3s0WwqTc7k3ghW0QWIXAypU%2FaaJCE9lbuYQS3jUN4ccPL5sD7N%2BAKOZIS%2FFZ8F%2Fu&xdm\_e=https%3A%2F%2Fmirada.atlassian.net&xdm\_c=channel-com.mxgraph.confluence.plugins.plantuml\_\_plantumlcloud2207699160968631890&cp=%2Fwiki&xdm\_deprecated\_addon\_key\_do\_not\_use=com.mxgraph.confluence.plugins.plantuml&lic=active&cv=1000.0.0-ed9338f6a197&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZDI4N2QwNjljMGQwMzBjMjk3N2ZmYjEiLCJxc2giOiI1M2E5MzJjNGU4ZWJiZDhhMTZkZjc1MGU3M2Q2YzMyN2Y4NjNhNGMzM2JkMTdhY2MwZTcwNmQ3ZjdkMDI4MDNlIiwiaXNzIjoiZjhjMTQ0MzEtNGRlNi0zZGZkLWEzMTAtY2RhM2VkZDVmNzc1IiwiY29udGV4dCI6e30sImV4cCI6MTcwNTEyODY3MywiaWF0IjoxNzA1MTI4NDkzfQ.PpRaOBA3DTwA\_IENjAWnJYILG9LOpxvgCSPgxVEVN2U", "contextJwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZDI4N2QwNjljMGQwMzBjMjk3N2ZmYjEiLCJxc2giOiJjb250ZXh0LXFzaCIsImlzcyI6ImY4YzE0NDMxLTRkZTYtM2RmZC1hMzEwLWNkYTNlZGQ1Zjc3NSIsImNvbnRleHQiOnsibGljZW5zZSI6eyJhY3RpdmUiOnRydWV9LCJjb25mbHVlbmNlIjp7Im1hY3JvIjp7Im91dHB1dFR5cGUiOiJodG1sX2V4cG9ydCIsImhhc2giOiJlZmE3Y2VjNC00ZGZiLTRjNzUtOGI5NC00MWFmMjYyZmNhNWUiLCJpZCI6ImVmYTdjZWM0LTRkZmItNGM3NS04Yjk0LTQxYWYyNjJmY2E1ZSJ9LCJjb250ZW50Ijp7InR5cGUiOiJwYWdlIiwidmVyc2lvbiI6IjEiLCJpZCI6IjQ2MDU0NzY5ODMifSwic3BhY2UiOnsia2V5IjoifjExNzc0MTU3MyIsImlkIjoiMTM1MjMwMjgzNyJ9fX0sImV4cCI6MTcwNTEyOTM5MywiaWF0IjoxNzA1MTI4NDkzfQ.8NlignO8Uzl3-QRE1x7AF-ZTHXU0wfYwV6lDiT-QAOw", "structuredContext": "{\\"license\\":{\\"active\\":true},\\"confluence\\":{\\"macro\\":{\\"outputType\\":\\"html\_export\\",\\"hash\\":\\"efa7cec4-4dfb-4c75-8b94-41af262fca5e\\",\\"id\\":\\"efa7cec4-4dfb-4c75-8b94-41af262fca5e\\"},\\"content\\":{\\"type\\":\\"page\\",\\"version\\":\\"1\\",\\"id\\":\\"4605476983\\"},\\"space\\":{\\"key\\":\\"~117741573\\",\\"id\\":\\"1352302837\\"}}}", "contentClassifier":"content", "productCtx":"{\\"page.id\\":\\"4605476983\\",\\"macro.hash\\":\\"efa7cec4-4dfb-4c75-8b94-41af262fca5e\\",\\"data\\":\\"hVFRDsIgDD0Nn0sQdgFd/FPiFZiSjYSxhUKy41tA0SjOpGnal77XVyAtBS+dD5MhdB+DUcz9vMaCsUvojYZROawTwk96GP3BBPUYrsWCivqqF2l9ljkrADmoLCIB0xNJS5W9IRSXpvaL3s0WwqTc7k3ghW0QWIXAypU/aaJCE9lbuYQS3jUN4ccPL5sD7N+AKOZIS/FZ8F/u\\",\\"space.key\\":\\"~117741573\\",\\"page.type\\":\\"page\\",\\"content.version\\":\\"1\\",\\"page.title\\":\\"Copy of Reactive Programming with WebFlux Reactor (part I)\\",\\"macro.localId\\":\\"\\",\\"macro.body\\":\\"\\",\\": = | RAW | = :\\":\\"filename=Example.png|data=hVFRDsIgDD0Nn0sQdgFd/FPiFZiSjYSxhUKy41tA0SjOpGnal77XVyAtBS+dD5MhdB+DUcz9vMaCsUvojYZROawTwk96GP3BBPUYrsWCivqqF2l9ljkrADmoLCIB0xNJS5W9IRSXpvaL3s0WwqTc7k3ghW0QWIXAypU/aaJCE9lbuYQS3jUN4ccPL5sD7N+AKOZIS/FZ8F/u|width=400|compressed=true|revision=5\\",\\"space.id\\":\\"1352302837\\",\\"macro.truncated\\":\\"false\\",\\"content.type\\":\\"page\\",\\"output.type\\":\\"html\_export\\",\\"page.version\\":\\"1\\",\\"revision\\":\\"5\\",\\"filename\\":\\"Example.png\\",\\"content.id\\":\\"4605476983\\",\\"width\\":\\"400\\",\\"macro.id\\":\\"efa7cec4-4dfb-4c75-8b94-41af262fca5e\\",\\"compressed\\":\\"true\\",\\"user.isExternalCollaborator\\":\\"false\\"}", "timeZone":"UTC", "origin":"https://puml4cc.stratus-addons.com", "hostOrigin":"https://mirada.atlassian.net", "sandbox":"allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-storage-access-by-user-activation", "apiMigrations": { "gdpr": true } } ; if(window.AP && window.AP.subCreate) { window.\_AP.appendConnectAddon(data); } else { require(\['ac/create'\], function(create){ create.appendConnectAddon(data); }); } // For Confluence App Analytics. This code works in conjunction with CFE's ConnectSupport.js. // Here, we add a listener to the initial HTML page that stores events if the ConnectSupport component // has not mounted yet. In CFE, we process the missed event data and disable this initial listener. const \_\_MAX\_EVENT\_ARRAY\_SIZE\_\_ = 20; const connectAppAnalytics = "ecosystem.confluence.connect.analytics"; window.connectHost && window.connectHost.onIframeEstablished((eventData) => { if (!window.\_\_CONFLUENCE\_CONNECT\_SUPPORT\_LOADED\_\_) { let events = JSON.parse(window.localStorage.getItem(connectAppAnalytics)) || \[\]; if (events.length >= \_\_MAX\_EVENT\_ARRAY\_SIZE\_\_) { events.shift(); } events.push(eventData); window.localStorage.setItem(connectAppAnalytics, JSON.stringify(events)); } }); }()); //\]\]>
+  <IMNAGEÇ>
 
   
 
@@ -46,11 +20,8 @@ This scenario is **reactive** because the subscriber will **_react_** to a new d
 *   It is message-driven mechanism
 *   Low coupling between Publishe and Subscriber
 
-Reactive Programming in Java
-----------------------------
-
-  
-
+## Reactive Programming in Java
+ 
 While **Asynchronous** **processing** is quite old in computing, in Java it can be achieved from the very first day by Managing Threads in an _ad-hoc_ solution (from Java 1) or using java.concurrent.util API (from Java 1.5)
 
 **Reactive**  Paradigm was introduced as a trend a few years ago.
@@ -69,10 +40,8 @@ There are several implementations:
 *   [Vert.x](https://vertx.io/)
 *   [Java 9](https://www.reactive-streams.org/) 
 
-Spring Boot WebFlux Reactor
----------------------------
-
-  
+### Spring Boot WebFlux Reactor
+ 
 
 As pointed, Spring Boot uses **Reactor** as _Reactive streams_ implementation to provide Reactive Programming.
 
@@ -102,13 +71,10 @@ Fortunately there are some of them in the Java Ecosystem:
 <table class="wrapped confluenceTable"><colgroup><col></colgroup><tbody><tr><th class="confluenceTh"><strong>WebFlux Reactor =&nbsp; Spring Boot + Reactor library +&nbsp; Async I/O communication modules</strong></th></tr></tbody></table>
 
   
+ 
 
-**Ratpack, which is used in Mirada,  includes Netty as async web server as well·**
-
-Why and When Reactive Programming is good idea?
------------------------------------------------
-
-  
+## Why and When Reactive Programming is good idea?
+ 
 
 In the context of a Web Service, let's compare a traditional approach (_Thread-per-request_) vs _reactive_ approach
 
@@ -146,14 +112,13 @@ In reactive programming, threads are not blocked or waiting for a I/O  to comple
 
 The problem with Reactive Programming is the code usually is more complex → difficult to maintain and to extend
 
-  
 
-<table class="wrapped confluenceTable"><colgroup><col></colgroup><tbody><tr><th class="confluenceTh"><p><strong>is good idea to use WebFlux Reactor ???&nbsp;&nbsp;</strong></p><p>My opinion:&nbsp; If there is a lot of potentially blocking I/O operations then it would be good idea, otherwise stick in the<em> traditional way (not reactive)</em></p><p><br></p><p><em>Examples:</em></p><ul><li><em>PowerSearch receives tens of HTTP requests per second, which means a&nbsp; lot of I/O operations → good idea at least in the component that handles requests</em></li><li><em>HollowMetadataPublisher which only reads database&nbsp;</em><em>every 10 minutes&nbsp;→ not good idea</em></li></ul><p><br></p></th></tr></tbody></table>
+<table class="wrapped confluenceTable"><colgroup><col></colgroup><tbody><tr><th class="confluenceTh"><strong>is good idea to use WebFlux Reactor ???&nbsp;&nbsp;</strong></p><p>My opinion:&nbsp; If there is a lot of potentially blocking I/O operations then it would be good idea, otherwise stick in the<em> traditional way (not reactive)</strong></th></tr></tbody></table>
 
-  
+ 
 
-Digging deeper in WebFlux Reactor
-=================================
+## Digging deeper in WebFlux Reactor
+ 
 
   
 
