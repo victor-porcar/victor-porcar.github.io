@@ -20,7 +20,7 @@ Based on this,  the following is a guideline to address and mitigage these issue
 ## Log level and strategies
  
 
-Typically, there are four log levels to be used:
+The following are the typically available logs
 
 *   **INFO**: to be used when everything goes smoothly, nothing unexpected happened
     
