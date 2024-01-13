@@ -1,5 +1,5 @@
 
-## Víctor Porcar [<img align="right" src="images/github.png" width="24">](https://github.com/victormpcmun)[<img align="right" src="images/mail.png" width="24">](mailto:victormpcmun@gmail.com)[<img align="right" src="images/linkedin.png" width="24">](https://es.linkedin.com/in/victor-porcar-a110a533)
+## Víctor Porcar [<img align="right" src="site/images/mail.png" width="24">](mailto:victormpcmun@gmail.com)[<img align="right" src="site/images/github.png" width="24">](https://github.com/victormpcmun)[<img align="right" src="site/images/linkedin.png" width="24">](https://es.linkedin.com/in/victor-porcar-a110a533)
 
 My public IT resources in one place
 <br />
@@ -9,8 +9,8 @@ My public IT resources in one place
 
 Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
-* [Pretty HTML](bookmarks/generated_PRETTY_HTML_IT.html)
-* [MarkDown GitHub style](bookmarks/generated_MD_IT.md)
+* [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
+* [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
 * [Importable to a browser](bookmarks/bookmarksIT.html)
 
 
@@ -24,12 +24,10 @@ Bookmarks I collected over the years in readable formats (using tool  [Bookmark2
 
 Some of my Talks:
 
-* [Introduction To Reactor Part 1](.site/talks/reactive_programming_with_webflux_reactor_part1/reactive_programming_with_webflux_reactor_part1.md)
-* [Introduction To Reactor Part 2](.site/talks/reactive_programming_with_webflux_reactor_part2/reactive_programming_with_webflux_reactor_part2.md)
-* [SonarLint / SonarQube](./talks/sonarLint/sonarLint.md)
-* [Loggin policy](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
-* [Code Refactor](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
-* [Clean code](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
+* [Interning](site/talks/interning/interning.md)
+* [SonarLint and Clean Code](site/talks/sonarLintAndCleanCode/sonarLintAndCleanCode.md)
+* [Logging policy](site/talks/loggingPolicy/loggingPolicy.md)
+* [Logging policy](site/talks/loggingPolicy/loggingPolicy.md)
 
 Articles:
 
