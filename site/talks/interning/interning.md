@@ -1,4 +1,8 @@
 
+# INTERNER
+
+
+
 *   [Introduction](#InterningLibrary-Introduction)
 *   [Example](#InterningLibrary-Example)
 *   [Interning process](#InterningLibrary-Interningprocess)
@@ -17,6 +21,7 @@ Let’s see how it works by using a real example:
 Let’s suppose there is a table “CAR” in our database model that holds information about cars we have to rent, the car table has the following structure:
 
 ![Interning](./interning.png)
+
 
 where for example column “**brand**” is a string that takes one of the following values:
 
