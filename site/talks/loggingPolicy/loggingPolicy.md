@@ -80,7 +80,7 @@ Code may fall into two categories:
 
 Typically production environment will have INFO level, which will include WARN and ERROR as well (see the hierarchy below).
 
-![exception hierarchy](./exception_hierarchy.png)
+![log hierarchy](./log_hierarchy.png)
 
 ## Good Practices
 
