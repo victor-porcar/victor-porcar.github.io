@@ -32,6 +32,8 @@ Typically, there are four log levels to be used:
     
 
 *   **TRACE / DEBUG**: to be used to describe relevant data or execution flow that may help the developer to find out a problem or explain a behaviour. The differences between TRACE and DEBUG are subtle.
+
+*   **FATAL**: the application can not be executed as it should, it is used typically by low level components or the underlying frameworks, i.e, it should not be used when developing business logic. 
     
 
 #### Log amount
@@ -78,7 +80,7 @@ Code may fall into two categories:
 
 #### Production log level
 
-Typically production environment will have INFO level, which will include WARN and ERROR as well (see the hierarchy below).
+Typically production environment will have INFO level, which will include FATAL, ERROR and WARN as well (see the hierarchy below).
 
 ![log hierarchy](./log_hierarchy.png)
 
