@@ -1,24 +1,9 @@
 
 ## Víctor Porcar [<img align="right" src="site/images/mail.png" width="24">](mailto:victormpcmun@gmail.com)[<img align="right" src="site/images/github.png" width="24">](https://github.com/victor-porcar)[<img align="right" src="site/images/linkedin.png" width="24">](https://es.linkedin.com/in/victor-porcar-a110a533)
 
-My public IT resources in one place
+*My public IT resources in one place*
 <br />
 <br />
-
-### Bookmarks
-
-Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
-
-* [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
-* [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
-* [Importable to a browser](bookmarks/bookmarksIT.html)
-
-
-### Tech notes 
-
-* [Develop](./site/notes/develop.md)
-* [Devops](./site/notes/devops.md)
-
 
 ### Tech Talks & Articles
 
@@ -34,7 +19,21 @@ Bookmarks I collected over the years in readable formats (using tool  [Bookmark2
 * [instance-rebuilder using Spring AOP proxies](site/talks/instance-rebuiler/instance-rebuilder.md)
 
 
-  ### Mountain
+### Tech notes 
+
+* [Develop](./site/notes/develop.md)
+* [Devops](./site/notes/devops.md)
+
+
+### Bookmarks
+
+Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
+
+* [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
+* [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
+* [Importable to a browser](bookmarks/bookmarksIT.html)
+
+### Mountain
 
   My passion is mountaneering and photography:
   
