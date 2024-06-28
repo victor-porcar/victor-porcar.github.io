@@ -5,7 +5,9 @@
 <br />
 <br />
 
-### Tech Talks
+### My Tech Talks
+
+The documentation I wrote to help me in my Tech Talks
 
 * [Interning](https://github.com/victor-porcar/TechTalk-Interning)
 * [SonarLint and Clean Code](https://github.com/victor-porcar/TechTalk-SonarLint-and-Clean-Code)
@@ -18,9 +20,18 @@
 * [Sleuth for Tracing](https://github.com/victor-porcar/TechTalk-Sleuth-for-Tracing)
 
  
-### Bookmarks
+### My Bookmarks
 
-Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
+These are the IT Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
+
+* [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
+* [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
+* [Importable to a browser](bookmarks/bookmarksIT.html)
+
+
+### Forked GitHub Repositories
+
+Repositories I found interesting
 
 * [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
 * [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
