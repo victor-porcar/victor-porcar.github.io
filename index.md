@@ -5,7 +5,7 @@
 <br />
 <br />
 
-### My Tech Talks
+### Tech Talks
 
 The documentation I wrote to help me in my Tech Talks
 
@@ -14,19 +14,24 @@ The documentation I wrote to help me in my Tech Talks
 * [Logging policy](https://github.com/victor-porcar/TechTalk-Logging-Policy)
 * [Reactive programming and WebFlux](https://github.com/victor-porcar/TechTalk-Reactive-Programming-and-WebFlux)
 * [Delayed-Batch-Executor](https://github.com/victor-porcar/TechTalk-Delayed-Batch-Executor)
-* [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
-* [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
+   * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
+   * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
 * [instance-rebuilder using Spring AOP proxies](site/talks/instance-rebuiler/instance-rebuilder.md)
 * [Sleuth for Tracing](https://github.com/victor-porcar/TechTalk-Sleuth-for-Tracing)
 
  
-### My Bookmarks
+### Bookmarks
 
 These are the IT Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
 * [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
 * [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
 * [Importable to a browser](bookmarks/bookmarksIT.html)
+
+### Projects
+
+Small applications that I wrote
+* [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): convert browser bookmarks to readable pretty html/md page
 
 
 ### Forked GitHub Repositories
