@@ -5,26 +5,19 @@
 <br />
 <br />
 
-### Tech Talks & Articles
+### Tech Talks
 
-
-
-* [Tech Talk:Interning](https://github.com/victor-porcar/TechTalk-Interning)
-* [SonarLint and Clean Code](site/talks/sonarLintAndCleanCode/sonarLintAndCleanCode.md)
-* [Logging policy](site/talks/loggingPolicy/loggingPolicy.md)
-* [Reactive programming and WebFlux](site/talks/reactiveProgrammingAndWebFlux/reactiveProgrammingAndWebFlux.md)
-* [Delayed-Batch-Executor](site/talks/delayedBatchExecutor/delayedBatchExecutor.md)
+* [Interning](https://github.com/victor-porcar/TechTalk-Interning)
+* [SonarLint and Clean Code](https://github.com/victor-porcar/TechTalk-SonarLint-and-Clean-Code)
+* [Logging policy](https://github.com/victor-porcar/TechTalk-Logging-Policy)
+* [Reactive programming and WebFlux](https://github.com/victor-porcar/TechTalk-Reactive-Programming-and-WebFlux)
+* [Delayed-Batch-Executor](https://github.com/victor-porcar/TechTalk-Delayed-Batch-Executor)
 * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
 * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
 * [instance-rebuilder using Spring AOP proxies](site/talks/instance-rebuiler/instance-rebuilder.md)
+* [Sleuth for Tracing](https://github.com/victor-porcar/TechTalk-Sleuth-for-Tracing)
 
-
-### Tech notes 
-
-* [Develop](./site/notes/develop.md)
-* [Devops](./site/notes/devops.md)
-
-
+ 
 ### Bookmarks
 
 Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
@@ -33,11 +26,11 @@ Bookmarks I collected over the years in readable formats (using tool  [Bookmark2
 * [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
 * [Importable to a browser](bookmarks/bookmarksIT.html)
 
-### Mountain
+### Miscellaneous
 
-  My passion is mountaneering and photography:
+ 
   
-  * [Interning](site/talks/interning/interning.md)
+  * [My Youtube channel about mountaineering](https://www.youtube.com/c/V%C3%ADctorPorcar))
   
 
 
