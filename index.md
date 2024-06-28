@@ -30,8 +30,10 @@ These are the IT Bookmarks I collected over the years in readable formats (using
 
 ### Projects
 
-Small applications that I wrote
-* [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): convert browser bookmarks to readable pretty html/md page
+Small tools that I wrote for my own
+
+* [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): command line tool convert browser bookmarks to readable pretty html/md page
+* [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
 
 
 ### Forked GitHub Repositories
