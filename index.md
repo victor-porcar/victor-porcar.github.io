@@ -38,7 +38,7 @@ Small tools that I wrote for my own
 
 ### Forked GitHub Repositories
 
-Repositories I found interesting
+Repositories I found interesting from the vast GitHub
 
 * [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
 * [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
@@ -46,9 +46,7 @@ Repositories I found interesting
 
 ### Miscellaneous
 
- 
-  
-  * [My Youtube channel about mountaineering](https://www.youtube.com/c/V%C3%ADctorPorcar))
+* [My Youtube channel about mountaineering](https://www.youtube.com/c/V%C3%ADctorPorcar))
   
 
 
