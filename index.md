@@ -1,13 +1,13 @@
 
 ## Víctor Porcar [<img align="right" src="site/images/mail.png" width="24">](mailto:victormpcmun@gmail.com)[<img align="right" src="site/images/github.png" width="24">](https://github.com/victor-porcar)[<img align="right" src="site/images/linkedin.png" width="24">](https://es.linkedin.com/in/victor-porcar-a110a533)
 
-*My public GitHub resources in one place*
+*My IT resources on GitHub*
 <br />
 <br />
 
 ### Tech Talks
 
-The documentation I wrote to help me in my Tech Talks
+The documentation I wrote for my Tech Talks
 
 * [Interning](https://github.com/victor-porcar/TechTalk-Interning)
 * [SonarLint and Clean Code](https://github.com/victor-porcar/TechTalk-SonarLint-and-Clean-Code)
@@ -30,7 +30,7 @@ These are the IT Bookmarks I collected over the years in readable formats (using
 
 ### Projects
 
-Small tools that I wrote for my use
+Small tools that I wrote for my own use
 
 * [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): command line tool convert browser bookmarks to readable pretty html/md page
 * [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
