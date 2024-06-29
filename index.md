@@ -7,7 +7,7 @@
 
 ### Tech Talks
 
-The documentation I wrote for my Tech Talks
+The documentation I wrote for my Tech Talks in Markdown
 
 
 * [Arthas tool](https://github.com/victor-porcar/TechTalk-Arthas-Tool)
@@ -27,13 +27,13 @@ The documentation I wrote for my Tech Talks
 These are the IT Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
 * [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
-* [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
+* [Markdown GitHub format](bookmarks/generated_MD_IT.md)
 * [Importable to a browser](bookmarks/bookmarksIT.html)
 
 ### Projects
 
 Small tools that I wrote for my own use
-* [kubenv]: kubenv is a tool to set multiple port-forwards for a given kubernetes configuration
+* [Kubernetes kubenv](https://github.com/victor-porcar/kubernetes-kubenv/blob/master/README.md): kubenv is a tool to set multiple port-forwards for a given kubernetes configuration
 * [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): command line tool convert browser bookmarks to readable pretty html/md page
 * [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
 
