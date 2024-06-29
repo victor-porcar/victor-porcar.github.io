@@ -44,9 +44,4 @@ Repositories I found interesting from the vast GitHub
 * [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
 * [Importable to a browser](bookmarks/bookmarksIT.html)
 
-### Miscellaneous
-
-* [My Youtube channel about mountaineering](https://www.youtube.com/c/V%C3%ADctorPorcar))
-  
-
 
