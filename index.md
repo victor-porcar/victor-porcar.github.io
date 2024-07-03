@@ -44,6 +44,6 @@ Repositories I found interesting from the vast GitHub
 
 * [Full Stack Developer Interview Questions And Answers](https://github.com/victor-porcar/Full-stack-Developer-Interview-Questions-and-Answers)
 * [Effective Java Summary by *Joshua Bloch*](https://github.com/victor-porcar/effective-java-summary)
-* [Importable to a browser](bookmarks/bookmarksIT.html)
+
 
 
