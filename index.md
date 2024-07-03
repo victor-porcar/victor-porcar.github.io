@@ -41,8 +41,8 @@ Small tools that I wrote for my own use
 
 Repositories I found interesting from the vast GitHub
 
-* [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
-* [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
+* [Full Stack Developer Interview Questions And Answers](https://github.com/victor-porcar/Full-stack-Developer-Interview-Questions-and-Answers)
+* [Effective Java Summary by *Joshua Bloch*](https://github.com/victor-porcar/effective-java-summary)
 * [Importable to a browser](bookmarks/bookmarksIT.html)
 
 
