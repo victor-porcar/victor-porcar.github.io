@@ -19,6 +19,7 @@ The documentation I wrote for my Tech Talks in Markdown
    * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
    * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
 * [Sleuth for Tracing](https://github.com/victor-porcar/TechTalk-Sleuth-for-Tracing)
+* [Clean Code by Uncle Bob](https://github.com/victor-porcar/TechTalk-Clean-Code)
 
  
 ### Bookmarks
