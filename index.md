@@ -18,7 +18,6 @@ The documentation I wrote for my Tech Talks in Markdown
 * [Delayed-Batch-Executor](https://github.com/victor-porcar/TechTalk-Delayed-Batch-Executor)
    * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
    * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
-* [instance-rebuilder using Spring AOP proxies](site/talks/instance-rebuiler/instance-rebuilder.md)
 * [Sleuth for Tracing](https://github.com/victor-porcar/TechTalk-Sleuth-for-Tracing)
 
  
