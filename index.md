@@ -33,9 +33,10 @@ These are the IT Bookmarks I collected over the years in readable formats (using
 ### Utilities and Scripts
 
 Useful utilities and scripts for my own use:
-* [Kubernetes kubenv](./site/scripts/kubenv/kubenv.sh): kubenv is a tool to set multiple port-forwards for a given kubernetes configuration
-* [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): command line tool convert browser bookmarks to readable pretty html/md page
-* [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
+* [gitCloneAll](./site/scripts/gitCloneAll/gitCloneAll.sh): is a script to clone all git repositories for a given user
+* [kubenv.sh](./site/scripts/kubenv/kubenv.sh): kubenv is a script to set multiple port-forwards for a given kubernetes configuration
+* [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): is a project for a command line tool to convert browser bookmarks to readable pretty html/md page
+* [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): is a project for a command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
 
 
 ### Forked GitHub Repositories
