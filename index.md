@@ -10,16 +10,16 @@
 The documentation I wrote for my Tech Talks in Markdown
 
 
-* [Arthas tool](https://github.com/victor-porcar/my-tech-talks/TechTalk-Arthas-Tool/readme.md)
-* [Interning](https://github.com/victor-porcar/TechTalk-Interning)
-* [SonarLint and Clean Code](https://github.com/victor-porcar/TechTalk-SonarLint-and-Clean-Code)
-* [Logging policy](https://github.com/victor-porcar/TechTalk-Logging-Policy)
-* [Reactive programming and WebFlux](https://github.com/victor-porcar/TechTalk-Reactive-Programming-and-WebFlux)
-* [Delayed-Batch-Executor](https://github.com/victor-porcar/TechTalk-Delayed-Batch-Executor)
+* [Arthas tool](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Arthas-Tool/README.md)
+* [Interning](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Interning/README.md)
+* [SonarLint and Clean Code](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-SonarLint-and-Clean-Code/README.md)
+* [Logging policy](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Logging-Policy/README.md)
+* [Reactive programming and WebFlux](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Reactive-Programming-and-WebFlux/README.md)
+* [Delayed-Batch-Executor](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Delayed-Batch-Executor/README.md)
    * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
    * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
-* [Sleuth for Tracing](https://github.com/victor-porcar/TechTalk-Sleuth-for-Tracing)
-* [Clean Code by Uncle Bob](https://github.com/victor-porcar/TechTalk-Clean-Code)
+* [Sleuth for Tracing](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Sleuth-for-Tracing/README.md)
+* [Clean Code by Uncle Bob](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Clean-Code/README.md)
 
  
 ### Bookmarks
