@@ -10,16 +10,16 @@
 The documentation I wrote for my Tech Talks in Markdown
 
 
-* [Arthas tool](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Arthas-Tool/README.md)
-* [Interning](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Interning/README.md)
-* [SonarLint and Clean Code](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-SonarLint-and-Clean-Code/README.md)
-* [Logging policy](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Logging-Policy/README.md)
-* [Reactive programming and WebFlux](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Reactive-Programming-and-WebFlux/README.md)
-* [Delayed-Batch-Executor](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Delayed-Batch-Executor/README.md)
+* [Arthas tool](./site/tech-talks/TechTalk-Arthas-Tool/README.md)
+* [Interning](./site/tech-talks/TechTalk-Interning/README.md)
+* [SonarLint and Clean Code](./site/tech-talks/TechTalk-SonarLint-and-Clean-Code/README.md)
+* [Logging policy](./site/tech-talks/TechTalk-Logging-Policy/README.md)
+* [Reactive programming and WebFlux](./site/tech-talks/TechTalk-Reactive-Programming-and-WebFlux/README.md)
+* [Delayed-Batch-Executor](./site/tech-talks/TechTalk-Delayed-Batch-Executor/README.md)
    * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
    * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
-* [Sleuth for Tracing](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Sleuth-for-Tracing/README.md)
-* [Clean Code by Uncle Bob](https://github.com/victor-porcar/my-tech-talks/blob/master/TechTalk-Clean-Code/README.md)
+* [Sleuth for Tracing](./site/tech-talks/TechTalk-Sleuth-for-Tracing/README.md)
+* [Clean Code by Uncle Bob](./site/tech-talks/TechTalk-Clean-Code/README.md)
 
  
 ### Bookmarks
