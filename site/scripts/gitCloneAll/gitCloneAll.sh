@@ -22,7 +22,7 @@ fi
 
 cd $dir
 
-curl "https://api.github.com/users/$name/repos?page=1&per_page=1000" | grep -e 'clone_url*' | cut -d \" -f 4 | xargs -L1 git clone
+curl "https://api.github.com/users/$name/repos?page=1&per_page=1000" --header "Authorization: Bearer $GITHUB_TOKEN" | grep -e 'clone_url*' | cut -d \" -f 4 | xargs -L1 git clone
  
  
 
