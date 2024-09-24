@@ -10,7 +10,7 @@
 The documentation I wrote for my Tech Talks in Markdown
 
 
-* [Arthas tool](https://github.com/victor-porcar/TechTalk-Arthas-Tool)
+* [Arthas tool](https://github.com/victor-porcar/my-tech-talks/TechTalk-Arthas-Tool/readme.md)
 * [Interning](https://github.com/victor-porcar/TechTalk-Interning)
 * [SonarLint and Clean Code](https://github.com/victor-porcar/TechTalk-SonarLint-and-Clean-Code)
 * [Logging policy](https://github.com/victor-porcar/TechTalk-Logging-Policy)
