@@ -25,7 +25,6 @@ The documentation I wrote for my Tech Talks in Markdown
 
 My IT Boomarks I collected over the years in [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html), [Markdown GitHub format](bookmarks/generated_MD_IT.md) and [Importable to a browser](bookmarks/bookmarksIT.html)
 <br />
-<br />
 
 ### Utilities and Scripts
 
@@ -36,12 +35,10 @@ Useful utilities and scripts for my own use:
 * [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): is an utility for a command line tool to convert browser bookmarks to readable pretty html/md page
 * [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): is an utility for a command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
 <br />
-<br />
 
 ### GitHub Repositories
 
 hola
-<br />
 <br />
 
 ### Forked GitHub Repositories
