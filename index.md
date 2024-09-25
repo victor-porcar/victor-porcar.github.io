@@ -5,7 +5,7 @@
 <br />
 <br />
 
-### Tech Talks
+### My Tech Talks
 
 The documentation I wrote for my Tech Talks in Markdown
 
@@ -22,15 +22,12 @@ The documentation I wrote for my Tech Talks in Markdown
 * [Clean Code by Uncle Bob](./site/tech-talks/TechTalk-Clean-Code/README.md)
 
  
-### Bookmarks
+### My Bookmarks
 
-These are the IT Bookmarks I collected over the years in readable formats (using tool  [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
+My IT Boomarks I collected over the years in [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html), [Markdown GitHub format](bookmarks/generated_MD_IT.md) and [Importable to a browser](bookmarks/bookmarksIT.html)
 
-* [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
-* [Markdown GitHub format](bookmarks/generated_MD_IT.md)
-* [Importable to a browser](bookmarks/bookmarksIT.html)
 
-### Utilities and Scripts
+### My Utilities and Scripts
 
 Useful utilities and scripts for my own use:
 * [gitCloneAll.sh for Linux](./site/scripts/gitCloneAll/gitCloneAll.sh): is a script to clone all git repositories for a given user
@@ -39,10 +36,10 @@ Useful utilities and scripts for my own use:
 * [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): is an utility for a command line tool to convert browser bookmarks to readable pretty html/md page
 * [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): is an utility for a command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
 
+### My GitHub Repositories
+
 
 ### Forked GitHub Repositories
-
-Repositories I found interesting from the vast GitHub
 
 * [Full Stack Developer Interview Questions And Answers](https://github.com/victor-porcar/Full-stack-Developer-Interview-Questions-and-Answers)
 * [Effective Java Summary by *Joshua Bloch*](https://github.com/victor-porcar/effective-java-summary)
