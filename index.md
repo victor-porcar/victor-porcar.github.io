@@ -9,7 +9,6 @@
 
 The documentation I wrote for my Tech Talks in Markdown
 
-
 * [Arthas tool](./site/tech-talks/TechTalk-Arthas-Tool/README.md)
 * [Interning](./site/tech-talks/TechTalk-Interning/README.md)
 * [SonarLint and Clean Code](./site/tech-talks/TechTalk-SonarLint-and-Clean-Code/README.md)
@@ -21,15 +20,15 @@ The documentation I wrote for my Tech Talks in Markdown
 * [Sleuth for Tracing](./site/tech-talks/TechTalk-Sleuth-for-Tracing/README.md)
 * [Clean Code by Uncle Bob](./site/tech-talks/TechTalk-Clean-Code/README.md)
 <br />
-<br />
+
 ### My Bookmarks
 
 My IT Boomarks I collected over the years in [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html), [Markdown GitHub format](bookmarks/generated_MD_IT.md) and [Importable to a browser](bookmarks/bookmarksIT.html)
 <br />
 <br />
+
 ### Utilities and Scripts
-<br />
-<br />
+
 Useful utilities and scripts for my own use:
 * [gitCloneAll.sh for Linux](./site/scripts/gitCloneAll/gitCloneAll.sh): is a script to clone all git repositories for a given user
 * [gitCloneAll.sh for Linux](./site/scripts/gitCloneAll/gitCloneAllwindows.bat): is a script to clone all git repositories for a given user
@@ -38,14 +37,19 @@ Useful utilities and scripts for my own use:
 * [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): is an utility for a command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
 <br />
 <br />
+
 ### GitHub Repositories
 
+hola
 <br />
 <br />
+
 ### Forked GitHub Repositories
 
 * [Full Stack Developer Interview Questions And Answers](https://github.com/victor-porcar/Full-stack-Developer-Interview-Questions-and-Answers)
 * [Effective Java Summary by *Joshua Bloch*](https://github.com/victor-porcar/effective-java-summary)
+<br />
+<br />
 
 
 
