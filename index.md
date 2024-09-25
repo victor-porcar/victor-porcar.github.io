@@ -5,7 +5,7 @@
 <br />
 <br />
 
-### My Tech Talks
+### Tech Talks
 
 The documentation I wrote for my Tech Talks in Markdown
 
@@ -27,7 +27,7 @@ The documentation I wrote for my Tech Talks in Markdown
 My IT Boomarks I collected over the years in [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html), [Markdown GitHub format](bookmarks/generated_MD_IT.md) and [Importable to a browser](bookmarks/bookmarksIT.html)
 
 
-### My Utilities and Scripts
+### Utilities and Scripts
 
 Useful utilities and scripts for my own use:
 * [gitCloneAll.sh for Linux](./site/scripts/gitCloneAll/gitCloneAll.sh): is a script to clone all git repositories for a given user
@@ -36,7 +36,7 @@ Useful utilities and scripts for my own use:
 * [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): is an utility for a command line tool to convert browser bookmarks to readable pretty html/md page
 * [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): is an utility for a command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
 
-### My GitHub Repositories
+### GitHub Repositories
 
 
 ### Forked GitHub Repositories
