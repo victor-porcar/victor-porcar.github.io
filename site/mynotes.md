@@ -1,4 +1,13 @@
 
+
+bucle infinito 
+
+while true; do cat file ; sleep 1; done
+
+
+
+
+
 desplegar en NEXU artifact directamente
 
 mvn deploy:deploy-file -DgroupId=com.wialon \
@@ -84,5 +93,8 @@ mosquitto_pub -h 172.20.20.15 -u 'iotsens' -p 30002 -P 'iot-adc' -t '/iot/proces
 '
 
  
+ 
+ 
+ robocopy I:\FSD-MASTER\REFERENCE z:\reference /mir /z /xd *__
 
 kubectl delete deployment -l app=iot-process-gensumaries
