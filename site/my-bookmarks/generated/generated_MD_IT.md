@@ -1,5 +1,12 @@
 * ## IT
 
+  * ## My Notes
+
+    * [⟿ My Notes: Java](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md)
+    * [⟿ My Notes: Linux - Network](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-linux-network.md)
+    * [⟿ My Notes: Git - HG - SVN](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-git-hg-svn.md)
+    * [⟿ My Notes: Virtualization](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-virtualization.md)
+
   * [My GitHub](https://github.com/victor-porcar?tab=repositories&q=&type=&language=&sort=name)
   * [My IT Bookmarks](https://victor-porcar.github.io/site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html)
   * ## Tools
@@ -217,8 +224,8 @@
 
     * ## Virtualization: VmWare - VirtualBox
 
-      * [virtualbox - How to sign a kernel module Ubuntu 18.04 - Super User](https://superuser.com/questions/1438279/how-to-sign-a-kernel-module-ubuntu-18-04)
       * [⟿ My Notes: Virtualization](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-virtualization.md)
+      * [virtualbox - How to sign a kernel module Ubuntu 18.04 - Super User](https://superuser.com/questions/1438279/how-to-sign-a-kernel-module-ubuntu-18-04)
 
     * ## Cluster: Docker - Kubernetes - Helm
 
