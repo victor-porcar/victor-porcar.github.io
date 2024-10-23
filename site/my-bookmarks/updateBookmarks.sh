@@ -4,7 +4,6 @@ THIS_FOLDER=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 # please set this variable properly for your environment
 
-#BOOKMARK2MD_HOME="$HOME/victormpcmun/Bookmark2md"
 BOOKMARK2MD_HOME="$THIS_FOLDER/../../../Bookmark2md"
 
 BOOKMARK_EXPORTED_FROM_BROWSER_DIRECTORY="$HOME/Bookmarks"

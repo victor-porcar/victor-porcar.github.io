@@ -1,7 +1,7 @@
 * ## IT
 
   * [My GitHub](https://github.com/victor-porcar?tab=repositories&q=&type=&language=&sort=name)
-  * [My IT Bookmarks](https://victor-porcar.github.io/site/bookmarks/generated/generated_PRETTY_HTML_IT.html)
+  * [My IT Bookmarks](https://victor-porcar.github.io/site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html)
   * ## Tools
 
     * [Epoch Converter - Unix Timestamp Converter](https://www.epochconverter.com/)
@@ -16,12 +16,13 @@
 
     * ## Java
 
-      * [→ My TechTalk: Arthas Tool](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/tech-talks/TechTalk-Arthas-Tool)
-      * [→ My TechTalk: Delayed-Batch-Executor](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/tech-talks/TechTalk-Delayed-Batch-Executor)
-      * [→ My TechTalk: Interning](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/tech-talks/TechTalk-Interning)
-      * [→ My TechTalk: Logging Policy](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/tech-talks/TechTalk-Logging-Policy)
-      * [→ My TechTalk: Reactive Programming and WebFlux](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/tech-talks/TechTalk-Reactive-Programming-and-WebFlux)
-      * [→ My TechTalk: Sleuth for Tracing](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/tech-talks/TechTalk-Sleuth-for-Tracing)
+      * [⟿ My Notes: Java](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md)
+      * [→ My TechTalk: Arthas Tool](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Arthas-Tool)
+      * [→ My TechTalk: Delayed-Batch-Executor](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Delayed-Batch-Executor)
+      * [→ My TechTalk: Interning](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Interning)
+      * [→ My TechTalk: Logging Policy](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Logging-Policy)
+      * [→ My TechTalk: Reactive Programming and WebFlux](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Reactive-Programming-and-WebFlux)
+      * [→ My TechTalk: Sleuth for Tracing](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Sleuth-for-Tracing)
       * [⇒ GITHUB FORKED: Better-java: Resources for writing modern Java](https://github.com/victor-porcar/better-java)
       * [⇒ GITHUB FORKED: Arthas: Alibaba Java Diagnostic Tool Arthas/Alibaba Java诊断利器Arthas](https://github.com/victor-porcar/arthas)
       * [⇒ GITHUB FORKED: Effective Java 3rd Edition Summary](https://github.com/david-sauvage/effective-java-summary/blob/master/README.md)
@@ -204,11 +205,12 @@
 
     * ## Linux - Windows - Security - Networking
 
-      * [Linux](file:///home/victor.porcar/FSD2/mygit/victor-porcar.github.io/site/articles/RESUMEN_LINUX.pdf)
+      * [⟿ My Notes: Linux - Network](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-linux-network.md)
       * [TCP/IP addressing and subnetting](https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting)
 
     * ## Repos: GIT - HG - SVN 
 
+      * [⟿ My Notes: Git - HG - SVN](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-git-hg-svn.md)
       * [Migrating from Mercurial to Git - Algeo Calculator](https://androidcalculator.com/migrating-from-mercurial-to-git/)
       * [Convert a Mercurial Repository to Git Using hg-fast-export - @daharveyjr](https://www.daharveyjr.com/convert-a-mercurial-repository-to-git-using-hg-fast-export/)
       * [git - How to change the commit author for one specific commit? - Stack Overflow](https://stackoverflow.com/questions/3042437/how-to-change-the-commit-author-for-one-specific-commit)
@@ -216,6 +218,7 @@
     * ## Virtualization: VmWare - VirtualBox
 
       * [virtualbox - How to sign a kernel module Ubuntu 18.04 - Super User](https://superuser.com/questions/1438279/how-to-sign-a-kernel-module-ubuntu-18-04)
+      * [⟿ My Notes: Virtualization](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-virtualization.md)
 
     * ## Cluster: Docker - Kubernetes - Helm
 
@@ -223,10 +226,10 @@
 
     * ## SQL db: Oracle - MySql - PostgreSQL
 
+      * [→ A Simple Guide To Five Normal Forms](https://victor-porcar.github.io/site/public-docs/A_simple_guide_to_five_normal_forms.pdf)
       * [Transactions and Concurrency in DBMS - by Alperen Bayramoğlu - Medium](https://alperenbayramoglu2.medium.com/transactions-and-concurrency-in-dbms-20174136f660)
       * [Porting between Oracle and PostgreSQL - EDB](https://www.enterprisedb.com/postgres-tutorials/porting-between-oracle-and-postgresql)
       * [Data Warehouse? vs Database?](https://victor-porcar.github.io/)
-      * [→ A Simple Guide To Five Normal Forms](https://victor-porcar.github.io/site/public-docs/A_simple_guide_to_five_normal_forms.pdf)
 
     * ## NoSQL db: Solr - Elastic - Redis - Cassandra - Hollow
 
