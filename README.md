@@ -46,8 +46,8 @@ $ ./gitCloneAll.sh victor-porcar $HOME/FSD <AUTHENTICATION_GITHUB_TOKEN>
 
 ### Manage Bookmarks
 
-Let's assume you have exported your bookmarks as *HTML NETSCAPE-Bookmark-file-1" DOCTYPE* format from your browser in directory`$HOME/Bookmarks`.
-Let's assume you have all your technical bookmarks in folder "IT" of your bookmarks hierarchy.
+Let's assume you have exported your bookmarks as *HTML NETSCAPE-Bookmark-file-1" DOCTYPE* format from your browser in directory`$HOME/Bookmarks`.<br>
+Let's assume you have all your technical bookmarks in folder "IT" of your bookmarks hierarchy.<br>
 At this point you can execute:
  
 ```
