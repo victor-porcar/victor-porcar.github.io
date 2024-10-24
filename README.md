@@ -59,5 +59,5 @@ this will create or update three files:
 *  `./site/my-bookmarks/generated/generated_MD_IT.md`: markdown GitHub flavour of the bookmarks under directory "IT"
 *  `./site/my-bookmarks/generated/bookmarksIT.html`: html file importable file in any browser with the content of directory "IT"
 
-
+Remember after creating for the first time or updating those files to commit and push them!
 
