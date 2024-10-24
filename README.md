@@ -51,7 +51,7 @@ Let's assume you have all your technical bookmarks in folder "IT" of your bookma
 At this point you can execute:
  
 ```
-$ ./$HOME/FSD/victor-porcar.github.io/site/my-bookmarks/updateBookmarks.sh
+$ $HOME/FSD/victor-porcar.github.io/site/my-bookmarks/updateBookmarks.sh
 ```
 this will create or update three files:
 
