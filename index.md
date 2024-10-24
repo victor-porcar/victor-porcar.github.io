@@ -4,6 +4,8 @@
  
 *My public IT resources gathered in one place:*
  
+ <br />
+ 
 #### Tech Talks
 
 The bulletpoints of my tech talks:
@@ -27,18 +29,4 @@ These are the IT Bookmarks I collected over the years in readable formats (using
 * [Markdown GitHub format](bookmarks/generated_MD_IT.md)
 * [Importable to a browser](bookmarks/bookmarksIT.html)
 
-### Projects
 
-Small tools that I wrote for my own use
-* [Kubernetes kubenv](https://github.com/victor-porcar/kubernetes-kubenv/blob/master/README.md): kubenv is a tool to set multiple port-forwards for a given kubernetes configuration
-* [Bookmark2md](https://github.com/victormpcmun/Bookmark2md): command line tool convert browser bookmarks to readable pretty html/md page
-* [TimelapseDNGInterpolator2](https://github.com/victor-porcar/TimelapseDNGInterpolator2): command line tool to interpolate settings values from a list of images in format DNG to process smooth transitions in timelapses
-
-
-### Forked GitHub Repositories
-
-Repositories I found interesting from the vast GitHub
-
-* [Pretty format](bookmarks/generated_PRETTY_HTML_IT.html)
-* [MarkDown GitHub format](bookmarks/generated_MD_IT.md)
-* [Importable to a browser](bookmarks/bookmarksIT.html)
