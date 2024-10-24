@@ -4,7 +4,7 @@
   <br />
 #### Tech Talks
 
-The bulletpoints of my tech talks:
+My tech talks in Markdown:
 
 * [Java Arthas tool](./site/my-techtalks/TechTalk-Arthas-Tool)
 * [Objects Interning](./site/my-techtalks/TechTalk-Interning)
