@@ -25,8 +25,8 @@ My tech talks in Markdown:
 
 These are the IT Bookmarks I collected over the years in readable formats (using tool [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
-* [Pretty format](./site/my-bookmarks/generated_PRETTY_HTML_IT.html)
-* [Markdown GitHub format](./site/my-bookmarks/generated_MD_IT.md)
-* [Importable to a browser](./site/my-bookmarks/bookmarksIT.html)
+* [Pretty format](./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html)
+* [Markdown GitHub format](./site/my-bookmarks/generated/generated_MD_IT.md)
+* [Importable to a browser](./site/my-bookmarks/generated/bookmarksIT.html)
 
 
