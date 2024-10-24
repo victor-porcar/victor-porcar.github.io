@@ -1,11 +1,7 @@
 ## Víctor Porcar [<img align="right" src="site/images/mail.png" width="24">](mailto:victormpcmun@gmail.com)[<img align="right" src="site/images/github.png" width="24">](https://github.com/victor-porcar)[<img align="right" src="site/images/linkedin.png" width="24">](https://es.linkedin.com/in/victor-porcar-a110a533)
-
- <br />
- 
-*My public IT resources gathered in one place:*
- 
- <br />
- 
+*My public IT resources gathered in one place*
+  <br />
+  <br />
 #### Tech Talks
 
 The bulletpoints of my tech talks:
@@ -20,8 +16,12 @@ The bulletpoints of my tech talks:
    * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
 * [Sleuth for Tracing](./site/my-techtalks/TechTalk-Sleuth-for-Tracing)
 
+
  
-### Bookmarks
+ <br />
+ 
+ 
+#### Bookmarks
 
 These are the IT Bookmarks I collected over the years in readable formats (using tool [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
 
