@@ -9,14 +9,14 @@
 The bulletpoints of my tech talks:
 
 * [Java Arthas tool](./site/my-techtalks/TechTalk-Arthas-Tool)
-* [Objects Interning](https://github.com/victor-porcar/TechTalk-Interning)
-* [SonarLint and Clean Code](https://github.com/victor-porcar/TechTalk-SonarLint-and-Clean-Code)
-* [Logging policy](https://github.com/victor-porcar/TechTalk-Logging-Policy)
-* [Reactive programming and WebFlux](https://github.com/victor-porcar/TechTalk-Reactive-Programming-and-WebFlux)
-* [Delayed-Batch-Executor](https://github.com/victor-porcar/TechTalk-Delayed-Batch-Executor)
+* [Objects Interning](./site/my-techtalks/TechTalk-Interning)
+* [SonarLint and Clean Code](./site/my-techtalks/TechTalk-SonarLint-and-Clean-Code)
+* [Logging policy](./site/my-techtalks/TechTalk-Logging-Policy)
+* [Reactive programming and WebFlux](./site/my-techtalks/TechTalk-Reactive-Programming-and-WebFlux)
+* [Delayed-Batch-Executor](./site/my-techtalks/TechTalk-Delayed-Batch-Executor)
    * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
    * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
-* [Sleuth for Tracing](https://github.com/victor-porcar/TechTalk-Sleuth-for-Tracing)
+* [Sleuth for Tracing](./site/my-techtalks/TechTalk-Sleuth-for-Tracing)
 
  
 ### Bookmarks
