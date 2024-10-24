@@ -34,7 +34,7 @@ $ mkdir $HOME/FSD
 ```
 $ cd $HOME/FSD
 $ curl https://raw.githubusercontent.com/victor-porcar/victor-porcar.github.io/refs/heads/master/site/my-scripts/gitCloneAll/gitCloneAll.sh > gitCloneAll.sh
-chmod 700 $HOME/FSD/gitCloneAll.sh
+$ chmod 700 $HOME/FSD/gitCloneAll.sh
 ``` 
     
 #### execute the script `gitCloneAll.sh`
