@@ -23,7 +23,7 @@ My tech talks in Markdown:
  
 #### Technical Notes
 
-* [Java/Languages Notes](./site/my-notes/my-notes-languages-java.md)
+* [Java/Languages Notes](./site/my-notes/my-notes-java-languages.md)
 * [Admin/DevOps Notes](./site/my-notes/my-notes-admin-devops.md)
 
  <br />
