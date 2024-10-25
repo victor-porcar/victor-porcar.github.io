@@ -21,6 +21,14 @@ My tech talks in Markdown:
  <br />
  
  
+#### Technical Notes
+
+* [Java/Languages Notes](./site/my-notes/my-notes-languages-java.md)
+* [Admin/DevOps Notes](./site/my-notes/my-notes-admin-devops.md)
+
+ <br />
+ 
+ 
 #### Bookmarks
 
 These are the IT Bookmarks I collected over the years in readable formats (using tool [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
@@ -28,5 +36,4 @@ These are the IT Bookmarks I collected over the years in readable formats (using
 * [Pretty format](./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html)
 * [Markdown GitHub format](./site/my-bookmarks/generated/generated_MD_IT.md)
 * [Importable to a browser](./site/my-bookmarks/generated/bookmarksIT.html)
-
 
