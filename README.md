@@ -21,6 +21,9 @@ The structure of this site is the following:
 
 In order to work locally with this site, please clone all repos in a working folder as follows:
 
+## Create Working directory
+
+
 ### Steps to clone locally all repositories
 
 Please follow these steps to do it:
