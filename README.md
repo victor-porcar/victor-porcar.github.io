@@ -19,35 +19,38 @@ The structure of this site is the following:
 * my-bookmarks: my technical bookmarks in a pretty HTML format using [Bookmark2md](https://github.com/victor-porcar/Bookmark2md) See *Manage Bookmarks* section below
 * public-docs: collection of documents which I find interesting.
 
-In order to work locally with this site, please clone all repos in a working folder as follows:
-
-## Create Working directory
 
 
-### Steps to clone locally all repositories
+## Create Local directory with all my Repos
 
-Please follow these steps to do it:
+It would be nice to have all my repos (include this one) in one local directory, lets say for example in route $HOME/FSD/mygithub for linux or d:\victor-master\fsd\mygithub for windows
 
-#### create working folder, for example with name FSD
-In this case let's use FSD
+The steps are the following:
+
+- Create directory $HOME/FSD/mygithub
+- Download  script  `gitCloneAll.sh` to any local folder (no $HOME/FSD/mygithub or  d:\victor-master\fsd\mygithub ) and execute as follows:
+
+For Linux
 ```
-$ mkdir $HOME/FSD
+$ cd /tmp
+$ curl https://raw.githubusercontent.com/victor-porcar/victor-porcar.github.io/refs/heads/master/site/my-scripts/gitCloneOrPullAll/gitCloneOrPullAll.sh > gitCloneOrPullAll.sh
+$ chmod 700 $HOME/FSD/gitCloneOrPullAll.sh
+$ ./gitCloneOrPull.sh "victor-porcar" "$HOME/FSD/mygithub" <GITHUB_TOKEN>
+$ rm ./gitCloneOrPull.sh
 ```
-#### download script `gitCloneAll.sh`
+For Windows
 ```
-$ cd $HOME/FSD
-$ curl https://raw.githubusercontent.com/victor-porcar/victor-porcar.github.io/refs/heads/master/site/my-scripts/gitCloneAll/gitCloneAll.sh > gitCloneAll.sh
-$ chmod 700 $HOME/FSD/gitCloneAll.sh
-``` 
-    
-#### execute the script `gitCloneAll.sh`
+D:\> cd d:\temp
+D:\TEMP> curl https://raw.githubusercontent.com/victor-porcar/victor-porcar.github.io/refs/heads/master/site/my-scripts/gitCloneOrPullAll/gitCloneOrPullAll.sh > gitCloneOrPullAll.sh
+D:\TEMP> gitCloneOrPull "victor-porcar" "d:\victor-master\fsd\mygithub" <GITHUB_TOKEN>
+D:\TEMP> del gitCloneOrPull.cmd
 ```
-$ cd $HOME/FSD
-$ ./gitCloneAll.sh victor-porcar $HOME/FSD <AUTHENTICATION_GITHUB_TOKEN>
-```
+This will clone all repositories of github user "victor-porcar" in the corresponding local directory
+
 
 
 ### Manage Bookmarks
+In order to manage bookmarks,  it is necessary to have locally the repository Bookmark2MD, so the previous steps to create Local directory with all my Repos has to be done
 
 Let's assume you have exported your bookmarks as *HTML NETSCAPE-Bookmark-file-1" DOCTYPE* format from your browser in directory`$HOME/Bookmarks`.<br>
 Let's assume you have all your technical bookmarks in folder "IT" of your bookmarks hierarchy.<br>
