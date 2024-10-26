@@ -35,11 +35,11 @@ for /f "tokens=*" %%A in ('curl -s "https://api.github.com/user/repos" --header 
 		set "expectedLocalDirectory=./!repositoryName!"  
 
 		if not exist "!expectedLocalDirectory!" (
-			echo "Current Directory is !dir! and the following directory !expectedLocalDirectory! does not exist, which means a clone has to be done" 
+			echo "Current Directory is !dir! and the following directory !expectedLocalDirectory! does not exist, which means a CLONE has to be done" 
 			set "url=https://!GITHUB_TOKEN!@github.com/!name!/!repositoryName!"
 			git clone "!url!"
 		) else (
-			echo "Current Directory is !dir! and the following directory !expectedLocalDirectory! does not exist, which means a pull has to be done" 
+			echo "Current Directory is !dir! and the following directory !expectedLocalDirectory! DOES EXIST, which means a PULL has to be done" 
 			cd "./!repositoryName!" || exit /b
 		    git pull
 		    cd ..
