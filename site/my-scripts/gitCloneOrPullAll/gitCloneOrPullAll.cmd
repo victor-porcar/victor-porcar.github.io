@@ -47,4 +47,4 @@ for /f "tokens=*" %%A in ('curl -s "https://api.github.com/user/repos" --header 
     )
 )
 
-exit /b 0
+rem exit /b 0
