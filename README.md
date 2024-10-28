@@ -23,12 +23,12 @@ The structure of this site is the following:
 
 ## Create Local directory with all my Repos
 
-It would be nice to have all my repos (include this one) in one local directory, lets say for example in route $HOME/FSD/mygithub for linux or d:\victor-master\fsd\mygithub for windows
+My aim is to have a local copy of all my github repos (including this one), lets say for example in local path `$HOME/FSD/mygithub` for linux or `d:\victor-master\fsd\mygithub` for Windows
 
-The steps are the following:
+To achieve this, please follow these steps:
 
-- Create directory $HOME/FSD/mygithub
-- Download  script  `gitCloneAll.sh` to any local folder (no $HOME/FSD/mygithub or  d:\victor-master\fsd\mygithub ) and execute as follows:
+- Create base directory `$HOME/FSD/mygithub` for linux or `d:\victor-master\fsd\mygithub` for Windows.
+- Download  script  `gitCloneOrPullAll.sh' or `gitCloneOrPullAll.cmd' accordingly and execute as follows:
 
 For Linux
 ```
