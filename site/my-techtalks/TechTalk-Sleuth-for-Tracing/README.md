@@ -1,4 +1,4 @@
-# TechTalk: Sleuth for Tracing
+# TechTalk: Sleuth for Tracing[<img align="right" src="../../../site/images/pencil.svg" width="14">](https://github.com/victor-porcar/victor-porcar.github.io/edit/master/site/my-techtalks/TechTalk-Sleuth-for-Tracing/README.md)
 
 * [Introduction](#introduction)
 * [How it works](#how-it-works)
