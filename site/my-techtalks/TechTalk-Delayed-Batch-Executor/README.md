@@ -1,4 +1,4 @@
-# TechTalk: Delayed-Batch-Executor
+# TechTalk: Delayed-Batch-Executor[<img align="right" src="../../../site/images/pencil.svg" width="14">](https://github.com/victor-porcar/victor-porcar.github.io/edit/master/site/my-techtalks/TechTalk-Delayed-Batch-Executor/README.md)
  
 
 ## Introduction
