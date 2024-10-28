@@ -1,4 +1,4 @@
- # Tech Talk: Interning
+ # Tech Talk: Interning[<img align="right" src="../../../site/images/pencil.svg" width="14">](https://github.com/victor-porcar/victor-porcar.github.io/edit/master/site/my-techtalks/TechTalk-Interning/README.md)
 
 Interning is a way to optimise memory usage in specific scenarios by reusing the same instance in the context of immutable objects.
 
