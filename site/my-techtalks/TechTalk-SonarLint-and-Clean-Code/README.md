@@ -1,4 +1,4 @@
-# TechTalk: SonarLint and Clean Code
+# TechTalk: SonarLint and Clean Code[<img align="right" src="../../../site/images/pencil.svg" width="14">](https://github.com/victor-porcar/victor-porcar.github.io/edit/master/site/my-techtalks/TechTalk-SonarLint-and-Clean-Code/README.md)
 
  
  
