@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-    echo "Usage: gitCloneAll.sh <USER_NAME> <LOCAL_DIRECTORY> <AUTHENTICATION_GITHUB_TOKEN>"
-    echo "Example: gitCloneAll.sh victor-porcar \"/home/victor.porcar/my_repository\" ghp_MpcYKKKdlqFQirdH15JcH3hwia45B4265DzQ"
+    echo "Usage: gitCloneOrPullAll.sh <USER_NAME> <LOCAL_DIRECTORY> <AUTHENTICATION_GITHUB_TOKEN>"
+    echo "Example: gitCloneOrPullAll.sh victor-porcar \"/home/victor.porcar/my_repository\" ghp_MpcYKKKdlqFQirdH15JcH3hwia45B4265DzQ"
     exit 1
 else
     name=$1
