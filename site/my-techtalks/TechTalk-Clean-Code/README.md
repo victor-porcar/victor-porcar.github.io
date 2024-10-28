@@ -1,4 +1,4 @@
-# TechTalk-Clean-Code
+# TechTalk-Clean-Code[<img align="right" src="../../../site/images/pencil.svg" width="14">](https://github.com/victor-porcar/victor-porcar.github.io/edit/master/site/my-techtalks/TechTalk-Clean-Code/README.md)
 
 *Clean code* by Robert C. Martin (Uncle Bob) is a classic book in Software engineering that every developer must read in order to build a better software.
 
