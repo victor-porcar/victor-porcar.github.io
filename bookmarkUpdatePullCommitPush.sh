@@ -1,10 +1,7 @@
 #!/bin/bash
 
-pwd
- ./site/my-bookmarks/updateBookmarks.sh
+./site/my-bookmarks/updateBookmarks.sh
 
+./site/my-scripts/gitPullCommitPush/gitPullCommitPush.sh "./"
 
-pwd
- ./site/my-scripts/gitPullCommitPush/gitPullCommitPush.sh "./"
-
-echo "Script completed."
+read -n 1 -s -r -p "Press any key to continue..."
