@@ -35,5 +35,5 @@ if ! git diff --quiet; then
 else
     echo "No changes to commit."
 fi
-
+ 
 echo "Script completed."
