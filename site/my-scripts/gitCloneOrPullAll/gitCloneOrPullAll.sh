@@ -22,7 +22,7 @@ fi
 cd "$dir" || { echo "Failed to change directory to $dir"; exit 1; }
 
 # Get repositories
-repos=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "https://$GITHUB_TOKEN@api.github.com/users/$name/repos?per_page=100" | grep -e 'clone_url' | cut -d \" -f 4)
+repos=$(curl "https://api.github.com/user/repos" --header "Authorization: Bearer $GITHUB_TOKEN" | grep -e 'clone_url*' | cut -d \" -f 4 | sed  "s/https:\/\//https:\/\/$GITHUB_TOKEN@/g")
 
 # Clone or pull each repository
 for repo in $repos; do
