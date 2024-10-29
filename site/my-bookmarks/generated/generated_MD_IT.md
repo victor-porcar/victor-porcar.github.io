@@ -1,14 +1,24 @@
 * ## IT
 
+  * [victor-porcar.github.io](https://victor-porcar.github.io/)
+  * [My IT Bookmarks](https://victor-porcar.github.io/site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html)
+  * [My GitHub](https://github.com/victor-porcar?tab=repositories&q=&type=&language=&sort=name)
   * ## My Notes
 
-    * [⟿ My Notes: Java](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md)
-    * [⟿ My Notes: Linux - Network](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-linux-network.md)
-    * [⟿ My Notes: Git - HG - SVN](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-git-hg-svn.md)
-    * [⟿ My Notes: Virtualization](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-virtualization.md)
+    * [→ My Notes: Java-Languages](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java-languages.md)
+    * [→ My Notes: Admin-Devops](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-admin-devops.md)
 
-  * [My GitHub](https://github.com/victor-porcar?tab=repositories&q=&type=&language=&sort=name)
-  * [My IT Bookmarks](https://victor-porcar.github.io/site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html)
+  * ## My TechTalks
+
+    * [→ My TechTalk: Arthas Tool](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Arthas-Tool)
+    * [→ My TechTalk: Clean-Code](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Clean-Code)
+    * [→ My TechTalk: Delayed-Batch-Executor](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Delayed-Batch-Executor)
+    * [→ My TechTalk: Interning](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Interning)
+    * [→ My TechTalk: Logging-Policy](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Logging-Policy)
+    * [→ My TechTalk: Reactive-Programming-and-WebFlux](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Arthas-Tool)
+    * [→ My TechTalk: Sleuth-for-Tracing](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Sleuth-for-Tracing)
+    * [→ My TechTalk: SonarLint-and-Clean-Code](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-SonarLint-and-Clean-Code)
+
   * ## Tools
 
     * [Epoch Converter - Unix Timestamp Converter](https://www.epochconverter.com/)
@@ -18,13 +28,14 @@
     * [Base64 Encode - Online](https://www.base64encode.org/)
     * [Confluence To Markdown](https://metamug.com/util/confluence-to-markdown/)
     * [Paint -&gt; on line](https://jspaint.app/#local:46eb9d943c75c)
+    * [Google Translate SPA-&gt;ENG](https://translate.google.es/?sl=es&tl=en&op=translate)
+    * [Google Translate ENG-&gt;SPA](https://translate.google.es/?sl=en&tl=es&op=translate)
 
   * ## Languages
 
+    * [→ My Notes: Java-Languages](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java-languages.md)
     * ## Java
 
-      * [⟿ My Notes: Java](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md)
-      * [→ My TechTalk: Arthas Tool](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Arthas-Tool)
       * [→ My TechTalk: Delayed-Batch-Executor](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Delayed-Batch-Executor)
       * [→ My TechTalk: Interning](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Interning)
       * [→ My TechTalk: Logging Policy](https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Logging-Policy)
@@ -208,11 +219,11 @@
 
 
 
-  * ## DevOps
+  * ## Admin-DevOps
 
+    * [→ My Notes: Admin-Devops](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-admin-devops.md)
     * ## Linux - Windows - Security - Networking
 
-      * [⟿ My Notes: Linux - Network](https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-linux-network.md)
       * [TCP/IP addressing and subnetting](https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting)
 
     * ## Repos: GIT - HG - SVN 
@@ -236,7 +247,6 @@
       * [→ A Simple Guide To Five Normal Forms](https://victor-porcar.github.io/site/public-docs/A_simple_guide_to_five_normal_forms.pdf)
       * [Transactions and Concurrency in DBMS - by Alperen Bayramoğlu - Medium](https://alperenbayramoglu2.medium.com/transactions-and-concurrency-in-dbms-20174136f660)
       * [Porting between Oracle and PostgreSQL - EDB](https://www.enterprisedb.com/postgres-tutorials/porting-between-oracle-and-postgresql)
-      * [Data Warehouse? vs Database?](https://victor-porcar.github.io/)
 
     * ## NoSQL db: Solr - Elastic - Redis - Cassandra - Hollow
 
@@ -280,9 +290,7 @@
     * ## Maths
 
 
-    * ## MSX
-
-
+    * [→ Articulo MSX Club Sprites desde código máquina](https://victor-porcar.github.io/site/public-docs/MSX_CLUB_65.pdf)
 
   * ## AI
 
