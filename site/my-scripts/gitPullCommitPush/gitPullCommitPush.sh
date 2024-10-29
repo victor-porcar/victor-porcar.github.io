@@ -5,7 +5,7 @@ if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <path_to_local_repo>"
     exit 1
 fi
-
+ 
 REPO_PATH="$1"
 
 # Change to the repository directory
