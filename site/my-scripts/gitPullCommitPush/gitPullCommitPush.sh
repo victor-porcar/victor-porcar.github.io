@@ -31,7 +31,7 @@ if ! git diff --quiet; then
     git commit -m "Automated commit: Updates from script"
 
     # Push changes
-    git push origin main
+    git push origin
 else
     echo "No changes to commit."
 fi
