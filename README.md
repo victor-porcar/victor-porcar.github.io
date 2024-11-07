@@ -53,6 +53,7 @@ In order to manage bookmarks,  it is necessary to have locally the repository Bo
 
 Let's assume you have exported your bookmarks as *HTML NETSCAPE-Bookmark-file-1" DOCTYPE* format from your browser in directory`$HOME/Bookmarks`.<br>
 Let's assume you have all your technical bookmarks in folder "IT" of your bookmarks hierarchy.<br>
+
 At this point you can execute:
  
 ```
