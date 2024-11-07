@@ -23,11 +23,10 @@ The structure of this site is the following:
 
 ## Create Local directory with all my Repos
 
-My aim is to have a local copy of all my github repos (including this one), lets say for example in local path `$HOME/FSD/mygithub` for linux or `d:\victor-master\fsd\mygithub` for Windows
-
+In order to have a local copy of all github repos (including this one), lets say for example in local path `$HOME/FSD/mygithub` for linux or `d:\victor-master\fsd\mygithub` for Windows
 To achieve this, please follow these steps:
 
-- Create base directory `$HOME/FSD/mygithub` for linux or `d:\victor-master\fsd\mygithub` for Windows.
+- Create directory `$HOME/FSD/mygithub` for linux or `d:\victor-master\fsd\mygithub` for Windows.
 - Download  script  `gitCloneOrPullAll.sh' or `gitCloneOrPullAll.cmd' accordingly and execute as follows:
 
 For Linux
