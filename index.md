@@ -30,7 +30,7 @@ My tech talks in Markdown:
 
 * [Java/Languages Notes](./site/my-notes/my-notes-java-languages.md)
 * [Admin/DevOps Notes](./site/my-notes/my-notes-admin-devops.md)
-* [Conceptsspanish](./site/my-notes/my-notes-concepts-in-spanish.md)
+* [Concepts in Spanish](./site/my-notes/my-notes-concepts-in-spanish.md)
 
  <br />
  
