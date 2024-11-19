@@ -4,9 +4,6 @@
 * Alcance = scope del proyecto	definir lo que entra en el trabajo acordado y lo que queda fuera
 * Puesta en Marcha = release	
 * Baseline = version	
-* OWASP	
-* PKI	
-* ortogonal	
 * Normalizar / Desnormalizar / Formas normales	
 * Pruebas de regresion	
 * Test unitario  / Regresion	
