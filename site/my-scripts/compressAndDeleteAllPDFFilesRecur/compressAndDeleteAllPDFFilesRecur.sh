@@ -20,10 +20,13 @@ find "$directory_to_compress" -type f | while read -r file; do
   # Get the base name of the file (without the directory path)
   base_name=$(basename "$file")
   
-  if [[ "$base_name" == *.zip ]]; then
-    echo "$base_name is already in ZIP"
+  if  [[ "$base_name" != *.pdf && "$base_name" != *.PDF ]]; then
+    echo "$base_name is NOT a PDF file"
     continue
   fi
+
+ 
+
 
   # Create a zip file with the same name as the file, but with a .zip extension
   # zip -9 -q "${file}.zip" "$file"
@@ -31,15 +34,13 @@ find "$directory_to_compress" -type f | while read -r file; do
 
   # Check if the zip command was successful
   if [ $? -eq 0 ]; then
-    echo "File '$file' has been successfully compressed to '${file}.zip'. Deleting the original file."
+    echo "File '$file' has been successfully compressed to '${file}.xz'. Deleting the original file."
     
     # If the zip was successful, delete the original file
     rm -f "$file"
     
     # Check if the file deletion was successful
-    if [ $? -eq 0 ]; then
-      echo "Original file '$file' deleted."
-    else
+    if [ $? -ne 0 ]; then
       echo "Error: Failed to delete the original file '$file'."
     fi
   else
