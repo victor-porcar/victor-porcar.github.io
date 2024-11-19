@@ -31,7 +31,7 @@
 * Arquitectura tipica de una aplicación web, por ejemplo teletienda, DMZ, nodos, potencia de cada nodo, etc…	
 * corporate governance -> subtipo = IT Governance -> subtipo = SOA governance	
 * HTML 5 y websocket 	
-* NOSQL	
+ 
 * JSON	
 * QCC	
 * 24x7 QoS, el portal es 24x7 alta disponibilidad	
@@ -73,10 +73,7 @@
 * CMMI	
 * meeting minutes	
 * book of work	
-* Deutsche Bank como banco y desarrollo de proyectos	
 * Introscope	
-* Quinta Forma Normal	link al documento
-* principio SOLID de Orientacion a Objetos	
 * Axway Orquestador	
 * DMZ	
 * CEH (Certified Ethical Hacking)	
@@ -94,7 +91,7 @@
 * encajar	
 * alcance = scope del proyecto	
 * fasear	
-* moscow (must, wish, should) oracle / rfc	
+* 
 * negocio dice lo que hace informatica y no al reves	
 * rfc	
 * circuito de pagar	
