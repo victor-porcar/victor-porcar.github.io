@@ -4,23 +4,9 @@
 * Alcance = scope del proyecto	definir lo que entra en el trabajo acordado y lo que queda fuera
 * Puesta en Marcha = release	
 * Baseline = version	
-* Normalizar / Desnormalizar / Formas normales	
-* Pruebas de regresion	
-* Test unitario  / Regresion	
-* metodos: ¿ Un solo punto de salida o varios ?	
-* A Team	
-* explotacion	
-* Idempotente (HTTP Get should be idempotent. What does this mean?)	tiene que ver con REST, que utiliza los verbos del protocolo HTTP para hacer operaciones "GET" coger datos, "PUT" guardar,…, pues bien, que sea idempotente significa que dos GET seguidos deben devolver el mismo resultado, esto se consigue al hacer que una operacion GET NUNCA cambie ningun estado.
-* Principio YAGNI	
-* SOLID	
-* decalaje	retraso, decalaje de 1 dia
-* Cadena de transferencia	
-* Automata	
-* agile	
-* scrum	
+* Test unitario  / Pruebas de Regresión	
 * Plan de pruebas	
 * Plan de Supervision	
-* Ciclo de vida	Inicialmente se aborda una mejoransdfds sfdds
 * Mejora / Peora	
 * EAC / EFC	
 * tablas maestras	
