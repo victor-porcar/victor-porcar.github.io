@@ -1,6 +1,5 @@
 ### Concepts  [<img align="right" src="../../site/images/pencil.svg" width="14">](https://github.com/victor-porcar/victor-porcar.github.io/edit/master/site/my-notes/my-notes-concepts-in-spanish.md)
 
-* Análisis de impacto	 
 * KTP (Knowledge Transfer Process)	
 * Alcance = scope del proyecto	definir lo que entra en el trabajo acordado y lo que queda fuera
 * Puesta en Marcha = release	
