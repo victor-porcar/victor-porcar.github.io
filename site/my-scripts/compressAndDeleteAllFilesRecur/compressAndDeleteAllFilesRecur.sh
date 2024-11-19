@@ -25,10 +25,10 @@ find "$directory_to_compress" -type f | while read -r file; do
     continue
   fi
 
-
   # Create a zip file with the same name as the file, but with a .zip extension
-  zip -9 -q "${file}.zip" "$file"
-  
+  # zip -9 -q "${file}.zip" "$file"
+  xz --keep --force "$file"
+
   # Check if the zip command was successful
   if [ $? -eq 0 ]; then
     echo "File '$file' has been successfully compressed to '${file}.zip'. Deleting the original file."
