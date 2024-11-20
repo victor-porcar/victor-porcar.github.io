@@ -333,12 +333,6 @@ END;
 ```
 
 
-###[NORMALIZATION](https://en.wikipedia.org/wiki/Database_normalization)
-
-* [article *A SlMPLE GUIDE TO FIVE NORMAL FORMS IN RELATIONAL DATABASE THEORY* of William Kent](http://www.roma1.infn.it/people/barone/metinf/database-normalization.pdf)
-
-* [How far to normalize a database?](https://stackoverflow.com/questions/47711/how-do-you-determine-how-far-to-normalize-a-database): *A wise man once told me: Normalize till it hurts, Denormalize till it works* 
-
 * Horizontal and vertical scaling.
 
 * How to scale database? (Data partitioning, sharding(vertical/horizontal), replication(master-slave, master-master)).
