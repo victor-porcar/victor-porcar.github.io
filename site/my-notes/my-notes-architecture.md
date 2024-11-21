@@ -10,7 +10,7 @@ Estado Actual - Estado Futuro
 #### mejora / peora / defecto
 No usar defecto por "defecto", siempre es mejor "mejora"
 
-#### KTP
+#### KTP = Handover
 Knowledge Transfer Process
 
 #### Alcance = Scope
