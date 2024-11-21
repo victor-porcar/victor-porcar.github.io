@@ -8,7 +8,7 @@
     
     - Reliability: ensures the integrity and consistency of the application and all its transactions. As the load increases on your system, your system must continue to process requests and handle transactions as accurately as it did before the load increased. Reliability can have a negative impact on scalability.  
     
-    - Availability: ensures that a service/resource is always accessible. Reliability can contribute to availability, but availability can be achieved even if components fail.  
+    - Availability: ensures that a service/resource is always accessible. Reliability can contribute to availability, but availability can be achieved even if components fail (24x7) 
     
     - Extensibility: is the ability to add additional functionality or modify existing functionality without impacting existing system functionality.  
     
