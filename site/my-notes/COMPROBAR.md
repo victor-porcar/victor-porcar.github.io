@@ -85,13 +85,8 @@ Icon=/usr/lib/jvm/jdk1.8.0_221/bin/jvisualvm.jpeg
 
 
 
+ 
 
-### GIT
--[TODO]
--[GIT Merging vs Rebasing ](https://dzone.com/articles/merging-vs-rebasing)
- 
- 
--[clone all GITLAB projects](https://gist.github.com/JonasGroeger/1b5155e461036b557d0fb4b3307e1e75)
 
 * *Git* workflow? (Master: production-ready state; Develop: latest delivered development changes for the next release; Feature Branches; Release Branches; Hotfixes) ![Git workflow](http://nvie.com/img/git-model@2x.png "Git workflow") http://nvie.com/posts/a-successful-git-branching-model/
 
