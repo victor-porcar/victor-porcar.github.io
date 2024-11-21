@@ -1,24 +1,4 @@
-`
 
-* [Multiple-column subquery](http://www.dba-oracle.com/t_multi_column_subquery.htm):  They exist and can be used!:  `SELECT EMPLOYEE_ID FROM EMPLOYEES WHERE (FIRST_NAME, LAST_NAME) IN (SELECT FIRST_NAME, LAST_NAME FROM CRUISE_CUSTOMERS) AND SHIP_ID = 1;`  IN operator can be replaced for = ...
-
-* [Scalar subquery](http://sql.standout-dev.com/2015/10/subqueries-oracle-sql/#Scalar_Subqueries_Single_Row_Single_Column): they always return one value, represented in one column of one row, every time
-
-* [Inline view](http://sql.standout-dev.com/2015/10/subqueries-oracle-sql/#Scalar_Subqueries_Single_Row_Single_Column): they are simply a subquery that appears in the FROM clause of a SELECT statement. They can be used in other parts of the main query as you would with a table or view (reference its columns, join it to other data sources, etc) . Inline views are always non-correlated subqueries.
-
-* [Subquery Factoring (The WITH Clause)](http://sql.standout-dev.com/2015/10/subqueries-oracle-sql/#Scalar_Subqueries_Single_Row_Single_Column)
-
-* [IMPLICIT INDEX in ORACLE (indexes created automatically)]: If you create a constraint on a table that is of type PRIMARY KEY or UNIQUE, then as part of the creation of the constraint, SQL will automatically create an index to support that constraint on the column or columns, if such an index does not already exist.
-
-* [Difference between DELETE and TRUNCATE](https://www.geeksforgeeks.org/difference-between-delete-and-truncate/?ref=leftbar-rightbar): TRUNCATE is DDL command (Can't be rolledback) and it is much faster
-
-* [Enhanced Aggregation, Cube, Grouping and Rollup](http://www.orafaq.com/node/56)
-
-* [Hierarchical Queries](https://docs.oracle.com/cd/B19306_01/server.102/b14200/queries003.htm): using `START WITH`, `CONNECT BY` and `PRIOR`. Example: `SELECT LEVEL, EMPLOYEE_ID, TITLE FROM EMPLOYEE_CHART START WITH EMPLOYEE_ID = 1 CONNECT BY REPORTS_TO = PRIOR EMPLOYEE_ID;`
-
-* [Regular Expressions ORACLE](https://www.red-gate.com/simple-talk/sql/oracle/introduction-to-regular-expressions-in-oracle/): REGEXP_LIKE , REGEXP_INSTR, REGEXP_SUBSTR, REGEXP_REPLACE and REGEXP_COUNT
-
-* [select count(*) = select count(1) in terms of performance](https://pretius.com/oracle-count-or-count1-that-is-the-question/): It is exactly the same. Oracle internally rewrite COUNT(1)  to COUNT(*)
 
 #### SQL ORACLE RANK AS AGGREGATE OR ANALYTIC
 
