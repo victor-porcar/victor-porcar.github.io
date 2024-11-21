@@ -313,3 +313,12 @@ END;
 /
 ```
 
+#### CREATE FOREIGN KEY AND DISABLE
+
+Broadly speaking it is good idea to create FK and disable it if necessary because the fact of having that FK provides important information to Oracle in order to optimize queries
+
+#### UPDATE OR INSERT: UPSERT (MERGE)
+
+https://stackoverflow.com/questions/237327/how-to-upsert-update-or-insert-into-a-table
+
+
