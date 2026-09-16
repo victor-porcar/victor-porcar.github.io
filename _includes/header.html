@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="nav">
+      <a class="icon-link" href="{{ site.github_user }}" aria-label="GitHub">{% include icon.html name="github" %}</a>
+      <a{% if include.home %} class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
+      {% for section in site.data.sections %}
+        <a href="{{ '/' | relative_url }}#{{ section.id }}">{{ section.nav | default: section.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
