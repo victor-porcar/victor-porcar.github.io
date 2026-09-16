@@ -1,29 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
+<head>{% include head.html %}</head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="nav">
-      <a class="icon-link" href="{{ site.github_user }}" aria-label="GitHub">{% include icon.html name="github" %}</a>
-      <a class="active" href="{{ '/' | relative_url }}">Home</a>
-      {% for section in site.data.sections %}
-        <a href="#{{ section.id }}">{{ section.nav | default: section.title }}</a>
-      {% endfor %}
-    </nav>
-  </div>
-</header>
+{% include header.html home=true %}
 
 <div class="hero"></div>
 
@@ -44,13 +24,7 @@
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <a href="{{ site.github_user }}" target="_blank" rel="noopener">{% include icon.html name="github" %} GitHub</a>
-    <a href="{{ site.linkedin }}" target="_blank" rel="noopener">{% include icon.html name="linkedin" %} LinkedIn</a>
-    <a href="mailto:{{ site.email }}">{% include icon.html name="mail" %} Contact</a>
-  </div>
-</footer>
+{% include footer.html %}
 
 </body>
 </html>
