@@ -1,59 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta name="description" content="{{ site.description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
 
-  <!-- Navegación Superior -->
-  <header class="top-nav">
-    <div class="nav-container">
-      <div class="brand">Víctor Porcar</div>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#tech-talks">Tech Talks</a>
-        <a href="#technical-notes">Notes</a>
-        <a href="#bookmarks">Bookmarks</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="nav">
+      <a class="icon-link" href="{{ site.github_user }}" aria-label="GitHub">{% include icon.html name="github" %}</a>
+      <a class="active" href="{{ '/' | relative_url }}">Home</a>
+      {% for section in site.data.sections %}
+        <a href="#{{ section.id }}">{{ section.nav | default: section.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
 
-  <!-- Sección Hero / Banner con Imagen -->
-  <section class="hero-section">
-    <div class="hero-image-wrapper">
-      <img src="site/images/header-photo.jpg" alt="Header Image" class="hero-image">
-    </div>
-    <div class="hero-content">
-      <h1>Víctor Porcar</h1>
-      <p class="subtitle">My public IT resources gathered in one place.</p>
-      <div class="tags">
-        <span>Software Engineering</span> · 
-        <span>Java</span> · 
-        <span>Backend</span> · 
-        <span>DevOps</span>
-      </div>
+<div class="hero"></div>
+
+<main>
+  <section class="intro">
+    <h1>{{ site.title }}</h1>
+    <p class="tagline">{{ site.description }}</p>
+    <div class="rule"></div>
+    <div class="topics">
+      {% for topic in site.topics %}
+        <span>{{ topic }}</span>{% unless forloop.last %}<span>•</span>{% endunless %}
+      {% endfor %}
     </div>
   </section>
 
-  <!-- Contenido principal (aquí se renderiza tu index.md) -->
-  <main class="main-container">
+  <div class="wrap">
     {{ content }}
-  </main>
+  </div>
+</main>
 
-  <!-- Pie de página -->
-  <footer class="site-footer">
-    <div class="footer-links">
-      <a href="https://github.com/victor-porcar" target="_blank">GitHub</a>
-      <a href="https://es.linkedin.com/in/victor-porcar-a110a533" target="_blank">LinkedIn</a>
-      <a href="mailto:victormpcmun@gmail.com">Contact</a>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="{{ site.github_user }}" target="_blank" rel="noopener">{% include icon.html name="github" %} GitHub</a>
+    <a href="{{ site.linkedin }}" target="_blank" rel="noopener">{% include icon.html name="linkedin" %} LinkedIn</a>
+    <a href="mailto:{{ site.email }}">{% include icon.html name="mail" %} Contact</a>
+  </div>
+</footer>
 
 </body>
 </html>
