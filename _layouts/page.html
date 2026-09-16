@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% include head.html %}</head>
+<body>
+
+{% include header.html %}
+
+<main class="page">
+  <article class="prose">
+    {{ content }}
+  </article>
+  <a class="back" href="{{ '/' | relative_url }}">&larr; Back to home</a>
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>
