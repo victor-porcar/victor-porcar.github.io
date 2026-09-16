@@ -1,15 +1,12 @@
+---
+layout: default
+---
 
-### Víctor Porcar [<img align="right" src="site/images/pencil.svg" width="24">](https://github.com/victor-porcar/victor-porcar.github.io/edit/master/index.md)[<img align="right" src="site/images/mail.png" width="24">](mailto:victormpcmun@gmail.com)[<img align="right" src="site/images/github-mark.svg" width="24">](https://github.com/victor-porcar)[<img align="right" src="site/images/linkedin.png" width="24">](https://es.linkedin.com/in/victor-porcar-a110a533)
- 
-*My public IT resources gathered in one place*
-  <br />
-  <br />
- 
+<div class="card" id="tech-talks">
 
-  
-#### Tech Talks
+#### 🎙️ Tech Talks
 
-My tech talks in Markdown:
+Talks, presentations & demos about technologies, tools and concepts.
 
 * [Java Arthas tool](./site/my-techtalks/TechTalk-Arthas-Tool)
 * [Objects Interning](./site/my-techtalks/TechTalk-Interning)
@@ -17,29 +14,30 @@ My tech talks in Markdown:
 * [Logging policy](./site/my-techtalks/TechTalk-Logging-Policy)
 * [Reactive programming and WebFlux](./site/my-techtalks/TechTalk-Reactive-Programming-and-WebFlux)
 * [Delayed-Batch-Executor](./site/my-techtalks/TechTalk-Delayed-Batch-Executor)
-   * [DZone DelayedBatchExecutor article ver1](https://dzone.com/articles/optimizing-data-repositories-usage-in-java-multith)
-   * [DZone DelayedBatchExecutor article ver2](https://web.archive.org/web/20200815000143/https://dzone.com/articles/delayedbatchexecutor-how-to-optimize-database-usag)
 * [Sleuth for Tracing](./site/my-techtalks/TechTalk-Sleuth-for-Tracing)
 
+</div>
 
- 
- <br />
- 
- 
-#### Technical Notes
+<div class="card" id="technical-notes">
+
+#### 📖 Technical Notes
+
+Deep dives, explanations and practical notes on different topics.
 
 * [Java/Languages Notes](./site/my-notes/my-notes-java-languages.md)
 * [Admin/DevOps Notes](./site/my-notes/my-notes-admin-devops.md)
 * [Concepts in Spanish](./site/my-notes/my-notes-concepts-in-spanish.md)
 
- <br />
- 
- 
-#### Bookmarks
+</div>
 
-These are the IT Bookmarks I collected over the years in readable formats (using tool [Bookmark2md](https://github.com/victormpcmun/Bookmark2md))
+<div class="card" id="bookmarks">
+
+#### 🔖 Bookmarks
+
+Curated links to useful resources, articles and tools.
 
 * [Pretty format](./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html)
 * [Markdown GitHub format](./site/my-bookmarks/generated/generated_MD_IT.md)
 * [Importable to a browser](./site/my-bookmarks/generated/bookmarksIT.html)
 
+</div>
