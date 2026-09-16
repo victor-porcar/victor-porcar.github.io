@@ -1,161 +1,307 @@
 :root {
-  --bg-color: #f8fafc;
-  --card-bg: #ffffff;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --accent-color: #2563eb;
-  --border-color: #e2e8f0;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --bg: #fbfbfc;
+  --surface: #ffffff;
+  --border: #e7e9ee;
+  --ink: #12263f;
+  --ink-soft: #5b6b7f;
+  --ink-mute: #8a97a8;
+  --accent: #1b6ef3;
+  --shadow: 0 1px 2px rgba(18, 38, 63, .04), 0 8px 24px rgba(18, 38, 63, .04);
+  --radius: 8px;
+  --maxw: 1320px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-main);
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Poppins, "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 15px;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Navegación */
-.top-nav {
-  background: #ffffff;
-  border-bottom: 1px solid var(--border-color);
-  padding: 1rem 2rem;
-}
+a { color: inherit; text-decoration: none; }
 
-.nav-container {
-  max-width: 1100px;
+.wrap {
+  max-width: var(--maxw);
   margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(252, 252, 253, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 58px;
 }
 
 .brand {
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.01em;
 }
 
-.top-nav nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
 }
 
-.top-nav nav a:hover {
-  color: var(--text-main);
+.nav a {
+  position: relative;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  padding: 18px 0;
+  transition: color .15s;
 }
 
-/* Banner / Hero */
-.hero-section {
+.nav a:hover { color: var(--ink); }
+
+.nav a.active { color: var(--accent); }
+
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent);
+}
+
+.nav .icon-link { color: var(--ink); padding: 0; display: flex; }
+
+/* ---------- hero ---------- */
+
+.hero {
+  height: 290px;
+  background-color: #35506b;
+  background-image: url("/site/images/header.jpeg"), linear-gradient(160deg, #56728f, #24384f);
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+}
+
+.intro {
   text-align: center;
-  background: #ffffff;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  padding: 52px 0 12px;
 }
 
-.hero-image-wrapper {
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-content h1 {
-  font-size: 2.2rem;
+.intro h1 {
+  margin: 0;
+  font-size: 52px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  letter-spacing: -.02em;
 }
 
-.subtitle {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+.intro .tagline {
+  margin: 10px 0 0;
+  font-size: 19px;
+  color: var(--ink-soft);
+  font-weight: 300;
 }
 
-.tags {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.rule {
+  width: 42px;
+  height: 3px;
+  margin: 28px auto;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
-/* Contenedor principal que agrupa tus 3 tarjetas */
-.main-container {
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
+.topics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.topics span:nth-of-type(even) { color: var(--ink-mute); font-size: 12px; }
+
+/* ---------- cards ---------- */
+
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+  padding: 44px 0 70px;
 }
 
-/* Estilos de las tarjetas (generadas desde H4 en Markdown) */
 .card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
 }
 
-.card h4 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-main);
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
+
+.card-head h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.badge svg { width: 21px; height: 21px; }
+.badge.blue { background: #e8f0fe; color: var(--accent); }
+.badge.green { background: #e6f6ee; color: #14875a; }
+.badge.indigo { background: #eceafc; color: #4c3fd6; }
 
 .card p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  margin: 18px 0 20px;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  max-width: 34ch;
 }
 
-.card ul {
+.card-list {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
+  border-top: 1px solid var(--border);
+  flex: 1;
 }
 
-.card li {
-  margin-bottom: 0.75rem;
-  font-size: 0.95rem;
+.card-list li { border-bottom: 1px solid #f1f2f5; }
+
+.card-list li:last-child { border-bottom: 0; }
+
+.card-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 2px;
+  color: var(--ink);
+  font-size: 14px;
+  transition: color .15s;
 }
 
-.card a {
-  color: var(--text-main);
-  text-decoration: none;
-  transition: color 0.2s;
+.card-list a:hover { color: var(--accent); }
+
+.card-list .lead { color: var(--ink-mute); display: flex; flex: none; }
+.card-list .lead svg { width: 15px; height: 15px; }
+.card-list .chev { margin-left: auto; color: #c3cad4; display: flex; }
+.card-list .chev svg { width: 14px; height: 14px; }
+
+.view-all {
+  margin-top: 22px;
+  color: var(--accent);
+  font-size: 14px;
 }
 
-.card a:hover {
-  color: var(--accent-color);
-}
+.view-all:hover { text-decoration: underline; }
 
-/* Footer */
-.site-footer {
+/* ---------- inner pages ---------- */
+
+.page-head {
+  padding: 56px 0 30px;
   text-align: center;
-  padding: 2rem;
-  border-top: 1px solid var(--border-color);
-  background: #ffffff;
-  margin-top: 4rem;
 }
 
-.footer-links a {
-  margin: 0 1rem;
-  color: var(--text-muted);
-  text-decoration: none;
+.page-head h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.page-head p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-weight: 300;
+}
+
+.entries {
+  max-width: 840px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  display: grid;
+  gap: 14px;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 22px;
+  transition: border-color .15s, transform .15s;
+}
+
+.entry:hover { border-color: #c9d8f5; transform: translateY(-1px); }
+
+.entry .lead { color: var(--ink-mute); display: flex; flex: none; }
+.entry .lead svg { width: 18px; height: 18px; }
+.entry h3 { margin: 0; font-size: 15.5px; font-weight: 600; }
+.entry p { margin: 3px 0 0; color: var(--ink-soft); font-size: 13.5px; }
+.entry .chev { margin-left: auto; color: #c3cad4; display: flex; }
+.entry .chev svg { width: 16px; height: 16px; }
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 26px 0 40px;
+}
+
+.site-footer .wrap {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.site-footer a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.site-footer a:hover { color: var(--accent); }
+.site-footer svg { width: 17px; height: 17px; }
+
+@media (max-width: 1000px) {
+  .cards { grid-template-columns: 1fr; gap: 24px; }
+  .intro h1 { font-size: 38px; }
+  .hero { height: 200px; }
+  .wrap { padding: 0 20px; }
+  .nav { gap: 16px; }
+  .site-footer .wrap { gap: 22px; flex-wrap: wrap; }
 }

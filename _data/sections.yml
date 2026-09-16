@@ -1,0 +1,64 @@
+- id: tech-talks
+  title: Tech Talks
+  lead: Talks, presentations & demos about technologies, tools and concepts.
+  badge: blue
+  icon: mic
+  item_icon: doc
+  view_all: View all talks
+  view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks
+  items:
+    - name: Arthas - JVM Runtime Diagnostics
+      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Arthas-Tool
+    - name: Object Interning
+      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Interning
+    - name: SonarLint and Clean Code
+      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-SonarLint-and-Clean-Code
+    - name: Reactive Programming and WebFlux
+      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Reactive-Programming-and-WebFlux
+    - name: Delayed-Batch-Executor
+      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Delayed-Batch-Executor
+    - name: Sleuth for Tracing
+      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Sleuth-for-Tracing
+    - name: Logging Policy
+      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Logging-Policy
+
+- id: technical-notes
+  title: Technical Notes
+  nav: Notes
+  lead: Deep dives, explanations and practical notes on different topics.
+  badge: green
+  icon: book
+  item_icon: doc
+  view_all: View all notes
+  view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-notes
+  items:
+    - name: Java Notes
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md
+    - name: Architecture
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-architecture.md
+    - name: Admin and DevOps
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-admin-devops.md
+    - name: Non-Functional Requirements
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-nonfunctionalrequirements.md
+    - name: Oracle Features
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-oracle-features.md
+    - name: Tools
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-tools.md
+    - name: Concepts in Spanish
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-concepts-in-spanish.md
+
+- id: bookmarks
+  title: Bookmarks
+  lead: Curated links to useful resources, articles and tools.
+  badge: indigo
+  icon: bookmark
+  item_icon: link
+  view_all: View all bookmarks
+  view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-bookmarks
+  items:
+    - name: Pretty format
+      url: ./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html
+    - name: Markdown GitHub format
+      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-bookmarks/generated/generated_MD_IT.md
+    - name: Importable to a browser
+      url: ./site/my-bookmarks/generated/bookmarksIT.html
