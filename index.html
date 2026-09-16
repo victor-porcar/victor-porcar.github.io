@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="cards">
+  {% for section in site.data.sections %}
+  <article class="card" id="{{ section.id }}">
+    <div class="card-head">
+      <span class="badge {{ section.badge }}">{% include icon.html name=section.icon %}</span>
+      <h2>{{ section.title }}</h2>
+    </div>
+    <p>{{ section.lead }}</p>
+    <ul class="card-list">
+      {% for item in section.items limit: 5 %}
+      <li>
+        <a href="{{ item.url }}"{% if item.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
+          <span class="lead">{% include icon.html name=section.item_icon %}</span>
+          {{ item.name }}
+          <span class="chev">{% include icon.html name="chevron" %}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="view-all" href="{{ section.view_all_url }}" target="_blank" rel="noopener">{{ section.view_all }} &rarr;</a>
+  </article>
+  {% endfor %}
+</section>

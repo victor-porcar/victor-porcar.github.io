@@ -1,3 +1,17 @@
 title: Víctor Porcar
 description: My public IT resources gathered in one place.
 theme: null
+
+github_user: https://github.com/victor-porcar
+linkedin: https://es.linkedin.com/in/victor-porcar-a110a533
+email: victormpcmun@gmail.com
+
+topics:
+  - Software Engineering
+  - Java
+  - Backend
+  - DevOps
+
+exclude:
+  - .claude
+  - _preview
