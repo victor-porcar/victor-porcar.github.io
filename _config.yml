@@ -15,3 +15,13 @@ topics:
 exclude:
   - .claude
   - _preview
+
+defaults:
+  - scope:
+      path: site/my-notes
+    values:
+      layout: page
+  - scope:
+      path: site/my-techtalks
+    values:
+      layout: page
