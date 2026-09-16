@@ -8,19 +8,19 @@
   view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks
   items:
     - name: Arthas - JVM Runtime Diagnostics
-      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Arthas-Tool
+      url: ./site/my-techtalks/TechTalk-Arthas-Tool/
     - name: Object Interning
-      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Interning
+      url: ./site/my-techtalks/TechTalk-Interning/
     - name: SonarLint and Clean Code
-      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-SonarLint-and-Clean-Code
+      url: ./site/my-techtalks/TechTalk-SonarLint-and-Clean-Code/
     - name: Reactive Programming and WebFlux
-      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Reactive-Programming-and-WebFlux
+      url: ./site/my-techtalks/TechTalk-Reactive-Programming-and-WebFlux/
     - name: Delayed-Batch-Executor
-      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Delayed-Batch-Executor
+      url: ./site/my-techtalks/TechTalk-Delayed-Batch-Executor/
     - name: Sleuth for Tracing
-      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Sleuth-for-Tracing
+      url: ./site/my-techtalks/TechTalk-Sleuth-for-Tracing/
     - name: Logging Policy
-      url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks/TechTalk-Logging-Policy
+      url: ./site/my-techtalks/TechTalk-Logging-Policy/
 
 - id: technical-notes
   title: Technical Notes
@@ -33,19 +33,19 @@
   view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-notes
   items:
     - name: Java Notes
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md
+      url: ./site/my-notes/my-notes-java.html
     - name: Architecture
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-architecture.md
+      url: ./site/my-notes/my-notes-architecture.html
     - name: Admin and DevOps
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-admin-devops.md
+      url: ./site/my-notes/my-notes-admin-devops.html
     - name: Non-Functional Requirements
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-nonfunctionalrequirements.md
+      url: ./site/my-notes/my-notes-nonfunctionalrequirements.html
     - name: Oracle Features
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-oracle-features.md
+      url: ./site/my-notes/my-notes-oracle-features.html
     - name: Tools
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-tools.md
+      url: ./site/my-notes/my-notes-tools.html
     - name: Concepts in Spanish
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-concepts-in-spanish.md
+      url: ./site/my-notes/my-notes-concepts-in-spanish.html
 
 - id: bookmarks
   title: Bookmarks
@@ -59,6 +59,6 @@
     - name: Pretty format
       url: ./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html
     - name: Markdown GitHub format
-      url: https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-bookmarks/generated/generated_MD_IT.md
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html
     - name: Importable to a browser
       url: ./site/my-bookmarks/generated/bookmarksIT.html
