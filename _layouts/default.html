@@ -13,6 +13,7 @@
       <h1>{{ site.title }}</h1>
     </div>
     <p class="tagline">{{ site.description }}</p>
+    {% if site.bio %}<p class="bio">{{ site.bio }}</p>{% endif %}
     <div class="rule"></div>
     <div class="topics">
       {% for topic in site.topics %}
