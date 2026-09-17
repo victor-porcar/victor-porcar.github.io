@@ -70,11 +70,17 @@ a { color: inherit; text-decoration: none; }
 
 .social a:hover { opacity: .65; }
 
+/* Each icon fills a different share of its own viewBox, so the boxes are
+   sized to make the drawings come out the same height, not the boxes. */
 .social svg {
-  width: 18px;
-  height: 18px;
   flex: none;
+  transform: translateY(-0.5px);   /* the labels have no descenders */
 }
+
+.social .github   svg { width: 15px; height: 15px; }
+.social .linkedin svg { width: 20px; height: 20px; }
+.social .mail     svg { width: 22px; height: 22px; }
+.social .youtube  svg { width: 21px; height: 21px; }
 
 .social .github   svg { color: #24292f; }
 .social .linkedin svg { color: #0a66c2; }
