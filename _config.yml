@@ -23,12 +23,6 @@ start_here:
   - name: Delayed-Batch-Executor
     url: /site/my-techtalks/TechTalk-Delayed-Batch-Executor/
 
-topics:
-  - Software Engineering
-  - Java
-  - Backend
-  - DevOps
-
 exclude:
   - .claude
   - _preview
