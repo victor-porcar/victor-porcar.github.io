@@ -140,11 +140,13 @@ a { color: inherit; text-decoration: none; }
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   gap: 38px;
   padding: 44px 0 70px;
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--surface);
@@ -192,7 +194,6 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   padding: 0;
   border-top: 1px solid var(--border);
-  flex: 1;
 }
 
 .card-list li { border-bottom: 1px solid #f1f2f5; }
@@ -216,13 +217,48 @@ a { color: inherit; text-decoration: none; }
 .card-list .chev { margin-left: auto; color: #c3cad4; display: flex; }
 .card-list .chev svg { width: 14px; height: 14px; }
 
+.expand {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.card-list .extra { display: none; }
+
+.expand:checked ~ .card-list .extra { display: block; }
+
 .view-all {
-  margin-top: 22px;
+  align-self: flex-start;
+  margin-top: 14px;
+  padding: 8px 0;
   color: var(--accent);
   font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .view-all:hover { text-decoration: underline; }
+
+.view-all .when-expanded { display: none; }
+
+.expand:checked ~ .view-all .when-collapsed { display: none; }
+
+.expand:checked ~ .view-all .when-expanded { display: inline; }
+
+.expand:focus ~ .view-all {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.expand:focus:not(:focus-visible) ~ .view-all { outline: none; }
 
 /* ---------- inner pages ---------- */
 

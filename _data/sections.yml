@@ -4,8 +4,8 @@
   badge: blue
   icon: mic
   item_icon: doc
-  view_all: View all talks
-  view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks
+  more_label: View all talks
+  less_label: Show less
   items:
     - name: Introduction to Claude for Java Programmers
       url: ./site/my-techtalks/TechTalk-Claude-for-Java-Programmers/
@@ -31,8 +31,8 @@
   badge: green
   icon: book
   item_icon: doc
-  view_all: View all notes
-  view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-notes
+  more_label: View all notes
+  less_label: Show less
   items:
     - name: Java Notes
       url: ./site/my-notes/my-notes-java.html
@@ -55,8 +55,6 @@
   badge: indigo
   icon: bookmark
   item_icon: link
-  view_all: View all bookmarks
-  view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-bookmarks
   items:
     - name: Pretty format
       url: ./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html
