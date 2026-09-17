@@ -175,15 +175,17 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- cards ---------- */
 
+/* Columns rather than a grid: the cards have very different heights and a
+   grid row is as tall as its tallest card, which leaves large gaps. */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: start;
-  gap: 38px;
+  column-count: 3;
+  column-gap: 38px;
   padding: 44px 0 70px;
 }
 
 .card {
+  break-inside: avoid;
+  margin-bottom: 38px;
   display: flex;
   flex-direction: column;
   background: var(--surface);
@@ -218,6 +220,7 @@ a { color: inherit; text-decoration: none; }
 .badge.blue { background: #e8f0fe; color: var(--accent); }
 .badge.green { background: #e6f6ee; color: #14875a; }
 .badge.indigo { background: #eceafc; color: #4c3fd6; }
+.badge.red { background: #fdeaea; color: #c0392b; }
 
 .card p {
   margin: 18px 0 20px;
@@ -309,7 +312,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 1000px) {
-  .cards { grid-template-columns: 1fr; gap: 24px; }
+  .cards { column-count: 1; }
+  .card { margin-bottom: 24px; }
   .intro h1 { font-size: 38px; }
   .identity { gap: 14px; }
   .avatar { width: 76px; height: 76px; }

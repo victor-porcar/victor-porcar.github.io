@@ -21,7 +21,7 @@
     <nav class="nav">
       <a{% if include.home %} class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
       {% for section in site.data.sections %}
-        <a href="{{ section.nav_url }}" target="_blank" rel="noopener">{{ section.nav | default: section.title }}</a>
+        {% if section.nav_url %}<a href="{{ section.nav_url }}" target="_blank" rel="noopener">{{ section.nav | default: section.title }}</a>{% endif %}
       {% endfor %}
     </nav>
   </div>

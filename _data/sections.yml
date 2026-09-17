@@ -81,3 +81,20 @@
       url: ./site/my-bookmarks/generated/generated_MD_IT.html
     - name: Importable to a browser
       url: ./site/my-bookmarks/generated/bookmarksIT.html
+
+- id: it-videos
+  title: IT Interesting Videos
+  nav: Videos
+  lead: Talks and interviews worth the time.
+  badge: red
+  icon: play
+  item_icon: play-circle
+  items:
+    - name: Uncle Bob - SOLID principles
+      url: https://youtu.be/zHiWqnTWsn4
+    - name: Microservices - Martin Fowler
+      url: https://youtu.be/wgdBVIX9ifA
+    - name: What developers get wrong about software architecture - Martin Fowler
+      url: https://youtu.be/ev2qvR9UFPs
+    - name: How AI will change software engineering - Martin Fowler
+      url: https://youtu.be/CQmI4XKTa0U
