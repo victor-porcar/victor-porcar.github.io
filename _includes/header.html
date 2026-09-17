@@ -5,7 +5,6 @@
       {{ site.github_handle }}
     </a>
     <nav class="nav">
-      <a class="icon-link" href="{{ site.github_user }}" aria-label="GitHub">{% include icon.html name="github" %}</a>
       <a{% if include.home %} class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
       {% for section in site.data.sections %}
         <a href="{{ section.nav_url }}" target="_blank" rel="noopener">{{ section.nav | default: section.title }}</a>

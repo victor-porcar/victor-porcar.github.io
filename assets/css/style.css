@@ -93,8 +93,6 @@ a { color: inherit; text-decoration: none; }
   background: var(--accent);
 }
 
-.nav .icon-link { color: var(--ink); padding: 0; display: flex; }
-
 /* ---------- hero ---------- */
 
 .hero {
