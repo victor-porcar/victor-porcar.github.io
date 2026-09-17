@@ -52,6 +52,8 @@
   icon: book
   item_icon: doc
   items:
+    - name: Linux Setup
+      url: ./site/my-notes/my-notes-linux-setup.html
     - name: Linux Cheatsheet
       url: ./site/my-notes/my-notes-linux.html
     - name: Git Cheatsheet
