@@ -37,6 +37,12 @@
       url: ./site/my-techtalks/TechTalk-Zero-Downtime-Database-Migrations/
     - name: "@Transactional: What Really Happens"
       url: ./site/my-techtalks/TechTalk-Transactional-What-Really-Happens/
+    - name: Autoboxing and the Integer Cache
+      url: ./site/my-techtalks/TechTalk-Autoboxing-and-the-Integer-Cache/
+    - name: The Exception That Costs 100x
+      url: ./site/my-techtalks/TechTalk-The-Exception-That-Costs-100x/
+    - name: The Requests You Lose on Every Deploy
+      url: ./site/my-techtalks/TechTalk-Requests-Lost-On-Every-Deploy/
 
 - id: technical-notes
   title: Technical Notes
