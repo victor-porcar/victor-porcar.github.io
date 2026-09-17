@@ -27,6 +27,16 @@
       url: ./site/my-techtalks/TechTalk-Sleuth-for-Tracing/
     - name: Logging Policy
       url: ./site/my-techtalks/TechTalk-Logging-Policy/
+    - name: Virtual Threads vs Reactive
+      url: ./site/my-techtalks/TechTalk-Virtual-Threads-vs-Reactive/
+    - name: From Sleuth to Micrometer Tracing
+      url: ./site/my-techtalks/TechTalk-From-Sleuth-to-Micrometer-Tracing/
+    - name: Resilience - Timeouts, Retries and Circuit Breakers
+      url: ./site/my-techtalks/TechTalk-Resilience-Patterns/
+    - name: Zero-Downtime Database Migrations
+      url: ./site/my-techtalks/TechTalk-Zero-Downtime-Database-Migrations/
+    - name: "@Transactional: What Really Happens"
+      url: ./site/my-techtalks/TechTalk-Transactional-What-Really-Happens/
 
 - id: technical-notes
   title: Technical Notes
