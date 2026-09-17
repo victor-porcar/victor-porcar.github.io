@@ -1,11 +1,14 @@
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="brand" href="{{ site.github_user }}" target="_blank" rel="noopener">
+      {% include icon.html name="github" %}
+      {{ site.github_handle }}
+    </a>
     <nav class="nav">
       <a class="icon-link" href="{{ site.github_user }}" aria-label="GitHub">{% include icon.html name="github" %}</a>
       <a{% if include.home %} class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
       {% for section in site.data.sections %}
-        <a href="{{ '/' | relative_url }}#{{ section.id }}">{{ section.nav | default: section.title }}</a>
+        <a href="{{ section.nav_url }}" target="_blank" rel="noopener">{{ section.nav | default: section.title }}</a>
       {% endfor %}
     </nav>
   </div>

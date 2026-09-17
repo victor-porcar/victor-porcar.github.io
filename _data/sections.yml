@@ -1,4 +1,5 @@
 - id: tech-talks
+  nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks
   title: Tech Talks
   lead: Talks, presentations & demos about technologies, tools and concepts.
   badge: blue
@@ -43,6 +44,7 @@
       url: ./site/my-techtalks/TechTalk-Requests-Lost-On-Every-Deploy/
 
 - id: technical-notes
+  nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-notes
   title: Technical Notes
   nav: Notes
   lead: "Cheatsheets and working notes: commands, recipes and vocabulary."
@@ -64,6 +66,7 @@
       url: ./site/my-notes/my-notes-glossary.html
 
 - id: bookmarks
+  nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-bookmarks
   title: Bookmarks
   lead: Curated links to useful resources, articles and tools.
   badge: indigo
