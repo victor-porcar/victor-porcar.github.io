@@ -9,6 +9,10 @@
   items:
     - name: Introduction to Claude for Java Programmers
       url: ./site/my-techtalks/TechTalk-Claude-for-Java-Programmers/
+    - name: Introduction to Docker
+      url: ./site/my-techtalks/TechTalk-Introduction-to-Docker/
+    - name: Introduction to Kubernetes
+      url: ./site/my-techtalks/TechTalk-Introduction-to-Kubernetes/
     - name: Arthas - JVM Runtime Diagnostics
       url: ./site/my-techtalks/TechTalk-Arthas-Tool/
     - name: Object Interning
