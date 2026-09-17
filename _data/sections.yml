@@ -7,6 +7,8 @@
   view_all: View all talks
   view_all_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks
   items:
+    - name: Introduction to Claude for Java Programmers
+      url: ./site/my-techtalks/TechTalk-Claude-for-Java-Programmers/
     - name: Arthas - JVM Runtime Diagnostics
       url: ./site/my-techtalks/TechTalk-Arthas-Tool/
     - name: Object Interning
