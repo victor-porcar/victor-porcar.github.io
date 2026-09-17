@@ -17,6 +17,7 @@ layout: default
         <a href="{{ item.url }}"{% if item.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
           <span class="lead">{% include icon.html name=section.item_icon %}</span>
           {{ item.name }}
+          {% if item.date %}<span class="when">{{ item.date | slice: 0, 4 }}</span>{% endif %}
           <span class="chev">{% include icon.html name="chevron" %}</span>
         </a>
       </li>

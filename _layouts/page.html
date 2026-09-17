@@ -5,7 +5,17 @@
 
 {% include header.html %}
 
+{%- assign here = page.url -%}
+{%- assign written = "" -%}
+{%- for section in site.data.sections -%}
+  {%- for item in section.items -%}
+    {%- assign target = item.url | remove_first: "." -%}
+    {%- if target == here and item.date -%}{%- assign written = item.date -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+
 <main class="page">
+  {% if written != "" %}<p class="written">{{ written | append: "-01" | date: "%B %Y" }}</p>{% endif %}
   <article class="prose">
     {{ content }}
   </article>

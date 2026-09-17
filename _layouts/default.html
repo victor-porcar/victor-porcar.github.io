@@ -19,6 +19,13 @@
         <span>{{ topic }}</span>{% unless forloop.last %}<span>•</span>{% endunless %}
       {% endfor %}
     </div>
+
+    {% if site.start_here %}
+    <p class="start-here">
+      New here? Start with
+      {% for t in site.start_here %}<a href="{{ t.url | relative_url }}">{{ t.name }}</a>{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}.
+    </p>
+    {% endif %}
   </section>
 
   <div class="wrap">

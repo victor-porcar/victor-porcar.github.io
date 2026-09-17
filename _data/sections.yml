@@ -1,71 +1,99 @@
 - id: tech-talks
   nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-techtalks
   title: Tech Talks
-  lead: Talks, presentations & demos about technologies, tools and concepts.
+  lead: My talks, presentations & demos about technologies, tools and concepts.
   badge: blue
   icon: mic
   item_icon: doc
   items:
     - name: Introduction to Claude for Java Programmers
       url: ./site/my-techtalks/TechTalk-Claude-for-Java-Programmers/
+      date: "2026-09"
     - name: Introduction to Docker
       url: ./site/my-techtalks/TechTalk-Introduction-to-Docker/
+      date: "2026-09"
     - name: Introduction to Kubernetes
       url: ./site/my-techtalks/TechTalk-Introduction-to-Kubernetes/
+      date: "2026-09"
     - name: Arthas - JVM Runtime Diagnostics
       url: ./site/my-techtalks/TechTalk-Arthas-Tool/
+      date: "2022-03"
     - name: Object Interning
       url: ./site/my-techtalks/TechTalk-Interning/
+      date: "2019-04"
+    - name: Clean Code
+      url: ./site/my-techtalks/TechTalk-Clean-Code/
+      date: "2020-02"
     - name: SonarLint and Clean Code
       url: ./site/my-techtalks/TechTalk-SonarLint-and-Clean-Code/
+      date: "2020-06"
     - name: Reactive Programming and WebFlux
       url: ./site/my-techtalks/TechTalk-Reactive-Programming-and-WebFlux/
+      date: "2021-05"
     - name: Delayed-Batch-Executor
       url: ./site/my-techtalks/TechTalk-Delayed-Batch-Executor/
+      date: "2020-11"
     - name: Sleuth for Tracing
       url: ./site/my-techtalks/TechTalk-Sleuth-for-Tracing/
+      date: "2021-09"
     - name: Logging Policy
       url: ./site/my-techtalks/TechTalk-Logging-Policy/
+      date: "2019-10"
     - name: Virtual Threads vs Reactive
       url: ./site/my-techtalks/TechTalk-Virtual-Threads-vs-Reactive/
+      date: "2026-09"
     - name: From Sleuth to Micrometer Tracing
       url: ./site/my-techtalks/TechTalk-From-Sleuth-to-Micrometer-Tracing/
+      date: "2026-09"
     - name: Resilience - Timeouts, Retries and Circuit Breakers
       url: ./site/my-techtalks/TechTalk-Resilience-Patterns/
+      date: "2026-09"
     - name: Zero-Downtime Database Migrations
       url: ./site/my-techtalks/TechTalk-Zero-Downtime-Database-Migrations/
+      date: "2026-09"
     - name: "@Transactional: What Really Happens"
       url: ./site/my-techtalks/TechTalk-Transactional-What-Really-Happens/
+      date: "2026-09"
     - name: Autoboxing and the Integer Cache
       url: ./site/my-techtalks/TechTalk-Autoboxing-and-the-Integer-Cache/
+      date: "2026-09"
     - name: The Exception That Costs 100x
       url: ./site/my-techtalks/TechTalk-The-Exception-That-Costs-100x/
+      date: "2026-09"
     - name: The Requests You Lose on Every Deploy
       url: ./site/my-techtalks/TechTalk-Requests-Lost-On-Every-Deploy/
+      date: "2026-09"
 
 - id: technical-notes
   nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-notes
   title: Technical Notes
   nav: Notes
-  lead: "Cheatsheets and working notes: commands, recipes and vocabulary."
+  lead: "My cheatsheets and working notes: commands, recipes and vocabulary."
   badge: green
   icon: book
   item_icon: doc
   items:
     - name: Linux Setup
       url: ./site/my-notes/my-notes-linux-setup.html
+      date: "2026-09"
     - name: Linux Cheatsheet
       url: ./site/my-notes/my-notes-linux.html
+      date: "2026-09"
     - name: Git Cheatsheet
       url: ./site/my-notes/my-notes-git.html
+      date: "2026-09"
     - name: Java and JVM Cheatsheet
       url: ./site/my-notes/my-notes-java-jvm.html
+      date: "2026-09"
     - name: Docker and Kubernetes Cheatsheet
       url: ./site/my-notes/my-notes-docker-kubernetes.html
+      date: "2026-09"
     - name: SQL and Oracle Cheatsheet
       url: ./site/my-notes/my-notes-oracle-features.html
+      date: "2021-02"
     - name: Glossary
       url: ./site/my-notes/my-notes-glossary.html
+      date: "2020-09"
 
 - id: bookmarks
   nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-bookmarks
@@ -97,7 +125,7 @@
 - id: it-videos
   title: IT Interesting Videos
   nav: Videos
-  lead: Talks and interviews worth the time.
+  lead: Talks and interviews by others, worth the time.
   badge: red
   icon: play
   item_icon: play-circle
