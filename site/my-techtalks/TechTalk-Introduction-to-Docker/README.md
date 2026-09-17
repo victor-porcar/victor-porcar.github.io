@@ -277,6 +277,7 @@ docker stats                   # live CPU and memory per container
 
 Two that save an afternoon:
 
+{% raw %}
 ```shell
 # why did it die?
 docker inspect <container> --format '{{.State.ExitCode}} {{.State.OOMKilled}}'
@@ -284,6 +285,7 @@ docker inspect <container> --format '{{.State.ExitCode}} {{.State.OOMKilled}}'
 # the image builds but the app does not start: get in without starting the app
 docker run --rm -it --entrypoint sh my-service:1.4.2
 ```
+{% endraw %}
 
 And the one to run when the laptop runs out of disk, which it will:
 
