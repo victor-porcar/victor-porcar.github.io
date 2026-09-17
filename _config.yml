@@ -29,3 +29,7 @@ defaults:
       path: site/my-techtalks
     values:
       layout: page
+  - scope:
+      path: site/my-bookmarks
+    values:
+      layout: page

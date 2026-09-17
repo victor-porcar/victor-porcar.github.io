@@ -75,12 +75,24 @@
   icon: bookmark
   item_icon: link
   items:
-    - name: Pretty format
-      url: ./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html
-    - name: Markdown GitHub format
+    - name: Java
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#java
+    - name: Software Concepts
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#software-concepts
+    - name: Tools
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#tools
+    - name: Architecture
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#architecture
+    - name: NoSQL databases
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#nosql-db-solr---elastic---redis---cassandra---hollow
+    - name: Patterns
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#patterns
+    - name: Clean Code
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#clean-code
+    - name: Version control
+      url: ./site/my-bookmarks/generated/generated_MD_IT.html#repos-git---hg---svn
+    - name: All of them
       url: ./site/my-bookmarks/generated/generated_MD_IT.html
-    - name: Importable to a browser
-      url: ./site/my-bookmarks/generated/bookmarksIT.html
 
 - id: it-videos
   title: IT Interesting Videos

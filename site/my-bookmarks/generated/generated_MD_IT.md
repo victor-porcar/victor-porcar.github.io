@@ -298,20 +298,6 @@
     * [Generative AI for Java Made Easy: A Quick Start with Spring AI - by Shashir - Nerd For Tech - Medium](https://medium.com/nerd-for-tech/generative-ai-for-java-made-easy-a-quick-start-with-spring-ai-8451742707ea)
     * [Natural Language Understanding con Snips NLU en Python - Adrianistán](https://blog.adrianistan.eu/natural-language-understanding-con-snips-nlu-en-python)
 
-  * ## Personal
-
-    * [GitHub - victormpcmun@gmail.com](https://github.com/)
-    * [ChatGPT - victormpcmun@gmail.com](https://chat.openai.com/)
-    * [DZone - victormpcmun@gmail.com](https://dzone.com/)
-    * [Oracle - vmpcano@gmail.com](https://login.oracle.com/mysso/signon.jsp)
-    * [Oracle Certview - vmpcano@gmail.com (same oracle)](https://catalog-education.oracle.com/pls/apex/f?p=1010:26:113404962375023)
-    * [Nexus Repository Manager - victormpcmun@gmail.com](https://oss.sonatype.org/#welcome)
-    * [Badges - Credly - victormpcmun@gmail.com](https://www.credly.com/users/victor-porcar/badges)
-    * [edX courses - vmpcano@gmail.com](https://courses.edx.org/dashboard)
-    * [Whizlabs - mavucura@gmail.com](https://www.whizlabs.com/)
-    * [JavaSuccess Interview - vmpcano@gmail.com](https://www.java-success.com/)
-
-
 
 ___Powered by https://github.com/victormpcmun/bookmark2md___
  
