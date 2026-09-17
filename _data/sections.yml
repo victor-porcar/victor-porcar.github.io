@@ -4,8 +4,6 @@
   badge: blue
   icon: mic
   item_icon: doc
-  more_label: View all talks
-  less_label: Show less
   items:
     - name: Introduction to Claude for Java Programmers
       url: ./site/my-techtalks/TechTalk-Claude-for-Java-Programmers/
@@ -51,8 +49,6 @@
   badge: green
   icon: book
   item_icon: doc
-  more_label: View all notes
-  less_label: Show less
   items:
     - name: Linux Cheatsheet
       url: ./site/my-notes/my-notes-linux.html

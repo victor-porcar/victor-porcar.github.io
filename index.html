@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% assign shown = 5 %}
-
 <section class="cards">
   {% for section in site.data.sections %}
   <article class="card" id="{{ section.id }}">
@@ -13,13 +11,9 @@ layout: default
     </div>
     <p>{{ section.lead }}</p>
 
-    {% if section.items.size > shown %}
-    <input class="expand" type="checkbox" id="expand-{{ section.id }}">
-    {% endif %}
-
     <ul class="card-list">
       {% for item in section.items %}
-      <li{% if forloop.index > shown %} class="extra"{% endif %}>
+      <li>
         <a href="{{ item.url }}"{% if item.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
           <span class="lead">{% include icon.html name=section.item_icon %}</span>
           {{ item.name }}
@@ -28,13 +22,6 @@ layout: default
       </li>
       {% endfor %}
     </ul>
-
-    {% if section.items.size > shown %}
-    <label class="view-all" for="expand-{{ section.id }}">
-      <span class="when-collapsed">{{ section.more_label }} &darr;</span>
-      <span class="when-expanded">{{ section.less_label }} &uarr;</span>
-    </label>
-    {% endif %}
   </article>
   {% endfor %}
 </section>
