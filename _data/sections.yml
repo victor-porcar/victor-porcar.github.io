@@ -70,7 +70,7 @@
 - id: bookmarks
   nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-bookmarks
   title: Bookmarks
-  lead: Curated links to useful resources, articles and tools.
+  lead: My reading shelf, by topic. What I have saved along the way.
   badge: indigo
   icon: bookmark
   item_icon: link
