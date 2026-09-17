@@ -41,27 +41,25 @@
 - id: technical-notes
   title: Technical Notes
   nav: Notes
-  lead: Deep dives, explanations and practical notes on different topics.
+  lead: "Cheatsheets and working notes: commands, recipes and vocabulary."
   badge: green
   icon: book
   item_icon: doc
   more_label: View all notes
   less_label: Show less
   items:
-    - name: Java Notes
-      url: ./site/my-notes/my-notes-java.html
-    - name: Architecture
-      url: ./site/my-notes/my-notes-architecture.html
-    - name: Admin and DevOps
-      url: ./site/my-notes/my-notes-admin-devops.html
-    - name: Non-Functional Requirements
-      url: ./site/my-notes/my-notes-nonfunctionalrequirements.html
-    - name: Oracle Features
+    - name: Linux Cheatsheet
+      url: ./site/my-notes/my-notes-linux.html
+    - name: Git Cheatsheet
+      url: ./site/my-notes/my-notes-git.html
+    - name: Java and JVM Cheatsheet
+      url: ./site/my-notes/my-notes-java-jvm.html
+    - name: Docker and Kubernetes Cheatsheet
+      url: ./site/my-notes/my-notes-docker-kubernetes.html
+    - name: SQL and Oracle Cheatsheet
       url: ./site/my-notes/my-notes-oracle-features.html
-    - name: Tools
-      url: ./site/my-notes/my-notes-tools.html
-    - name: Concepts in Spanish
-      url: ./site/my-notes/my-notes-concepts-in-spanish.html
+    - name: Glossary
+      url: ./site/my-notes/my-notes-glossary.html
 
 - id: bookmarks
   title: Bookmarks

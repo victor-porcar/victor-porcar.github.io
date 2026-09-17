@@ -322,3 +322,273 @@ Broadly speaking it is good idea to create FK and disable it if necessary becaus
 https://stackoverflow.com/questions/237327/how-to-upsert-update-or-insert-into-a-table
 
 
+
+---
+
+### SQL Cheatsheet
+
+Recipes that come up again and again, mostly Oracle but portable where noted.
+
+#### Analytic functions: the pattern that replaces subqueries
+
+```sql
+SELECT plate, brand, price,
+       ROW_NUMBER() OVER (PARTITION BY brand ORDER BY price DESC) AS rn,
+       RANK()       OVER (PARTITION BY brand ORDER BY price DESC) AS rnk,
+       DENSE_RANK() OVER (PARTITION BY brand ORDER BY price DESC) AS drnk
+  FROM car;
+```
+
+The difference, with a tie for second place:
+
+- `ROW_NUMBER` → 1, 2, 3, 4 — never repeats, arbitrary between ties
+- `RANK` → 1, 2, 2, 4 — leaves a gap
+- `DENSE_RANK` → 1, 2, 2, 3 — no gap
+
+**The most valuable one in practice: the latest row per group.**
+
+```sql
+SELECT * FROM (
+  SELECT c.*, ROW_NUMBER() OVER (PARTITION BY plate ORDER BY updated_at DESC) rn
+    FROM car_history c)
+ WHERE rn = 1;
+```
+
+That replaces the correlated subquery with `MAX(updated_at)` that everybody writes first, and it reads the table once instead of twice.
+
+```sql
+SELECT plate, price,
+       LAG(price)  OVER (ORDER BY updated_at) AS previous_price,
+       LEAD(price) OVER (ORDER BY updated_at) AS next_price,
+       price - LAG(price) OVER (ORDER BY updated_at) AS delta
+  FROM price_history;
+```
+
+```sql
+-- running total, and share of the group
+SELECT brand, plate, price,
+       SUM(price) OVER (PARTITION BY brand ORDER BY plate) AS running_total,
+       SUM(price) OVER (PARTITION BY brand)                AS brand_total,
+       RATIO_TO_REPORT(price) OVER (PARTITION BY brand)    AS share
+  FROM car;
+```
+
+#### Duplicates
+
+Find them:
+
+```sql
+SELECT plate, COUNT(*)
+  FROM car
+ GROUP BY plate
+HAVING COUNT(*) > 1;
+```
+
+Delete them keeping one, the Oracle way with `ROWID`:
+
+```sql
+DELETE FROM car
+ WHERE ROWID NOT IN (SELECT MIN(ROWID) FROM car GROUP BY plate);
+```
+
+Portable version, using the analytic function above:
+
+```sql
+DELETE FROM car
+ WHERE id IN (
+   SELECT id FROM (
+     SELECT id, ROW_NUMBER() OVER (PARTITION BY plate ORDER BY id) rn
+       FROM car)
+    WHERE rn > 1);
+```
+
+#### CTEs instead of nested subqueries
+
+```sql
+WITH available AS (
+    SELECT * FROM car WHERE status = 'AVAILABLE'
+), priced AS (
+    SELECT a.*, p.daily_rate
+      FROM available a
+      JOIN tariff p ON p.category = a.category
+)
+SELECT brand, AVG(daily_rate)
+  FROM priced
+ GROUP BY brand;
+```
+
+Same execution, far more readable, and each step can be tested on its own by selecting from it.
+
+#### NULL, which is where the bugs are
+
+```sql
+NULL = NULL          -- is NOT true: it is unknown
+x <> 'A'             -- does NOT return rows where x IS NULL
+NOT IN (1, 2, NULL)  -- returns NOTHING, ever
+```
+
+That third one is worth memorising: a single NULL inside a `NOT IN` subquery makes the whole predicate return no rows, silently. Use `NOT EXISTS` instead.
+
+```sql
+COALESCE(a, b, c)    -- first non-null  (standard)
+NVL(a, b)            -- Oracle, two arguments
+NVL2(a, if_not_null, if_null)
+NULLIF(a, b)         -- NULL if they are equal: handy against division by zero
+```
+
+Oracle quirk worth knowing: **the empty string is NULL**. `'' IS NULL` is true, which is not the case in PostgreSQL.
+
+#### Pagination
+
+```sql
+-- Oracle 12c and later, and standard
+SELECT * FROM car ORDER BY id OFFSET 20 ROWS FETCH NEXT 10 ROWS ONLY;
+
+-- older Oracle
+SELECT * FROM (SELECT c.*, ROWNUM rn FROM (SELECT * FROM car ORDER BY id) c
+                WHERE ROWNUM <= 30)
+ WHERE rn > 20;
+```
+
+`ORDER BY` is not optional: without it the order is undefined and page 2 may repeat rows from page 1.
+
+And on a large table, **offset pagination degrades**: `OFFSET 100000` reads and discards 100000 rows. Keyset pagination does not:
+
+```sql
+SELECT * FROM car WHERE id > :last_seen_id ORDER BY id FETCH NEXT 10 ROWS ONLY;
+```
+
+#### Queues with SKIP LOCKED
+
+The clean way to have several workers consuming from a table without stepping on each other:
+
+```sql
+SELECT * FROM job_queue
+ WHERE status = 'PENDING'
+ ORDER BY created_at
+ FOR UPDATE SKIP LOCKED
+ FETCH NEXT 10 ROWS ONLY;
+```
+
+`FOR UPDATE` locks the rows; `SKIP LOCKED` makes other sessions ignore the ones already taken instead of queueing behind them. Available in Oracle and PostgreSQL, and it removes the need for a message broker in a lot of simple cases.
+
+#### Reading a plan
+
+```sql
+EXPLAIN PLAN FOR SELECT ...;
+SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY);
+```
+
+The real one, with actual rows rather than estimates:
+
+```sql
+SELECT /*+ GATHER_PLAN_STATISTICS */ ... ;
+SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(NULL, NULL, 'ALLSTATS LAST'));
+```
+
+What to look for, in order:
+
+- **`TABLE ACCESS FULL`** on a large table inside a loop — the usual culprit
+- a large gap between **E-Rows and A-Rows** (estimated vs actual) — the statistics are lying, and every decision after that is wrong
+- **`NESTED LOOPS`** over many rows where a `HASH JOIN` belongs
+
+#### Why an index is not being used
+
+Almost always one of these three:
+
+```sql
+-- 1. a function on the column kills the index
+WHERE UPPER(plate) = 'ABC'          -- needs a function-based index
+CREATE INDEX idx_car_plate_upper ON car (UPPER(plate));
+
+-- 2. implicit type conversion
+WHERE plate = 123                   -- plate is VARCHAR2: converts the COLUMN, not the literal
+
+-- 3. leading wildcard
+WHERE plate LIKE '%123'             -- cannot use a b-tree index
+```
+
+And statistics:
+
+```sql
+EXEC DBMS_STATS.GATHER_TABLE_STATS('SCHEMA', 'CAR');
+SELECT table_name, num_rows, last_analyzed FROM user_tables WHERE table_name = 'CAR';
+```
+
+A table loaded last night and never analysed has the optimizer planning for the volume it had yesterday.
+
+#### Bind variables
+
+```sql
+-- hard parse on every execution, floods the shared pool
+SELECT * FROM car WHERE plate = 'ABC123';
+
+-- one parse, reused
+SELECT * FROM car WHERE plate = :plate;
+```
+
+In Java this is the difference between a `Statement` with concatenation and a `PreparedStatement`, and it is also the difference between being vulnerable to SQL injection and not being vulnerable.
+
+#### Who is blocking whom
+
+```sql
+-- sessions and what they are running
+SELECT s.sid, s.serial#, s.username, s.status, s.machine, q.sql_text
+  FROM v$session s LEFT JOIN v$sql q ON q.sql_id = s.sql_id
+ WHERE s.type = 'USER';
+
+-- blocked and blocker
+SELECT s.sid, s.blocking_session, s.event, s.seconds_in_wait
+  FROM v$session s
+ WHERE s.blocking_session IS NOT NULL;
+
+-- the heaviest statements
+SELECT sql_id, executions, elapsed_time/1e6 secs,
+       elapsed_time/NULLIF(executions,0)/1e3 ms_per_exec, sql_text
+  FROM v$sql
+ ORDER BY elapsed_time DESC FETCH FIRST 20 ROWS ONLY;
+```
+
+```sql
+ALTER SYSTEM KILL SESSION '<sid>,<serial#>' IMMEDIATE;
+```
+
+#### Dates
+
+```sql
+TRUNC(SYSDATE)                      -- today at 00:00
+TRUNC(created_at) = TRUNC(SYSDATE)  -- careful: this kills the index on created_at
+```
+
+```sql
+-- range instead, so the index is used
+WHERE created_at >= TRUNC(SYSDATE) AND created_at < TRUNC(SYSDATE) + 1
+```
+
+```sql
+ADD_MONTHS(SYSDATE, -1)
+MONTHS_BETWEEN(a, b)
+LAST_DAY(SYSDATE)
+TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+TO_DATE('2026-09-17', 'YYYY-MM-DD')
+```
+
+#### Data dictionary
+
+```sql
+SELECT * FROM user_tables;
+SELECT * FROM user_tab_columns WHERE table_name = 'CAR';
+SELECT * FROM user_indexes WHERE table_name = 'CAR';
+SELECT * FROM user_constraints WHERE table_name = 'CAR';
+
+-- who points at me
+SELECT c.table_name, c.constraint_name
+  FROM user_constraints c
+  JOIN user_constraints p ON p.constraint_name = c.r_constraint_name
+ WHERE p.table_name = 'CAR';
+
+-- find a column anywhere
+SELECT table_name, column_name FROM user_tab_columns WHERE column_name LIKE '%PLATE%';
+```
+
+`ALL_` instead of `USER_` for everything visible to you, `DBA_` for the whole instance if you have the privilege.
