@@ -2,14 +2,18 @@
 setlocal enabledelayedexpansion
 
 if "%~1"=="" (
-    echo Usage: gitCloneOrPullAll.cmd ^<USER_NAME^> ^<LOCAL_DIRECTORY^> ^<AUTHENTICATION_GITHUB_TOKEN^>
-    echo Example: gitCloneOrPullAll.cmd victor-porcar "C:\path\to\my_repository" ghp_MpcYKKKdlqFQirdH15JcH3hwia45B4265DzQ
+    echo Usage: gitCloneOrPullAll.cmd ^<USER_NAME^> ^<LOCAL_DIRECTORY^>
+    echo Example: gitCloneOrPullAll.cmd victor-porcar "C:\path\to\my_repository"
+    echo.
+    echo The token is read from the GITHUB_TOKEN environment variable, never from
+    echo an argument: an argument is stored in the command history and is visible
+    echo to other users while the script runs.
+    echo   set GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxx
     exit /b 1
 )
 
 set "name=%~1"
 set "dir=%~2"
-set "GITHUB_TOKEN=%~3"
 
 if not exist "!dir!" (
     mkdir "!dir!"
@@ -36,7 +40,8 @@ for /f "tokens=*" %%A in ('curl -s "https://api.github.com/user/repos" --header 
 
 		if not exist "!expectedLocalDirectory!" (
 			echo "Current Directory is !dir! and the following directory !expectedLocalDirectory! does not exist, which means a CLONE has to be done" 
-			set "url=https://!GITHUB_TOKEN!@github.com/!name!/!repositoryName!"
+			REM SSH: no credential is written into the .git/config of the clone
+			set "url=git@github.com:!name!/!repositoryName!.git"
 			git clone "!url!"
 		) else (
 			echo "Current Directory is !dir! and the following directory !expectedLocalDirectory! DOES EXIST, which means a PULL has to be done" 
