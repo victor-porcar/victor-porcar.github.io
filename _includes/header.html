@@ -1,9 +1,23 @@
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{{ site.github_user }}" target="_blank" rel="noopener">
-      {% include icon.html name="github" %}
-      {{ site.github_handle }}
-    </a>
+    <div class="social">
+      <a class="github" href="{{ site.github_user }}" target="_blank" rel="noopener"
+         aria-label="GitHub: {{ site.github_handle }}" title="GitHub: {{ site.github_handle }}">
+        {% include icon.html name="github" %}<span>{{ site.github_handle }}</span>
+      </a>
+      <a class="linkedin" href="{{ site.linkedin }}" target="_blank" rel="noopener"
+         aria-label="LinkedIn" title="LinkedIn">
+        {% include icon.html name="linkedin" %}<span>LinkedIn</span>
+      </a>
+      <a class="mail" href="mailto:{{ site.email }}"
+         aria-label="Contact by email" title="{{ site.email }}">
+        {% include icon.html name="mail" %}<span>Contact</span>
+      </a>
+      <a class="youtube" href="{{ site.youtube }}" target="_blank" rel="noopener"
+         aria-label="YouTube: {{ site.youtube_name }}" title="YouTube: {{ site.youtube_name }}">
+        {% include icon.html name="youtube" %}<span>{{ site.youtube_name }}</span>
+      </a>
+    </div>
     <nav class="nav">
       <a{% if include.home %} class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
       {% for section in site.data.sections %}
