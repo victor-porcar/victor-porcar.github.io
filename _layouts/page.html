@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>{% include head.html %}</head>
-<body>
-
-{% include header.html %}
-
 {%- assign here = page.url -%}
 {%- assign written = "" -%}
 {%- for section in site.data.sections -%}
@@ -13,6 +6,13 @@
     {%- if target == here and item.date -%}{%- assign written = item.date -%}{%- endif -%}
   {%- endfor -%}
 {%- endfor -%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>{% include head.html %}</head>
+<body>
+
+{% include header.html %}
 
 <main class="page">
   {% if written != "" %}<p class="written">{{ written | append: "-01" | date: "%B %Y" }}</p>{% endif %}

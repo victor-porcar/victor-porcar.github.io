@@ -1,25 +1,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title | default: site.title }}</title>
-<meta name="description" content="{{ page.description | default: site.description }}">
-<meta name="author" content="{{ site.title }}">
 
-{%- assign page_title = page.title | default: site.title -%}
-{%- assign page_desc = page.description | default: site.description -%}
+{%- if page.layout == "page" -%}
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- assign full_title = page_title | append: " · " | append: site.title -%}
+  {%- assign body_text = content | strip_html | normalize_whitespace -%}
+  {%- assign page_desc = body_text | remove_first: page.title | strip | truncate: 160 -%}
+{%- else -%}
+  {%- assign page_title = site.title -%}
+  {%- assign full_title = site.title | append: " · " | append: site.job_title -%}
+  {%- assign page_desc = site.seo_description -%}
+{%- endif -%}
 {%- assign page_url = page.url | absolute_url -%}
 {%- assign share_image = "/assets/apple-touch-icon.png" | absolute_url -%}
+{%- assign person_image = "/site/images/victor_profile.jpg" | absolute_url -%}
 
+<title>{{ full_title | escape }}</title>
+<meta name="description" content="{{ page_desc | escape }}">
+<meta name="author" content="{{ site.title }}">
 <link rel="canonical" href="{{ page_url }}">
-<meta property="og:type" content="{% if page.layout == 'page' %}article{% else %}website{% endif %}">
+
+<meta property="og:type" content="{% if page.layout == 'page' %}article{% else %}profile{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:title" content="{{ page_title }}">
-<meta property="og:description" content="{{ page_desc }}">
+<meta property="og:title" content="{{ full_title | escape }}">
+<meta property="og:description" content="{{ page_desc | escape }}">
 <meta property="og:url" content="{{ page_url }}">
 <meta property="og:image" content="{{ share_image }}">
+{%- if written and written != "" %}
+<meta property="article:published_time" content="{{ written }}-01">
+{%- endif %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ page_title }}">
-<meta name="twitter:description" content="{{ page_desc }}">
+<meta name="twitter:title" content="{{ full_title | escape }}">
+<meta name="twitter:description" content="{{ page_desc | escape }}">
 <meta name="twitter:image" content="{{ share_image }}">
+
+<script type="application/ld+json">
+{%- if page.layout == "page" %}
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page_title | jsonify }},
+  "description": {{ page_desc | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "inLanguage": "en",
+  {%- if written and written != "" %}
+  "datePublished": {{ written | append: "-01" | jsonify }},
+  {%- endif %}
+  "author": { "@type": "Person", "name": {{ site.title | jsonify }}, "url": {{ site.url | append: "/" | jsonify }} }
+}
+{%- else %}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ site.url | append: "/#person" | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "jobTitle": {{ site.job_title | jsonify }},
+      "description": {{ site.bio | jsonify }},
+      "url": {{ site.url | append: "/" | jsonify }},
+      "image": {{ person_image | jsonify }},
+      "knowsAbout": {{ site.knows_about | jsonify }},
+      "sameAs": [{{ site.github_user | jsonify }}, {{ site.linkedin | jsonify }}, {{ site.youtube | jsonify }}]
+    },
+    {
+      "@type": "WebSite",
+      "url": {{ site.url | append: "/" | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "author": { "@id": {{ site.url | append: "/#person" | jsonify }} }
+    }
+  ]
+}
+{%- endif %}
+</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">

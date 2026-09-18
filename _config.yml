@@ -2,6 +2,11 @@ title: Víctor Porcar
 url: https://victor-porcar.github.io
 since: 2019
 description: My public IT resources gathered in one place.
+job_title: Senior Software Engineer & Architect
+seo_description: >-
+  Víctor Porcar, Senior Software Engineer & Architect. Tech talks, notes and
+  cheatsheets on Java backends, the JVM, Spring, Kubernetes and software architecture.
+knows_about: [Java, JVM, Spring Boot, Kubernetes, Docker, Software Architecture, Oracle]
 bio: >-
   Senior Software Engineer & Architect, 22 years designing, building and
   evolving complex Java backends. I work from the architecture down to the
@@ -26,6 +31,7 @@ start_here:
 
 exclude:
   - .claude
+  - README.md
   - _preview
 
 defaults:
@@ -41,3 +47,18 @@ defaults:
       path: site/my-bookmarks
     values:
       layout: page
+  - scope:
+      path: site/public-docs
+    values:
+      sitemap: false
+  - scope:
+      path: site/my-bookmarks/generated/bookmarksIT.html
+    values:
+      sitemap: false
+  - scope:
+      path: site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html
+    values:
+      sitemap: false
+
+plugins:
+  - jekyll-sitemap
