@@ -1,7 +1,8 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>
-      &copy; {{ site.time | date: "%Y" }} {{ site.title }}
+      {%- assign now = site.time | date: "%Y" -%}
+      &copy; {% if site.since and site.since != now %}{{ site.since }}&ndash;{% endif %}{{ now }} {{ site.title }}
       <span class="sep">&middot;</span>
       Tech talks under the MIT License
     </p>

@@ -1,10 +1,10 @@
 title: Víctor Porcar
 url: https://victor-porcar.github.io
+since: 2019
 description: My public IT resources gathered in one place.
 bio: >-
-  Senior software engineer and architect. Eighteen years on Java backends:
-  high-throughput services, and the performance, data and observability
-  problems that come with them.
+  Senior software engineer and architect. Eighteen years on high-throughput
+  Java backends, and on the problems that only show up in production.
 theme: null
 
 github_user: https://github.com/victor-porcar
