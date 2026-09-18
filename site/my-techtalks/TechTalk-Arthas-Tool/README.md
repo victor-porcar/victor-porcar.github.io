@@ -317,7 +317,7 @@ If the value were private, it is required to execute the following command befor
 ```
 <br/>
 
- #### Static variable
+#### Static variable
  
 **INSPECT**
 
