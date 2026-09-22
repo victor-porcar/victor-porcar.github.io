@@ -63,10 +63,10 @@ if [ -z "$GITHUB_VICTOR_PORCAR" ]; then
     finish 1
 fi
 
-BOOKMARK2HTML_JAR="$GITHUB_VICTOR_PORCAR/Bookmark2html/target/bookmark2html.jar"
+BOOKMARK2HTML_JAR="$GITHUB_VICTOR_PORCAR/bookmark2html/target/bookmark2html.jar"
 if [ ! -f "$BOOKMARK2HTML_JAR" ]; then
     echo "X  bookmark2html.jar not found at: $BOOKMARK2HTML_JAR"
-    echo "   Build it with \"mvn clean package\" in $GITHUB_VICTOR_PORCAR/Bookmark2html"
+    echo "   Build it with \"mvn clean package\" in $GITHUB_VICTOR_PORCAR/bookmark2html"
     finish 1
 fi
 
