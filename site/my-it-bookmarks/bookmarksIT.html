@@ -12,6 +12,7 @@
    restyle the whole page. Dark mode values live in the media query.
 
    Page structure (class names you can target):
+     .back-button                    the Back button, top left corner
      .page-controls > button         the A- / A+ / Host / Width buttons
      .page-header > .breadcrumb, .page-title, .page-summary
                                      .breadcrumb only shows when the address
@@ -85,7 +86,7 @@ html {
 
 body {
     margin: 0;
-    padding: 40px 24px;
+    padding: 60px 24px 40px;
     background: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-family);
@@ -93,7 +94,38 @@ body {
     line-height: 1.4;
 }
 
-/* ---------- A- / A+ / Host / Width buttons, fixed at the top right corner ---------- */
+/* ---------- Back button at the top left corner, A- / A+ / Host / Width at the top right ---------- */
+
+.back-button {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-button svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform .15s ease;
+}
+
+.back-button:hover:not(:disabled) svg {
+    transform: translateX(-3px);
+}
+
+/* nothing to go back to: the page was opened on its own */
+.back-button:disabled {
+    opacity: .45;
+    cursor: default;
+}
 
 .page-controls {
     position: fixed;
@@ -104,6 +136,7 @@ body {
     gap: 6px;
 }
 
+.back-button,
 .page-controls button {
     min-width: 34px;
     height: 34px;
@@ -117,6 +150,7 @@ body {
     cursor: pointer;
 }
 
+.back-button:hover:not(:disabled),
 .page-controls button:hover {
     background: var(--color-highlight);
     color: var(--color-highlight-text);
@@ -409,6 +443,7 @@ details[open] > .folder-header::before {
         box-shadow: none;
     }
 
+    .back-button,
     .page-controls,
     .folder-anchor {
         display: none;
@@ -418,6 +453,10 @@ details[open] > .folder-header::before {
 </style>
 </head>
 <body>
+<button type="button" class="back-button" title="Go back to the previous page">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+  <span>Back</span>
+</button>
 <div class="page-controls">
   <button type="button" data-font-step="-1" title="Smaller text" aria-label="Smaller text">A&minus;</button>
   <button type="button" data-font-step="1" title="Bigger text" aria-label="Bigger text">A+</button>
@@ -906,6 +945,16 @@ details[open] > .folder-header::before {
         }
     }
 
+    /* ---------- Back : previous page of the browser history ---------- */
+
+    function setUpBackButton() {
+        var button = document.querySelector(".back-button");
+        button.disabled = history.length <= 1;
+        button.addEventListener("click", function () {
+            history.back();
+        });
+    }
+
     /* ---------- A- / A+ : root font size, everything is in rem ---------- */
 
     var MIN_SIZE = 8;
@@ -1069,6 +1118,7 @@ details[open] > .folder-header::before {
         window.scrollTo(0, 0);
     }
 
+    setUpBackButton();
     setUpFontSize();
     setUpToggle(".host-toggle", "showHosts", true, showHosts);
     setUpToggle(".width-toggle", "fullWidth", false, useFullWidth);
