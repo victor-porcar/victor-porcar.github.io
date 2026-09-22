@@ -36,11 +36,11 @@ if not defined GITHUB_VICTOR_PORCAR (
     goto finish
 )
 
-set "BOOKMARK2HTML_JAR=%GITHUB_VICTOR_PORCAR%\bookmark2html\target\bookmark2html.jar"
+set "BOOKMARK2HTML_JAR=%GITHUB_VICTOR_PORCAR%\bookmark2html\dist\bookmark2html.jar"
 
 if not exist "%BOOKMARK2HTML_JAR%" (
     echo X  bookmark2html.jar not found at: %BOOKMARK2HTML_JAR%
-    echo    Build it with "mvn clean package" in %GITHUB_VICTOR_PORCAR%\bookmark2html
+    echo    Pull it with "git pull" or build it with "mvn clean package" in %GITHUB_VICTOR_PORCAR%\bookmark2html
     goto finish
 )
 
