@@ -12,8 +12,8 @@
    restyle the whole page. Dark mode values live in the media query.
 
    Page structure (class names you can target):
-     .back-button                    the Back button, top left corner
      .page-controls > button         the A- / A+ / Host / Width buttons
+     .page-nav > .back-button        the Back button, above the header
      .page-header > .breadcrumb, .page-title, .page-summary
                                      .breadcrumb only shows when the address
                                      ends with the #anchor of a folder
@@ -86,7 +86,7 @@ html {
 
 body {
     margin: 0;
-    padding: 60px 24px 40px;
+    padding: 40px 24px;
     background: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-family);
@@ -94,13 +94,9 @@ body {
     line-height: 1.4;
 }
 
-/* ---------- Back button at the top left corner, A- / A+ / Host / Width at the top right ---------- */
+/* ---------- A- / A+ / Host / Width buttons at the top right corner; Back above the header ---------- */
 
 .back-button {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 1;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -169,6 +165,7 @@ body {
     border-color: var(--color-accent);
 }
 
+.page-nav,
 .page-header,
 .content,
 .page-footer {
@@ -177,10 +174,15 @@ body {
 }
 
 /* set by the Width button: only the body padding is left at the sides */
+.full-width .page-nav,
 .full-width .page-header,
 .full-width .content,
 .full-width .page-footer {
     max-width: none;
+}
+
+.page-nav {
+    margin-bottom: 14px;
 }
 
 .page-header {
@@ -443,7 +445,7 @@ details[open] > .folder-header::before {
         box-shadow: none;
     }
 
-    .back-button,
+    .page-nav,
     .page-controls,
     .folder-anchor {
         display: none;
@@ -453,16 +455,18 @@ details[open] > .folder-header::before {
 </style>
 </head>
 <body>
-<button type="button" class="back-button" title="Go back to the previous page">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
-  <span>Back</span>
-</button>
 <div class="page-controls">
   <button type="button" data-font-step="-1" title="Smaller text" aria-label="Smaller text">A&minus;</button>
   <button type="button" data-font-step="1" title="Bigger text" aria-label="Bigger text">A+</button>
   <button type="button" class="host-toggle" aria-pressed="true" title="Show or hide the host of every bookmark">Host</button>
   <button type="button" class="width-toggle" aria-pressed="false" title="Use the whole window width or the original width">Width</button>
 </div>
+<nav class="page-nav">
+  <button type="button" class="back-button" title="Go back to the previous page">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+    <span>Back</span>
+  </button>
+</nav>
 <header class="page-header">
   <nav class="breadcrumb" aria-label="Folder path" hidden></nav>
   <h1 class="page-title">IT</h1>
