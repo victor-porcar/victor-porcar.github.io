@@ -17,7 +17,7 @@ BOOKMARKS_FILE="$CHROME_PROFILE/AccountBookmarks;$CHROME_PROFILE/Bookmarks"
 
 # This repository and the generated page inside it
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
-OUTPUT_IN_REPO="site/my-it-bookmarks/index.html"
+OUTPUT_IN_REPO="site/my-it-bookmarks/bookmarks${FOLDER}.html"
 OUTPUT_FILE="$REPO_DIR/$OUTPUT_IN_REPO"
 
 # Message of the commit made when the page is pushed

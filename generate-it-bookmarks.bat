@@ -17,8 +17,9 @@ set "BOOKMARKS_FILE=%CHROME_PROFILE%\AccountBookmarks;%CHROME_PROFILE%\Bookmarks
 REM This repository (the "." avoids a trailing backslash before a closing quote) and the
 REM generated page inside it
 set "REPO_DIR=%~dp0."
-set "OUTPUT_IN_REPO=site/my-it-bookmarks/index.html"
-set "OUTPUT_FILE=%~dp0site\my-it-bookmarks\index.html"
+set "OUTPUT_NAME=bookmarks%FOLDER%.html"
+set "OUTPUT_IN_REPO=site/my-it-bookmarks/%OUTPUT_NAME%"
+set "OUTPUT_FILE=%~dp0site\my-it-bookmarks\%OUTPUT_NAME%"
 
 REM Message of the commit made when the page is pushed
 set "COMMIT_MESSAGE=Update IT bookmarks"

@@ -104,23 +104,23 @@
   item_icon: link
   items:
     - name: Java
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#java
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: Software Concepts
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#software-concepts
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: Tools
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#tools
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: Architecture
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#architecture
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: NoSQL databases
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#nosql-db-solr---elastic---redis---cassandra---hollow
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: Patterns
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#patterns
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: Clean Code
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#clean-code
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: Version control
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#repos-git---hg---svn
+      url: ./site/my-it-bookmarks/bookmarksIT.html#java
     - name: All of them
-      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html
+      url: ./site/my-it-bookmarks/bookmarksIT.html
 
 - id: it-videos
   title: IT Interesting Videos

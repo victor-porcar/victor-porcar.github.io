@@ -13,15 +13,21 @@
 
    Page structure (class names you can target):
      .page-controls > button         the A- / A+ / Host / Width buttons
-     .page-header > .page-title, .page-summary
+     .page-header > .breadcrumb, .page-title, .page-summary
+                                     .breadcrumb only shows when the address
+                                     ends with the #anchor of a folder
      .content                        the sheet holding the tree
        ul.tree                       the content of a folder, in Chrome order
          li.link > a                 a bookmark
            .link-icon .link-title .link-domain
-         li.folder > details         a subfolder (collapsible)
-           summary.folder-header > .folder-name, .folder-count
+         li.folder#anchor > details  a subfolder (collapsible); its id is its
+                                     anchor, e.g. "java/spring-boot"
+           summary.folder-header > .folder-name, .folder-count, .folder-anchor
            ul.tree                   its content, indented one level
      .page-footer
+
+   While the address ends with the #anchor of a folder, <html> has the
+   class .folder-focus, that folder has .focused and its ancestors .on-path.
    ===================================================================== */
 
 :root {
@@ -161,6 +167,37 @@ body {
     color: var(--color-muted);
 }
 
+/* ---------- path to the folder shown, when the address ends with its #anchor ---------- */
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .35rem;
+    margin-bottom: 6px;
+    font-size: .9rem;
+}
+
+.breadcrumb[hidden] {
+    display: none;
+}
+
+.breadcrumb a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb a + a::before {
+    content: "\203A";
+    display: inline-block;
+    margin-right: .35rem;
+    color: var(--color-muted);
+}
+
 .content {
     padding: .8rem;
     background: var(--color-surface);
@@ -238,6 +275,56 @@ details[open] > .folder-header::before {
     text-align: center;
 }
 
+/* the # after the count: link to this folder, shown when the mouse is over the folder */
+.folder-anchor {
+    padding: 0 .35rem;
+    border-radius: 6px;
+    color: var(--color-muted);
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.folder-header:hover .folder-anchor,
+.folder-anchor:focus-visible {
+    opacity: 1;
+}
+
+.folder-anchor:hover,
+.folder-anchor:focus-visible {
+    background: var(--color-highlight);
+    color: var(--color-highlight-text);
+    outline: none;
+}
+
+@media (hover: none) {
+    .folder-anchor {
+        opacity: 1;
+    }
+}
+
+/* ---------- a single folder, when the address ends with its #anchor ---------- */
+
+/* only the path down to the folder is left: no sibling folders or bookmarks */
+.folder-focus .content > .tree > li:not(.on-path):not(.focused),
+.folder-focus .on-path > details > .tree > li:not(.on-path):not(.focused) {
+    display: none;
+}
+
+/* the path is in the breadcrumb and the folder name in the title */
+.folder-focus .on-path > details > .folder-header,
+.folder-focus .focused > details > .folder-header {
+    display: none;
+}
+
+/* the content of the folder starts at the left edge of the sheet */
+.folder-focus .on-path > details > .tree,
+.folder-focus .focused > details > .tree {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+}
+
 /* ---------- bookmarks ---------- */
 
 .link a {
@@ -295,8 +382,9 @@ details[open] > .folder-header::before {
 /* ---------- small screens ---------- */
 
 @media (max-width: 600px) {
+    /* the header starts below the fixed buttons, which would cover it */
     body {
-        padding: 24px 16px;
+        padding: 64px 16px 24px;
     }
 
     :root {
@@ -321,7 +409,8 @@ details[open] > .folder-header::before {
         box-shadow: none;
     }
 
-    .page-controls {
+    .page-controls,
+    .folder-anchor {
         display: none;
     }
 }
@@ -336,37 +425,18 @@ details[open] > .folder-header::before {
   <button type="button" class="width-toggle" aria-pressed="false" title="Use the whole window width or the original width">Width</button>
 </div>
 <header class="page-header">
+  <nav class="breadcrumb" aria-label="Folder path" hidden></nav>
   <h1 class="page-title">IT</h1>
   <p class="page-summary">61 bookmarks &middot; 2 folders</p>
 </header>
 <main class="content">
 <ul class="tree">
-<li class="folder">
-  <details open>
-    <summary class="folder-header">
-      <span class="folder-name">Java</span>
-      <span class="folder-count">61</span>
-    </summary>
-<ul class="tree">
-<li class="link">
-  <a href="https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md#register-all-versions" target="_blank" rel="noopener noreferrer">
-    <img class="link-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEX///8kKS74+PgsMTY+Q0f8/Pzw8PGRk5ZNUVXr6+xDSEzCxMUpLjLV1tYuMzc/Q0i3ubuUl5lbX2NTV1uLjpFKTlKxs7Xh4uOFh4rn5+h3en1vcnZ9gIPc3d6/wcJzd3o3PECmqKpjZ2rOz9CfoaRP5W5KAAABU0lEQVQ4jW1T7aKCIAzdEEUTSUuzLMtuvf8zXtiQVDx/lJ3DvgEIEPU9l1rL/F4LiFEMCQYkj2JDC6VxhaRJl3x2xgin7MePMuYRD7cQftrjrcL7ELk9nNt8yXXtyRm5mquzXADKA6LpzgZRlgBPZ1WO7yn/yrmqyGdGn95Zjav2hbNghZHMV3uNG3DZCigEmhRq+pmyrUAcifj4CO+49xciWqAe6p3pCJrNH1ATp5gH6KghQLrDnoB8GxaYPYFkhpONipjrl+wI61hQ8tB5EvYb4eTL5Ebhd8u/2f4EYfhvvWJpw9ZJ0LQfb5uxbMKi3pp5xVp30miexZHbRriHvUnojrKt7isXqWRBFQQNF2w3aYCPUl8/EREWzxtuE+pVI/wbkSGp0a51Nyg1F+L5/nel56xXgt+zcMgeC0FK27gdTzVoPXtI9DBuO2tRhJj94m3/A1GiDZXoM3d5AAAAAElFTkSuQmCC" alt="">
-    <span class="link-title">→ My Notes: Java</span>
-    <span class="link-domain">github.com</span>
-  </a>
-</li>
-<li class="link">
-  <a href="https://visualvm.github.io/" target="_blank" rel="noopener noreferrer">
-    <img class="link-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAZlBMVEXzcCH////29vf9/f3H1eH7+/uTr8Lw8fHz8/Pp6uv4+Pnu7/Dq6+z6+/u5y9iku82bs8j3pXSyxNPzeC6QqbxSfJx4m7P70rr89O/5yKr4to/1m2X0ikr1zLTzgTzwuJXxj1T15dz+WBIiAAAAjElEQVQYlU3M6w6DIAyG4Q+YclABFdzm5tzu/ybX1sT4/Cl904CYbhcpIis1Qp0yolLA/QwRkzFmNKdJAreHeQIrh4GtwAAyTEiBvALegfYQEpImmDf94YdOyM45Pp6dyGi7bueATrQoff+V0IuC4r2X4AUFa+1Guz1QkM/17xi6oDZsRHOoWGp7UZc/1nsHuvUpn6IAAAAASUVORK5CYII=" alt="">
-    <span class="link-title">VisualVM: Home</span>
-    <span class="link-domain">visualvm.github.io</span>
-  </a>
-</li>
-<li class="folder">
+<li class="folder" id="maven-gradle">
   <details open>
     <summary class="folder-header">
       <span class="folder-name">maven-gradle</span>
       <span class="folder-count">3</span>
+      <a class="folder-anchor" href="#maven-gradle" title="Link to this folder" aria-label="Link to this folder">#</a>
     </summary>
 <ul class="tree">
 <li class="link">
@@ -392,6 +462,28 @@ details[open] > .folder-header::before {
 </li>
 </ul>
   </details>
+</li>
+<li class="folder" id="java">
+  <details open>
+    <summary class="folder-header">
+      <span class="folder-name">Java</span>
+      <span class="folder-count">58</span>
+      <a class="folder-anchor" href="#java" title="Link to this folder" aria-label="Link to this folder">#</a>
+    </summary>
+<ul class="tree">
+<li class="link">
+  <a href="https://github.com/victor-porcar/victor-porcar.github.io/blob/master/site/my-notes/my-notes-java.md#register-all-versions" target="_blank" rel="noopener noreferrer">
+    <img class="link-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEX///8kKS74+PgsMTY+Q0f8/Pzw8PGRk5ZNUVXr6+xDSEzCxMUpLjLV1tYuMzc/Q0i3ubuUl5lbX2NTV1uLjpFKTlKxs7Xh4uOFh4rn5+h3en1vcnZ9gIPc3d6/wcJzd3o3PECmqKpjZ2rOz9CfoaRP5W5KAAABU0lEQVQ4jW1T7aKCIAzdEEUTSUuzLMtuvf8zXtiQVDx/lJ3DvgEIEPU9l1rL/F4LiFEMCQYkj2JDC6VxhaRJl3x2xgin7MePMuYRD7cQftrjrcL7ELk9nNt8yXXtyRm5mquzXADKA6LpzgZRlgBPZ1WO7yn/yrmqyGdGn95Zjav2hbNghZHMV3uNG3DZCigEmhRq+pmyrUAcifj4CO+49xciWqAe6p3pCJrNH1ATp5gH6KghQLrDnoB8GxaYPYFkhpONipjrl+wI61hQ8tB5EvYb4eTL5Ebhd8u/2f4EYfhvvWJpw9ZJ0LQfb5uxbMKi3pp5xVp30miexZHbRriHvUnojrKt7isXqWRBFQQNF2w3aYCPUl8/EREWzxtuE+pVI/wbkSGp0a51Nyg1F+L5/nel56xXgt+zcMgeC0FK27gdTzVoPXtI9DBuO2tRhJj94m3/A1GiDZXoM3d5AAAAAElFTkSuQmCC" alt="">
+    <span class="link-title">→ My Notes: Java</span>
+    <span class="link-domain">github.com</span>
+  </a>
+</li>
+<li class="link">
+  <a href="https://visualvm.github.io/" target="_blank" rel="noopener noreferrer">
+    <img class="link-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAZlBMVEXzcCH////29vf9/f3H1eH7+/uTr8Lw8fHz8/Pp6uv4+Pnu7/Dq6+z6+/u5y9iku82bs8j3pXSyxNPzeC6QqbxSfJx4m7P70rr89O/5yKr4to/1m2X0ikr1zLTzgTzwuJXxj1T15dz+WBIiAAAAjElEQVQYlU3M6w6DIAyG4Q+YclABFdzm5tzu/ybX1sT4/Cl904CYbhcpIis1Qp0yolLA/QwRkzFmNKdJAreHeQIrh4GtwAAyTEiBvALegfYQEpImmDf94YdOyM45Pp6dyGi7bueATrQoff+V0IuC4r2X4AUFa+1Guz1QkM/17xi6oDZsRHOoWGp7UZc/1nsHuvUpn6IAAAAASUVORK5CYII=" alt="">
+    <span class="link-title">VisualVM: Home</span>
+    <span class="link-domain">visualvm.github.io</span>
+  </a>
 </li>
 <li class="link">
   <a href="https://www.graalvm.org/" target="_blank" rel="noopener noreferrer">
@@ -872,9 +964,109 @@ details[open] > .folder-header::before {
         root.classList.toggle("full-width", on);
     }
 
+    /* ---------- #anchor of a folder : that folder alone, below the path to it ---------- */
+
+    var title = document.querySelector(".page-title");
+    var summary = document.querySelector(".page-summary");
+    var breadcrumb = document.querySelector(".breadcrumb");
+    var wholePage = { title: title.textContent, summary: summary.innerHTML, documentTitle: document.title };
+
+    function folderOf(hash) {
+        try {
+            var element = hash.length > 1 && document.getElementById(decodeURIComponent(hash.slice(1)));
+            return element && element.classList.contains("folder") ? element : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function nameOf(folder) {
+        return folder.querySelector(".folder-name").textContent;
+    }
+
+    function ancestorsOf(folder) {
+        var ancestors = [];
+        for (var node = folder.parentElement.closest(".folder"); node; node = node.parentElement.closest(".folder")) {
+            ancestors.unshift(node);
+        }
+        return ancestors;
+    }
+
+    function plural(count, word) {
+        return count + " " + word + (count === 1 ? "" : "s");
+    }
+
+    function crumb(text, href) {
+        var link = document.createElement("a");
+        link.href = href;
+        link.textContent = text;
+        return link;
+    }
+
+    function showBreadcrumb(ancestors) {
+        breadcrumb.replaceChildren(crumb(wholePage.title, "#"));
+        ancestors.forEach(function (ancestor) {
+            breadcrumb.append(crumb(nameOf(ancestor), "#" + ancestor.id));
+        });
+        breadcrumb.hidden = false;
+    }
+
+    function showHeader(text, summaryHtml, documentTitle) {
+        title.textContent = text;
+        summary.innerHTML = summaryHtml;
+        document.title = documentTitle;
+    }
+
+    function clearFocus() {
+        root.classList.remove("folder-focus");
+        document.querySelectorAll(".on-path, .focused").forEach(function (folder) {
+            folder.classList.remove("on-path", "focused");
+        });
+        breadcrumb.hidden = true;
+    }
+
+    function focusOn(folder) {
+        var ancestors = ancestorsOf(folder);
+        ancestors.concat(folder).forEach(function (node) {
+            node.classList.add(node === folder ? "focused" : "on-path");
+            node.querySelector("details").open = true;
+        });
+        root.classList.add("folder-focus");
+        showBreadcrumb(ancestors);
+        showHeader(nameOf(folder), summaryOf(folder), nameOf(folder) + " \u2013 " + wholePage.documentTitle);
+    }
+
+    function summaryOf(folder) {
+        return plural(folder.querySelectorAll(".link").length, "bookmark")
+                + " &middot; " + plural(folder.querySelectorAll(".folder").length, "folder");
+    }
+
+    function showAnchoredFolder() {
+        var folder = folderOf(location.hash);
+        clearFocus();
+        if (folder) {
+            focusOn(folder);
+        } else {
+            showHeader(wholePage.title, wholePage.summary, wholePage.documentTitle);
+        }
+    }
+
+    function showAnchoredFolderFromTop() {
+        showAnchoredFolder();
+        window.scrollTo(0, 0);
+    }
+
     setUpFontSize();
     setUpToggle(".host-toggle", "showHosts", true, showHosts);
     setUpToggle(".width-toggle", "fullWidth", false, useFullWidth);
+    showAnchoredFolder();
+    window.addEventListener("hashchange", showAnchoredFolderFromTop);
+    /* the browser jumps to the anchor once the page is loaded, hiding the header */
+    window.addEventListener("load", function () {
+        if (root.classList.contains("folder-focus")) {
+            window.scrollTo(0, 0);
+        }
+    });
 })();
 </script>
 </body>
