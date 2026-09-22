@@ -16,7 +16,7 @@ The structure of this site is the following:
 * my-notes: markdown files with my notes and scripts.
 * my-scripts: useful scripts I built and used over the years
 * my-techtalks: collection in markdown with the bulletpoints of my tech talks.
-* my-bookmarks: my technical bookmarks in a pretty HTML format using [Bookmark2md](https://github.com/victor-porcar/Bookmark2md) See *Manage Bookmarks* section below
+* my-it-bookmarks: my technical bookmarks in a pretty HTML format using [Bookmark2md](https://github.com/victor-porcar/Bookmark2md) See *Manage Bookmarks* section below
 * public-docs: collection of documents which I find interesting.
 
 
@@ -57,13 +57,13 @@ Let's assume you have all your technical bookmarks in folder "IT" of your bookma
 At this point you can execute:
  
 ```
-$ $HOME/FSD/victor-porcar.github.io/site/my-bookmarks/updateBookmarks.sh
+$ $HOME/FSD/victor-porcar.github.io/site/my-it-bookmarks/updateBookmarks.sh
 ```
 this will create or update three files:
 
-*  `./site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html`: pretty HTML version of the bookmarks under directory "IT"
-*  `./site/my-bookmarks/generated/generated_MD_IT.md`: markdown GitHub flavour of the bookmarks under directory "IT"
-*  `./site/my-bookmarks/generated/bookmarksIT.html`: html file importable file in any browser with the content of directory "IT"
+*  `./site/my-it-bookmarks/generated/generated_PRETTY_HTML_IT.html`: pretty HTML version of the bookmarks under directory "IT"
+*  `./site/my-it-bookmarks/generated/generated_MD_IT.md`: markdown GitHub flavour of the bookmarks under directory "IT"
+*  `./site/my-it-bookmarks/generated/bookmarksIT.html`: html file importable file in any browser with the content of directory "IT"
 
 Remember after creating for the first time or updating those files to commit and push them!
 

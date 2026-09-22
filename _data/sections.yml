@@ -96,7 +96,7 @@
       date: "2020-09"
 
 - id: bookmarks
-  nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-bookmarks
+  nav_url: https://github.com/victor-porcar/victor-porcar.github.io/tree/master/site/my-it-bookmarks
   title: Bookmarks
   lead: My reading shelf, by topic. What I have saved along the way.
   badge: indigo
@@ -104,23 +104,23 @@
   item_icon: link
   items:
     - name: Java
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#java
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#java
     - name: Software Concepts
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#software-concepts
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#software-concepts
     - name: Tools
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#tools
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#tools
     - name: Architecture
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#architecture
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#architecture
     - name: NoSQL databases
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#nosql-db-solr---elastic---redis---cassandra---hollow
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#nosql-db-solr---elastic---redis---cassandra---hollow
     - name: Patterns
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#patterns
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#patterns
     - name: Clean Code
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#clean-code
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#clean-code
     - name: Version control
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html#repos-git---hg---svn
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html#repos-git---hg---svn
     - name: All of them
-      url: ./site/my-bookmarks/generated/generated_MD_IT.html
+      url: ./site/my-it-bookmarks/generated/generated_MD_IT.html
 
 - id: it-videos
   title: IT Interesting Videos

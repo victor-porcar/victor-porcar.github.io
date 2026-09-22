@@ -44,7 +44,7 @@ defaults:
     values:
       layout: page
   - scope:
-      path: site/my-bookmarks
+      path: site/my-it-bookmarks
     values:
       layout: page
   - scope:
@@ -52,11 +52,11 @@ defaults:
     values:
       sitemap: false
   - scope:
-      path: site/my-bookmarks/generated/bookmarksIT.html
+      path: site/my-it-bookmarks/generated/bookmarksIT.html
     values:
       sitemap: false
   - scope:
-      path: site/my-bookmarks/generated/generated_PRETTY_HTML_IT.html
+      path: site/my-it-bookmarks/generated/generated_PRETTY_HTML_IT.html
     values:
       sitemap: false
 
