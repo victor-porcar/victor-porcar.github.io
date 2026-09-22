@@ -1021,6 +1021,7 @@ details[open] > .folder-header::before {
         root.classList.remove("folder-focus");
         document.querySelectorAll(".on-path, .focused").forEach(function (folder) {
             folder.classList.remove("on-path", "focused");
+            folder.style.scrollMarginTop = "";
         });
         breadcrumb.hidden = true;
     }
@@ -1034,6 +1035,18 @@ details[open] > .folder-header::before {
         root.classList.add("folder-focus");
         showBreadcrumb(ancestors);
         showHeader(nameOf(folder), summaryOf(folder), nameOf(folder) + " \u2013 " + wholePage.documentTitle);
+        keepHeaderInView();
+    }
+
+    /* The browser scrolls to the anchored folder, sometimes well after the page is loaded, which
+       would hide the header above it. A top scroll margin as tall as everything above the folder
+       makes that scroll end at the top of the page. */
+    function keepHeaderInView() {
+        var folder = document.querySelector(".focused");
+        if (folder) {
+            folder.style.scrollMarginTop = (folder.getBoundingClientRect().top + window.scrollY) + "px";
+            window.scrollTo(0, 0);
+        }
     }
 
     function summaryOf(folder) {
@@ -1061,12 +1074,8 @@ details[open] > .folder-header::before {
     setUpToggle(".width-toggle", "fullWidth", false, useFullWidth);
     showAnchoredFolder();
     window.addEventListener("hashchange", showAnchoredFolderFromTop);
-    /* the browser jumps to the anchor once the page is loaded, hiding the header */
-    window.addEventListener("load", function () {
-        if (root.classList.contains("folder-focus")) {
-            window.scrollTo(0, 0);
-        }
-    });
+    /* images and fonts loaded later move the folder down: measure it again */
+    window.addEventListener("load", keepHeaderInView);
 })();
 </script>
 </body>
