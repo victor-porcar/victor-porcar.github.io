@@ -103,22 +103,28 @@
   icon: bookmark
   item_icon: link
   items:
+    - name: Software Engineering
+      url: ./site/my-it-bookmarks/bookmarksIT.html#software-engineering
+    - name: Architecture
+      url: ./site/my-it-bookmarks/bookmarksIT.html#architecture
+    - name: Distributed Systems & Integration
+      url: ./site/my-it-bookmarks/bookmarksIT.html#distributed-systems-integration
     - name: Java
       url: ./site/my-it-bookmarks/bookmarksIT.html#java
-    - name: Software Concepts
-      url: ./site/my-it-bookmarks/bookmarksIT.html#java
-    - name: Tools
-      url: ./site/my-it-bookmarks/bookmarksIT.html#java
-    - name: Architecture
-      url: ./site/my-it-bookmarks/bookmarksIT.html#java
-    - name: NoSQL databases
-      url: ./site/my-it-bookmarks/bookmarksIT.html#java
-    - name: Patterns
-      url: ./site/my-it-bookmarks/bookmarksIT.html#java
-    - name: Clean Code
-      url: ./site/my-it-bookmarks/bookmarksIT.html#java
-    - name: Version control
-      url: ./site/my-it-bookmarks/bookmarksIT.html#java
+    - name: Programming & Computer Science
+      url: ./site/my-it-bookmarks/bookmarksIT.html#programming-computer-science
+    - name: Data & AI
+      url: ./site/my-it-bookmarks/bookmarksIT.html#data-ai
+    - name: Cloud & Infrastructure
+      url: ./site/my-it-bookmarks/bookmarksIT.html#cloud-infrastructure
+    - name: DevOps & SRE
+      url: ./site/my-it-bookmarks/bookmarksIT.html#devops-sre
+    - name: Systems, Networks & Security
+      url: ./site/my-it-bookmarks/bookmarksIT.html#systems-networks-security
+    - name: Business & Management
+      url: ./site/my-it-bookmarks/bookmarksIT.html#business-management
+    - name: Human Factor
+      url: ./site/my-it-bookmarks/bookmarksIT.html#human-factor
     - name: All of them
       url: ./site/my-it-bookmarks/bookmarksIT.html
 
