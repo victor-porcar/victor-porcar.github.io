@@ -339,6 +339,14 @@ a { color: inherit; text-decoration: none; }
   .nav { gap: 16px; }
 }
 
+/* On a phone the icons and the menu do not fit in one row: icons on top, menu below */
+@media (max-width: 600px) {
+  .site-header .wrap { flex-wrap: wrap; justify-content: center; height: auto; padding-top: 12px; column-gap: 0; row-gap: 2px; }
+  .social { flex-basis: 100%; justify-content: center; gap: 26px; }
+  .nav { gap: 20px; }
+  .nav a { white-space: nowrap; padding: 12px 0; }
+}
+
 /* ---------- rendered markdown pages ---------- */
 
 .written {
