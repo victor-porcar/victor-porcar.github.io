@@ -175,6 +175,18 @@ mvn -q                                   # only errors
 mvn clean install -U                     # force re-checking SNAPSHOTs
 ```
 
+A third-party jar that is not in any public repository goes into Nexus as an artifact of its own, so every project can depend on it normally:
+
+```shell
+mvn deploy:deploy-file \
+    -DgroupId=com.vendor -DartifactId=sdk-core -Dversion=1.3.57 -Dpackaging=jar \
+    -Dfile=vendor-sdk-1.3.57.jar -DgeneratePom=true \
+    -DrepositoryId=nexus \
+    -Durl=https://<nexus-host>/repository/thirdparty/
+```
+
+`-DrepositoryId` must match a `<server>` id in `~/.m2/settings.xml`, which is where the credentials live.
+
 #### Formatting and quality, from the command line
 
 ```shell

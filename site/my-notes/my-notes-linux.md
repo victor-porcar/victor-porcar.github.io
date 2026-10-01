@@ -14,6 +14,7 @@ Ctrl-R                  # search backwards in history (press again to keep going
 Alt-.                   # insert the last argument of the previous command
 cd -                    # back to the previous directory
 Ctrl-X Ctrl-E           # open the current command line in $EDITOR
+echo $?                 # exit code of the last command: 0 = success, anything else = failure
 ```
 
 ```shell
@@ -80,6 +81,23 @@ tr -d '\r' < windows.txt > unix.txt           # strip CRLF
 column -t -s,                                 # align a CSV into columns to read it
 ```
 
+Adding text at the start or end of every line, and removing duplicates:
+
+```shell
+sed 's/^/prefix/' file.txt          # at the start of every line
+sed 's/$/suffix/' file.txt          # at the end of every line
+sort -u file.txt                    # remove duplicate lines (sorted)
+awk '!seen[$0]++' file.txt          # remove duplicate lines keeping the original order
+grep 'my-app' file.txt > only.txt   # keep only the lines that match
+```
+
+The same in Notepad++ (Search > Replace, mode "Regular expression"):
+
+- start of every line: find `^(.*)`, replace with `prefix\1`
+- end of every line: find `(.*)$`, replace with `\1suffix`
+- copy only the lines that match: Search > Mark, tick "Bookmark line", Mark All, then Search > Bookmark > Copy Bookmarked Lines
+- duplicates: Edit > Line Operations > Remove Duplicate Lines
+
 JSON without leaving the terminal:
 
 ```shell
@@ -116,6 +134,7 @@ watch -n 2 'kubectl get pods'           # re-run every 2 seconds
 strace -p <pid> -f -e trace=network     # what system calls it is making
 lsof -p <pid>                           # everything that process has open
 lsof -i :8080                           # WHO is holding the port
+fuser -k 8080/tcp                       # kill whoever holds the port (e.g. an embedded Tomcat left running)
 ```
 
 #### Performance: the first five minutes
@@ -157,6 +176,8 @@ A log rotated badly and still held by the JVM can be occupying gigabytes that no
 #### Network
 
 ```shell
+ip a                    # interfaces and their IP addresses (ifconfig is deprecated)
+ip route                # routing table, default gateway
 ss -tulpn               # listening ports with the owning process (netstat is deprecated)
 ss -tan state established | wc -l       # how many open connections
 ```
@@ -175,6 +196,19 @@ getent hosts api.example.com            # what the SYSTEM resolves, /etc/hosts i
 nc -zv db-host 5432                     # is the port open at all
 traceroute -T -p 443 api.example.com
 tcpdump -i any -nn port 5432 -c 100     # 100 packets and stop
+```
+
+Names resolved by hand, before DNS: `/etc/hosts` on Linux, `C:\Windows\System32\drivers\etc\hosts` on Windows (edit it as administrator).
+
+MQTT from the command line (Mosquitto clients):
+
+```shell
+# subscribe; '+' matches one level of the topic, '#' everything below
+mosquitto_sub -h <broker> -p 1883 -u <user> -P <password> -t 'sensors/+/temperature' -v
+
+# publish a JSON message
+mosquitto_pub -h <broker> -p 1883 -u <user> -P <password> -t 'sensors/room1/temperature' \
+  -m '{"sensorId":"room1","timestamp":1554899869000,"value":21.5}'
 ```
 
 #### systemd and logs
@@ -250,7 +284,26 @@ sudo update-alternatives --config java
 
 ```shell
 update-alternatives --list java         # what is registered
+sudo update-alternatives --config javac # the compiler is registered separately: switch it too
 readlink -f $(which java)               # which one is actually running
+```
+
+#### Symlinks: switching versions
+
+A stable name pointing to a versioned file: deploying a new version is changing the link, and rolling back is changing it again.
+
+```shell
+ln -sfn jars/my-reader-1.0.22.jar my-reader.jar     # -f replace, -n do not follow an existing link to a directory
+ls -l my-reader.jar                                 # where it points now
+java -jar my-reader.jar                             # scripts and services always use the stable name
+```
+
+#### Keyboard layout
+
+```shell
+setxkbmap es            # Spanish layout in the current X session
+setxkbmap us
+localectl set-x11-keymap es   # permanent, system wide
 ```
 
 #### Loops and repetition

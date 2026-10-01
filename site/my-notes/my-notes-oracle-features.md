@@ -592,3 +592,145 @@ SELECT table_name, column_name FROM user_tab_columns WHERE column_name LIKE '%PL
 ```
 
 `ALL_` instead of `USER_` for everything visible to you, `DBA_` for the whole instance if you have the privilege.
+
+#### Space and schema inventory
+
+```sql
+-- size of each table, in MB (without indexes or LOBs)
+SELECT segment_name, SUM(bytes)/1024/1024 mb
+  FROM user_segments WHERE segment_type = 'TABLE'
+ GROUP BY segment_name ORDER BY mb DESC;
+
+-- total size of a schema, in GB
+SELECT SUM(bytes)/1024/1024/1024 gb FROM dba_segments WHERE owner = 'MY_SCHEMA';
+
+-- rows per table (from statistics: as fresh as the last gather)
+SELECT table_name, num_rows FROM dba_tables WHERE owner = 'MY_SCHEMA' ORDER BY num_rows DESC;
+
+-- tables per schema
+SELECT owner, COUNT(*) FROM dba_tables GROUP BY owner;
+
+-- tables with LOB columns
+SELECT DISTINCT table_name FROM user_tab_cols WHERE data_type IN ('CLOB', 'BLOB', 'NCLOB');
+
+-- free space per tablespace
+SELECT tablespace_name, ROUND(SUM(bytes)/1024/1024) free_mb
+  FROM dba_free_space GROUP BY tablespace_name ORDER BY free_mb;
+```
+
+```sql
+-- every FK of a schema and the column it points to
+SELECT a.table_name || '.' || a.column_name || ' --> ' || p.table_name || '.' || p.column_name
+  FROM all_cons_columns a
+  JOIN all_constraints c ON c.owner = a.owner AND c.constraint_name = a.constraint_name
+  JOIN all_cons_columns p ON p.owner = c.r_owner AND p.constraint_name = c.r_constraint_name
+                         AND p.position = a.position
+ WHERE c.constraint_type = 'R' AND c.owner = 'MY_SCHEMA';
+
+-- search a text in all the PL/SQL of the schema
+SELECT name, type, line, text FROM all_source
+ WHERE UPPER(text) LIKE UPPER('%orders%') ORDER BY type, name, line;
+
+-- synonyms
+SELECT synonym_name, table_owner, table_name FROM all_synonyms WHERE owner IN ('PUBLIC', USER);
+```
+
+A `UNIQUE` index behaves like a primary key as far as duplicates are concerned: it rejects them. And creating a `PRIMARY KEY` or `UNIQUE` constraint creates its index implicitly, if none exists.
+
+#### Locks with their mode
+
+The blocking query above says who waits for whom. This one shows every object currently locked and how:
+
+```sql
+SELECT s.sid, s.username, s.machine, o.object_name, o.object_type,
+       DECODE(l.locked_mode, 1, 'no lock', 2, 'row share (SS)', 3, 'row exclusive (SX)',
+                             4, 'shared table (S)', 5, 'shared row exclusive (SSX)', 6, 'exclusive (X)') lock_mode
+  FROM v$locked_object l
+  JOIN dba_objects o ON o.object_id = l.object_id
+  JOIN v$session   s ON s.sid = l.session_id;
+```
+
+A lock is not a block: there is only a wait when two sessions want the same rows. An `UPDATE` left uncommitted in SQL Developer keeps its rows locked, and any batch process touching them waits until that commit.
+
+#### Statistics and materialized views
+
+```sql
+-- refresh the optimizer statistics of a table after a big load
+EXEC DBMS_STATS.GATHER_TABLE_STATS(ownname => 'MY_SCHEMA', tabname => 'ORDERS', estimate_percent => DBMS_STATS.AUTO_SAMPLE_SIZE);
+
+-- when were the materialized views refreshed, and are they stale?
+SELECT mview_name, refresh_method, refresh_mode, staleness, last_refresh_type,
+       TO_CHAR(last_refresh_date, 'DD/MM/YYYY HH24:MI:SS') last_refresh
+  FROM user_mviews ORDER BY last_refresh_date DESC;
+```
+
+Without fresh statistics the optimizer plans for the table as it was: a table loaded from empty to millions of rows keeps being treated as empty.
+
+#### Recovering deleted data: flashback
+
+| Feature | Recovers | Uses |
+|---|---|---|
+| Flashback query | rows as they were at a point in time | undo |
+| Flashback table | a whole table back to a point in time | undo |
+| Flashback drop | a dropped table and its indexes | recycle bin |
+| Flashback database | the whole database to a point in time | flashback logs |
+
+```sql
+SELECT * FROM orders AS OF TIMESTAMP SYSTIMESTAMP - INTERVAL '15' MINUTE WHERE id = 42;
+FLASHBACK TABLE orders TO TIMESTAMP SYSTIMESTAMP - INTERVAL '15' MINUTE;   -- needs ROW MOVEMENT enabled
+FLASHBACK TABLE orders TO BEFORE DROP;
+```
+
+#### Rows to a list and back
+
+```sql
+-- many rows to one delimited value
+SELECT dept_id, LISTAGG(name, ',') WITHIN GROUP (ORDER BY name) names
+  FROM employees GROUP BY dept_id;
+
+-- one delimited value to many rows
+SELECT REGEXP_SUBSTR('a;b;c', '[^;]+', 1, LEVEL) item
+  FROM dual CONNECT BY LEVEL <= REGEXP_COUNT('a;b;c', ';') + 1;
+```
+
+#### Export and import
+
+The old `exp` / `imp` are deprecated: Data Pump replaces them, runs on the server and is much faster.
+
+```shell
+expdp <user>@<db> tables=ORDERS directory=DATA_PUMP_DIR dumpfile=orders.dmp logfile=orders.log
+expdp <user>@<db> tables=ORDERS query='ORDERS:"WHERE ROWNUM < 1000"' directory=DATA_PUMP_DIR dumpfile=sample.dmp
+expdp <user>@<db> schemas=MY_SCHEMA exclude=INDEX directory=DATA_PUMP_DIR dumpfile=schema.dmp
+impdp <user>@<db> tables=ORDERS directory=DATA_PUMP_DIR dumpfile=orders.dmp table_exists_action=replace
+```
+
+#### SQL Developer: an FK References tab
+
+Save this as `fk_ref.xml`, then Tools > Preferences > Database > User Defined Extensions > Add Row, type `EDITOR`, location the file, and restart. Every table then shows which foreign keys point at it.
+
+```xml
+<items>
+  <item type="editor" node="TableNode" vertical="true">
+    <title><![CDATA[FK References]]></title>
+    <query>
+      <sql><![CDATA[select a.owner, a.table_name, a.constraint_name, a.status
+                      from all_constraints a
+                     where a.constraint_type = 'R'
+                       and exists (select 1 from all_constraints
+                                    where constraint_name = a.r_constraint_name
+                                      and constraint_type in ('P', 'U')
+                                      and table_name = :OBJECT_NAME
+                                      and owner = :OBJECT_OWNER)
+                     order by table_name, constraint_name]]></sql>
+    </query>
+  </item>
+</items>
+```
+
+#### Habits worth keeping
+
+- `ORDER BY` whenever the order matters: without it SQL guarantees no order at all, even if it looks stable today.
+- Test queries and processes against **empty tables** too: aggregates return NULL, `MAX` of nothing is not zero.
+- In a batch, **one commit at the end** (or per controlled chunk), not one per row: faster and restartable.
+- Careful with dates: decide whether "now" comes from the application or from `SYSDATE`, and do not mix both in the same flow.
+- After a big load, gather statistics before trusting any plan.

@@ -187,6 +187,16 @@ git clean -fdx              # ...including ignored ones (target/, node_modules/)
 
 `-n` first. `git clean -fdx` deletes things git has never seen and cannot recover.
 
+Branches:
+
+```shell
+git branch -d release/1.16                      # delete a local branch, only if merged
+git branch -D release/1.16                      # ...even if it is not merged
+git branch -d -r origin/release/1.16            # forget a stale remote-tracking ref (local only)
+git push origin --delete release/1.16           # delete the branch ON the remote
+git fetch --prune                               # drop every remote-tracking ref whose branch is gone
+```
+
 #### Configuration worth having
 
 ```shell

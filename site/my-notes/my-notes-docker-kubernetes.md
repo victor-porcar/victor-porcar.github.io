@@ -151,6 +151,7 @@ kubectl rollout status deployment/car-service
 kubectl rollout history deployment/car-service
 kubectl rollout undo deployment/car-service
 kubectl rollout restart deployment/car-service     # restart the pods, no changes
+kubectl delete deployment -l app=car-service       # delete by label, every deployment that matches
 ```
 
 `kubectl diff` before `apply` is the habit worth building: it shows exactly what is about to change in a live cluster.
