@@ -21,6 +21,9 @@ set "OUTPUT_NAME=bookmarks%FOLDER%.html"
 set "OUTPUT_IN_REPO=site/my-it-bookmarks/%OUTPUT_NAME%"
 set "OUTPUT_FILE=%~dp0site\my-it-bookmarks\%OUTPUT_NAME%"
 
+REM Favicon of the generated page: the one of the site (the same as in _includes/head.html)
+set "PAGE_FAVICON=/assets/favicon-32.png"
+
 REM Message of the commit made when the page is pushed
 set "COMMIT_MESSAGE=Update IT bookmarks"
 
@@ -52,7 +55,7 @@ if /i not "%ANSWER%"=="y" (
     goto finish
 )
 
-java -jar "%BOOKMARK2HTML_JAR%" "%BOOKMARKS_FILE%" "%OUTPUT_FILE%" "%FOLDER%" "%BACKUP_DIR%" "%BACKUPS_TO_KEEP%"
+java -jar "%BOOKMARK2HTML_JAR%" "%BOOKMARKS_FILE%" "%OUTPUT_FILE%" "%FOLDER%" "%BACKUP_DIR%" "%BACKUPS_TO_KEEP%" "%PAGE_FAVICON%"
 set "EXIT_CODE=%ERRORLEVEL%"
 if not "%EXIT_CODE%"=="0" goto finish
 

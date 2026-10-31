@@ -20,6 +20,9 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 OUTPUT_IN_REPO="site/my-it-bookmarks/bookmarks${FOLDER}.html"
 OUTPUT_FILE="$REPO_DIR/$OUTPUT_IN_REPO"
 
+# Favicon of the generated page: the one of the site (the same as in _includes/head.html)
+PAGE_FAVICON="/assets/favicon-32.png"
+
 # Message of the commit made when the page is pushed
 COMMIT_MESSAGE="Update IT bookmarks"
 
@@ -81,7 +84,7 @@ if [ "$ANSWER" != "y" ] && [ "$ANSWER" != "Y" ]; then
     finish 0
 fi
 
-if ! java -jar "$BOOKMARK2HTML_JAR" "$BOOKMARKS_FILE" "$OUTPUT_FILE" "$FOLDER" "$BACKUP_DIR" "$BACKUPS_TO_KEEP"; then
+if ! java -jar "$BOOKMARK2HTML_JAR" "$BOOKMARKS_FILE" "$OUTPUT_FILE" "$FOLDER" "$BACKUP_DIR" "$BACKUPS_TO_KEEP" "$PAGE_FAVICON"; then
     finish 1
 fi
 
