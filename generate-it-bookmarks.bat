@@ -21,8 +21,8 @@ set "OUTPUT_NAME=bookmarks%FOLDER%.html"
 set "OUTPUT_IN_REPO=site/my-it-bookmarks/%OUTPUT_NAME%"
 set "OUTPUT_FILE=%~dp0site\my-it-bookmarks\%OUTPUT_NAME%"
 
-REM Favicon of the generated page: the one of the site (the same as in _includes/head.html)
-set "PAGE_FAVICON=/assets/favicon-32.png"
+REM Site configuration, where the icons of every page are defined
+set "CONFIG_FILE=%~dp0_config.yml"
 
 REM Message of the commit made when the page is pushed
 set "COMMIT_MESSAGE=Update IT bookmarks"
@@ -47,6 +47,19 @@ if not exist "%BOOKMARK2HTML_JAR%" (
     goto finish
 )
 
+REM The bookmarks page gets the same icons as the rest of the site: the text after "key:"
+REM of each top-level key of the site configuration
+set "FAVICON="
+set "APPLE_TOUCH_ICON="
+for /f "tokens=1,* delims=: " %%A in ('findstr /b /c:"favicon:" "%CONFIG_FILE%"') do set "FAVICON=%%B"
+for /f "tokens=1,* delims=: " %%A in ('findstr /b /c:"apple_touch_icon:" "%CONFIG_FILE%"') do set "APPLE_TOUCH_ICON=%%B"
+set "ICONS_FOUND="
+if defined FAVICON if defined APPLE_TOUCH_ICON set "ICONS_FOUND=1"
+if not defined ICONS_FOUND (
+    echo X  favicon or apple_touch_icon not found in %CONFIG_FILE%
+    goto finish
+)
+
 set "ANSWER="
 set /p "ANSWER=Are you sure to generate IT bookmarks with the current Chrome Bookmarks [Yy]? "
 if /i not "%ANSWER%"=="y" (
@@ -55,7 +68,7 @@ if /i not "%ANSWER%"=="y" (
     goto finish
 )
 
-java -jar "%BOOKMARK2HTML_JAR%" "%BOOKMARKS_FILE%" "%OUTPUT_FILE%" "%FOLDER%" "%BACKUP_DIR%" "%BACKUPS_TO_KEEP%" "%PAGE_FAVICON%"
+java -jar "%BOOKMARK2HTML_JAR%" "%BOOKMARKS_FILE%" "%OUTPUT_FILE%" "%FOLDER%" "%BACKUP_DIR%" "%BACKUPS_TO_KEEP%" "--favicon=%FAVICON%" "--apple-touch-icon=%APPLE_TOUCH_ICON%"
 set "EXIT_CODE=%ERRORLEVEL%"
 if not "%EXIT_CODE%"=="0" goto finish
 

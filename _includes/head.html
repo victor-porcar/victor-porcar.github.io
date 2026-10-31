@@ -12,7 +12,7 @@
   {%- assign page_desc = site.seo_description -%}
 {%- endif -%}
 {%- assign page_url = page.url | absolute_url -%}
-{%- assign share_image = "/assets/apple-touch-icon.png" | absolute_url -%}
+{%- assign share_image = site.apple_touch_icon | absolute_url -%}
 {%- assign person_image = "/site/images/victor_profile.jpg" | absolute_url -%}
 
 <title>{{ full_title | escape }}</title>
@@ -74,8 +74,8 @@
 {%- endif %}
 </script>
 
-<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32.png' | relative_url }}">
-<link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+<link rel="icon" href="{{ site.favicon | relative_url }}">
+<link rel="apple-touch-icon" href="{{ site.apple_touch_icon | relative_url }}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -20,8 +20,8 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 OUTPUT_IN_REPO="site/my-it-bookmarks/bookmarks${FOLDER}.html"
 OUTPUT_FILE="$REPO_DIR/$OUTPUT_IN_REPO"
 
-# Favicon of the generated page: the one of the site (the same as in _includes/head.html)
-PAGE_FAVICON="/assets/favicon-32.png"
+# Site configuration, where the icons of every page are defined
+CONFIG_FILE="$REPO_DIR/_config.yml"
 
 # Message of the commit made when the page is pushed
 COMMIT_MESSAGE="Update IT bookmarks"
@@ -35,6 +35,11 @@ finish() {
     read -n 1 -s -r -p "Press any key to finish..."
     echo
     exit "$1"
+}
+
+# Prints the value of a top-level key of the site configuration: the text after "key:"
+config_value() {
+    sed -n "s/^$1:[[:space:]]*//p" "$CONFIG_FILE" | tr -d '\r'
 }
 
 # Commits only the generated page (nothing else that may be modified in the repository)
@@ -78,13 +83,22 @@ if ! command -v java > /dev/null; then
     finish 1
 fi
 
+# The bookmarks page gets the same icons as the rest of the site
+FAVICON="$(config_value favicon)"
+APPLE_TOUCH_ICON="$(config_value apple_touch_icon)"
+if [ -z "$FAVICON" ] || [ -z "$APPLE_TOUCH_ICON" ]; then
+    echo "X  favicon or apple_touch_icon not found in $CONFIG_FILE"
+    finish 1
+fi
+
 read -r -p "Are you sure to generate IT bookmarks with the current Chrome Bookmarks [Yy]? " ANSWER
 if [ "$ANSWER" != "y" ] && [ "$ANSWER" != "Y" ]; then
     echo "Aborted: nothing was generated"
     finish 0
 fi
 
-if ! java -jar "$BOOKMARK2HTML_JAR" "$BOOKMARKS_FILE" "$OUTPUT_FILE" "$FOLDER" "$BACKUP_DIR" "$BACKUPS_TO_KEEP" "$PAGE_FAVICON"; then
+if ! java -jar "$BOOKMARK2HTML_JAR" "$BOOKMARKS_FILE" "$OUTPUT_FILE" "$FOLDER" "$BACKUP_DIR" "$BACKUPS_TO_KEEP" \
+        "--favicon=$FAVICON" "--apple-touch-icon=$APPLE_TOUCH_ICON"; then
     finish 1
 fi
 

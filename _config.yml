@@ -13,6 +13,12 @@ bio: >-
   details that only surface in production.
 theme: null
 
+# Icons of every page: _includes/head.html links them, and the generate-it-bookmarks scripts pass
+# them to the bookmarks page. Those scripts read each value as the plain text after the colon,
+# so keep them on one line and without quotes
+favicon: /assets/favicon-32.png
+apple_touch_icon: /assets/apple-touch-icon.png
+
 github_user: https://github.com/victor-porcar
 github_handle: victor-porcar
 linkedin: https://es.linkedin.com/in/victor-porcar-a110a533
